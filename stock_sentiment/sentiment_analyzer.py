@@ -1,123 +1,149 @@
 """
-情绪分析模块 - 使用OpenAI GPT分析新闻情绪
+Sentiment Analysis Module - Uses WaveSpeed AI API (Claude 3.7 Sonnet) for news sentiment
 """
 import json
-from typing import List, Dict, Optional
-from openai import OpenAI
+import requests
+from typing import List, Dict
 import config
 
 
 class SentimentAnalyzer:
-    """使用LLM分析新闻情绪"""
-    
+    """Analyze news sentiment using LLM via WaveSpeed AI API"""
+
     def __init__(self, api_key: str = None):
-        self.api_key = api_key or config.OPENAI_API_KEY
-        
+        self.api_key = api_key or config.WAVESPEED_API_KEY
+
         if not self.api_key:
-            raise ValueError("OpenAI API key is required. Please set OPENAI_API_KEY in .env file.")
-        
-        self.client = OpenAI(api_key=self.api_key)
+            raise ValueError("WaveSpeed API key is required. Please set WAVESPEED_API_KEY in .env file.")
+
+        self.api_url = config.WAVESPEED_API_URL
         self.model = config.LLM_MODEL
-        self.temperature = config.LLM_TEMPERATURE
-    
+
+    def _call_llm(self, prompt: str) -> str:
+        """
+        Call WaveSpeed AI API and return the response text.
+
+        Args:
+            prompt: The prompt to send to the LLM
+
+        Returns:
+            Response text from the LLM
+        """
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.api_key}"
+        }
+
+        payload = {
+            "enable_sync_mode": True,
+            "model": self.model,
+            "priority": "latency",
+            "prompt": prompt,
+            "reasoning": False
+        }
+
+        response = requests.post(
+            self.api_url,
+            headers=headers,
+            json=payload,
+            timeout=60
+        )
+        response.raise_for_status()
+
+        data = response.json()
+
+        # Extract text from WaveSpeed response
+        if data.get("code") == 200 and data.get("data", {}).get("outputs"):
+            return data["data"]["outputs"][0]
+
+        raise RuntimeError(f"LLM API error: {data.get('message', 'Unknown error')}")
+
     def analyze_single_news(self, news: Dict) -> Dict:
         """
-        分析单条新闻的情绪
-        
+        Analyze sentiment for a single news article.
+
         Args:
-            news: 新闻字典，包含ticker, title, description, published_utc
-            
+            news: News dict with ticker, title, description, published_utc
+
         Returns:
-            情绪分析结果，包含sentiment, score, confidence, reason
+            Sentiment result with sentiment, score, confidence, reason
         """
-        # 构建prompt
         prompt = config.SENTIMENT_PROMPT.format(
             ticker=news.get("ticker", "Unknown"),
             title=news.get("title", ""),
             description=news.get("description", ""),
             published_date=news.get("published_utc", "")
         )
-        
+
         try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[
-                    {"role": "system", "content": "你是一个专业的金融分析师，擅长分析新闻对股票的影响。"},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=self.temperature,
-                max_tokens=200
-            )
-            
-            # 解析返回的JSON
-            result_text = response.choices[0].message.content.strip()
-            
-            # 尝试提取JSON（处理可能的markdown代码块）
+            result_text = self._call_llm(prompt)
+
+            # Clean up potential markdown code blocks
             if "```json" in result_text:
                 result_text = result_text.split("```json")[1].split("```")[0].strip()
             elif "```" in result_text:
                 result_text = result_text.split("```")[1].split("```")[0].strip()
-            
+
             result = json.loads(result_text)
-            
-            # 添加原始新闻信息
+
+            # Attach original news info
             result["title"] = news.get("title", "")
             result["source"] = news.get("source", "")
             result["published_utc"] = news.get("published_utc", "")
-            
+
             return result
-            
+
         except json.JSONDecodeError as e:
-            print(f"JSON解析失败: {e}")
-            print(f"原始返回: {result_text}")
+            print(f"  JSON parse failed: {e}")
+            print(f"  Raw response: {result_text[:200]}")
             return self._default_result(news)
-            
+
         except Exception as e:
-            print(f"分析失败: {e}")
+            print(f"  Analysis failed: {e}")
             return self._default_result(news)
-    
+
     def _default_result(self, news: Dict) -> Dict:
-        """返回默认的中性结果"""
+        """Return a default neutral result on failure"""
         return {
             "sentiment": "neutral",
             "score": 50,
             "confidence": 0,
-            "reason": "分析失败，使用默认值",
+            "reason": "Analysis failed, using default",
             "title": news.get("title", ""),
             "source": news.get("source", ""),
             "published_utc": news.get("published_utc", "")
         }
-    
+
     def analyze_news_batch(self, news_list: List[Dict]) -> List[Dict]:
         """
-        批量分析多条新闻
-        
+        Analyze sentiment for a batch of news articles.
+
         Args:
-            news_list: 新闻列表
-            
+            news_list: List of news dicts
+
         Returns:
-            分析结果列表
+            List of sentiment results
         """
         results = []
-        
+
         for i, news in enumerate(news_list, 1):
-            print(f"  分析第 {i}/{len(news_list)} 条新闻...")
+            print(f"  Analyzing article {i}/{len(news_list)}...")
             result = self.analyze_single_news(news)
             results.append(result)
-        
+
         return results
-    
+
     def aggregate_sentiment(self, results: List[Dict]) -> Dict:
         """
-        聚合多条新闻的情绪评分
-        
-        使用置信度加权平均计算最终得分
-        
+        Aggregate sentiment scores from multiple articles into a stock-level score.
+
+        Uses confidence-weighted average.
+
         Args:
-            results: 情绪分析结果列表
-            
+            results: List of sentiment results
+
         Returns:
-            聚合后的情绪评分，包含final_score, sentiment, news_count等
+            Aggregated sentiment with final_score, sentiment, counts, etc.
         """
         if not results:
             return {
@@ -129,42 +155,39 @@ class SentimentAnalyzer:
                 "bearish_count": 0,
                 "neutral_count": 0
             }
-        
-        # 统计各类情绪数量
+
+        # Count sentiment categories
         bullish_count = sum(1 for r in results if r.get("sentiment") == "bullish")
         bearish_count = sum(1 for r in results if r.get("sentiment") == "bearish")
         neutral_count = sum(1 for r in results if r.get("sentiment") == "neutral")
-        
-        # 置信度加权平均
+
+        # Confidence-weighted average
         total_weight = 0
         weighted_score = 0
-        
+
         for r in results:
             confidence = r.get("confidence", 50)
             score = r.get("score", 50)
-            
-            # 使用置信度作为权重
+
             weight = confidence / 100.0 if confidence > 0 else 0.5
             weighted_score += score * weight
             total_weight += weight
-        
-        # 计算最终得分
+
         if total_weight > 0:
             final_score = weighted_score / total_weight
         else:
             final_score = 50
-        
-        # 根据得分确定整体情绪
+
+        # Determine overall sentiment
         if final_score >= 60:
             overall_sentiment = "bullish"
         elif final_score <= 40:
             overall_sentiment = "bearish"
         else:
             overall_sentiment = "neutral"
-        
-        # 平均置信度
+
         avg_confidence = sum(r.get("confidence", 50) for r in results) / len(results)
-        
+
         return {
             "final_score": round(final_score, 2),
             "sentiment": overall_sentiment,
@@ -173,49 +196,47 @@ class SentimentAnalyzer:
             "bullish_count": bullish_count,
             "bearish_count": bearish_count,
             "neutral_count": neutral_count,
-            "details": results  # 保留详细结果
+            "details": results
         }
 
 
-# 测试代码
+# Test code
 if __name__ == "__main__":
-    # 模拟新闻数据进行测试
     test_news = [
         {
             "ticker": "AAPL",
             "title": "Apple Reports Record iPhone Sales in Q4",
             "description": "Apple Inc. announced record-breaking iPhone sales for the fourth quarter, exceeding analyst expectations by 15%. The company's services revenue also grew significantly.",
-            "published_utc": "2024-01-15T10:00:00Z",
+            "published_utc": "2026-02-05T10:00:00Z",
             "source": "Reuters"
         },
         {
             "ticker": "AAPL",
             "title": "Apple Faces Supply Chain Challenges in China",
             "description": "Apple is experiencing production delays at its major manufacturing facilities in China due to ongoing supply chain disruptions.",
-            "published_utc": "2024-01-14T08:00:00Z",
+            "published_utc": "2026-02-04T08:00:00Z",
             "source": "Bloomberg"
         }
     ]
-    
+
     analyzer = SentimentAnalyzer()
-    
+
     print("=" * 50)
-    print("测试情绪分析")
+    print("Testing Sentiment Analysis")
     print("=" * 50)
-    
+
     results = analyzer.analyze_news_batch(test_news)
-    
+
     for r in results:
-        print(f"\n标题: {r['title']}")
-        print(f"情绪: {r['sentiment']} | 评分: {r['score']} | 置信度: {r['confidence']}")
-        print(f"理由: {r['reason']}")
-    
-    # 测试聚合
+        print(f"\nTitle: {r['title']}")
+        print(f"Sentiment: {r['sentiment']} | Score: {r['score']} | Confidence: {r['confidence']}")
+        print(f"Reason: {r['reason']}")
+
     print("\n" + "=" * 50)
-    print("聚合结果")
+    print("Aggregated Result")
     print("=" * 50)
-    
+
     aggregated = analyzer.aggregate_sentiment(results)
-    print(f"最终评分: {aggregated['final_score']}")
-    print(f"整体情绪: {aggregated['sentiment']}")
-    print(f"分析新闻数: {aggregated['news_count']}")
+    print(f"Final Score: {aggregated['final_score']}")
+    print(f"Overall Sentiment: {aggregated['sentiment']}")
+    print(f"Articles Analyzed: {aggregated['news_count']}")
