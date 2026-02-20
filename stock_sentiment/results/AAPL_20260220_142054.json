@@ -1,0 +1,94 @@
+{
+  "ticker": "AAPL",
+  "analysis_time": "2026-02-20T14:20:54.678515",
+  "lookback_days": 7,
+  "final_score": 58.87,
+  "grade": "SLIGHTLY BULLISH",
+  "breakdown": {
+    "sentiment_score": 53.12,
+    "sentiment_weight": 0.6,
+    "sentiment_contribution": 31.87,
+    "technical_score": 67.5,
+    "technical_weight": 0.4,
+    "technical_contribution": 27.0
+  },
+  "sentiment": {
+    "final_score": 53.12,
+    "sentiment": "neutral",
+    "news_count": 5,
+    "avg_confidence": 64.0,
+    "bullish_count": 1,
+    "bearish_count": 1,
+    "neutral_count": 3,
+    "details": [
+      {
+        "sentiment": "neutral",
+        "score": 50,
+        "confidence": 40,
+        "reason": "The news is about Alphabet (Google), not Apple (AAPL). Cannot determine AAPL sentiment from this information.",
+        "title": "How This AI Stock Went From Lost Cause to Leading Force",
+        "source": "The Motley Fool",
+        "published_utc": "2026-02-20T17:02:00Z"
+      },
+      {
+        "sentiment": "bearish",
+        "score": 35,
+        "confidence": 75,
+        "reason": "Major institutional investor rotating out of Apple into other investments, suggesting decreased confidence in AAPL's future performance relative to alternative opportunities.",
+        "title": "Mesirow Financial Investment Management Buys 2 Million Shares of Akre Focus ETF",
+        "source": "The Motley Fool",
+        "published_utc": "2026-02-20T14:05:58Z"
+      },
+      {
+        "sentiment": "bullish",
+        "score": 75,
+        "confidence": 85,
+        "reason": "Article positively highlights Apple's prudent AI approach and strong distribution advantage for long-term growth potential, recommending it as a buy-and-hold investment.",
+        "title": "3 Artificial Intelligence Stocks You Can Buy and Hold for the Next Decade",
+        "source": "The Motley Fool",
+        "published_utc": "2026-02-20T11:22:00Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 50,
+        "confidence": 60,
+        "reason": "News focuses on Gates' investment in Berkshire Hathaway but doesn't mention AAPL directly or provide information affecting Apple's business outlook.",
+        "title": "Bill Gates Has Nearly 30% of His $36.6 Billion Portfolio Invested in One of Warren Buffett's Favorite Stocks",
+        "source": "The Motley Fool",
+        "published_utc": "2026-02-20T09:30:00Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 50,
+        "confidence": 60,
+        "reason": "The news focuses on QQQ ETF purchases by billionaires rather than AAPL specifically, though Apple is likely a component of the fund.",
+        "title": "Billionaires Buy an AI Index Fund That Could Turn $500 Per Month Into $485,000",
+        "source": "The Motley Fool",
+        "published_utc": "2026-02-20T09:12:00Z"
+      }
+    ]
+  },
+  "technical": {
+    "ticker": "AAPL",
+    "technical_score": 67.5,
+    "signal": "bullish",
+    "ema": {
+      "score": 100.0,
+      "raw_points": 4,
+      "ema100_uptrend": true,
+      "ema50_above_ema100": true,
+      "ema25_above_ema100": true
+    },
+    "rsi": {
+      "score": 35,
+      "value": 47.9,
+      "signal": "mildly_bearish"
+    },
+    "price": {
+      "current": 263.79,
+      "ema25": 264.79,
+      "ema50": 264.85,
+      "ema100": 261.22
+    }
+  }
+}
