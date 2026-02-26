@@ -1,0 +1,132 @@
+{
+  "ticker": "AAPL",
+  "analysis_time": "2026-02-26T14:28:17.280790",
+  "lookback_days": 7,
+  "final_score": 63.29,
+  "grade": "SLIGHTLY BULLISH",
+  "breakdown": {
+    "sentiment_score": 45.49,
+    "sentiment_weight": 0.6,
+    "sentiment_contribution": 27.29,
+    "technical_score": 90.0,
+    "technical_weight": 0.4,
+    "technical_contribution": 36.0
+  },
+  "sentiment": {
+    "final_score": 45.49,
+    "sentiment": "neutral",
+    "news_count": 5,
+    "avg_confidence": 73.0,
+    "bullish_count": 1,
+    "bearish_count": 2,
+    "neutral_count": 2,
+    "details": [
+      {
+        "sentiment": "neutral",
+        "score": 50,
+        "confidence": 78,
+        "reason": "[gpt-5-chat] The news concerns PayPal and Stripe, not Apple, implying minimal direct impact on AAPL’s fundamentals or immediate sentiment. | [claude-3.7-sonnet] News focuses on PayPal and Stripe merger talks with no direct mention of Apple's business performance, competitive position, or stock implications.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 50,
+          "claude-3.7-sonnet": 50
+        },
+        "title": "PayPal Stock Halted on Stripe Rumor: Why the Narrative Just Changed",
+        "source": "Investing.com",
+        "published_utc": "2026-02-26T14:29:00Z"
+      },
+      {
+        "sentiment": "bearish",
+        "score": 35,
+        "confidence": 85,
+        "reason": "[gpt-5-chat] Buffett selling Apple and concerns about high valuation, slower growth, and lack of innovation signal negative sentiment toward future stock performance. | [claude-3.7-sonnet] Warren Buffett reducing his position, premium valuation (33x PE), slower growth expectations, and lack of innovative products signal potential overvaluation concerns.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 35,
+          "claude-3.7-sonnet": 35
+        },
+        "title": "One Of Warren Buffett's Last Moves as CEO of Berkshire Hathaway Was Selling the Stock That Made Him Rich",
+        "source": "The Motley Fool",
+        "published_utc": "2026-02-26T12:35:00Z"
+      },
+      {
+        "sentiment": "bearish",
+        "score": 30,
+        "confidence": 80,
+        "reason": "[gpt-5-chat] Heavy insider selling and high valuations suggest reduced insider confidence and potential downside risk for Apple and other tech stocks. | [claude-3.7-sonnet] Significant insider selling across tech giants including Apple suggests lack of confidence in current valuations, potentially signaling overvaluation concerns.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 30,
+          "claude-3.7-sonnet": 30
+        },
+        "title": "The \"Magnificent Seven\" Are Sending Shockwaves Through Wall Street With This $8.4 Billion Warning",
+        "source": "The Motley Fool",
+        "published_utc": "2026-02-26T10:06:00Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 55,
+        "confidence": 60,
+        "reason": "[claude-3.7-sonnet] While facial recognition growth benefits tech sector, the news doesn't specifically mention AAPL, though they likely benefit from their FaceID technology.",
+        "models_used": [
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "claude-3.7-sonnet": 55
+        },
+        "title": "Facial Recognition Market Size to Exceed $36.46 Billion by 2035 | Research by SNS Insider",
+        "source": "GlobeNewswire Inc.",
+        "published_utc": "2026-02-26T10:00:00Z"
+      },
+      {
+        "sentiment": "bullish",
+        "score": 65,
+        "confidence": 62,
+        "reason": "[gpt-5-chat] Positive market forecast with strong earnings growth and Fed rate cuts likely benefit AAPL, though forecasting uncertainty tempers enthusiasm. | [claude-3.7-sonnet] News discusses positive overall market outlook but has no AAPL-specific information. General market optimism may indirectly benefit AAPL.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 70,
+          "claude-3.7-sonnet": 60
+        },
+        "title": "Wall Street Says the Stock Market's Return in 2026 Will Crush the 30-Year Average",
+        "source": "The Motley Fool",
+        "published_utc": "2026-02-26T09:12:00Z"
+      }
+    ]
+  },
+  "technical": {
+    "ticker": "AAPL",
+    "technical_score": 90.0,
+    "signal": "bullish",
+    "ema": {
+      "score": 100.0,
+      "raw_points": 4,
+      "ema100_uptrend": true,
+      "ema50_above_ema100": true,
+      "ema25_above_ema100": true
+    },
+    "rsi": {
+      "score": 80,
+      "value": 60.6,
+      "signal": "bullish_momentum"
+    },
+    "price": {
+      "current": 272.79,
+      "ema25": 266.69,
+      "ema50": 265.87,
+      "ema100": 262.27
+    }
+  }
+}

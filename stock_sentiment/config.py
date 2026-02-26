@@ -23,7 +23,12 @@ MAX_CONCURRENT_LLM_CALLS = 5  # Max parallel LLM API calls
 
 # WaveSpeed LLM API config
 WAVESPEED_API_URL = "https://api.wavespeed.ai/api/v3/wavespeed-ai/any-llm"
-LLM_MODEL = "anthropic/claude-3.7-sonnet"
+
+# Dual-model ensemble: both models analyze each article, scores are averaged
+LLM_MODELS = [
+    "anthropic/claude-3.7-sonnet",
+    "openai/gpt-5-chat",
+]
 
 # Target stock list (tech sector)
 TECH_STOCKS = [
