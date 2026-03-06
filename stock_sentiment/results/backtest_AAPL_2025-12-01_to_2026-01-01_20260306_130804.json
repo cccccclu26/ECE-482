@@ -1,0 +1,53 @@
+{
+  "ticker": "AAPL",
+  "period": "2025-12-01 to 2026-01-01",
+  "test_points": 3,
+  "forward_days": 5,
+  "news_limit": 5,
+  "news_lookback_days": 7,
+  "accuracy": 0.0,
+  "results": [
+    {
+      "date": "2025-12-01",
+      "final_score": 56.68,
+      "grade": "SLIGHTLY BULLISH",
+      "sentiment_score": 51.14,
+      "technical_score": 65.0,
+      "news_count": 5,
+      "predicted_direction": "up",
+      "actual_return_pct": -1.8403,
+      "actual_direction": "down",
+      "correct": false,
+      "price": 282.84,
+      "rsi": 80.05
+    },
+    {
+      "date": "2025-12-15",
+      "final_score": 58.37,
+      "grade": "SLIGHTLY BULLISH",
+      "sentiment_score": 57.29,
+      "technical_score": 60.0,
+      "news_count": 5,
+      "predicted_direction": "up",
+      "actual_return_pct": -1.1455,
+      "actual_direction": "down",
+      "correct": false,
+      "price": 273.85,
+      "rsi": 37.29
+    },
+    {
+      "date": "2025-12-29",
+      "final_score": 68.59,
+      "grade": "BUY",
+      "sentiment_score": 69.32,
+      "technical_score": 67.5,
+      "news_count": 5,
+      "predicted_direction": "up",
+      "actual_return_pct": -4.1642,
+      "actual_direction": "down",
+      "correct": false,
+      "price": 273.5,
+      "rsi": 47.42
+    }
+  ]
+}

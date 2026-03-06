@@ -1,0 +1,4 @@
+date,final_score,grade,sentiment_score,technical_score,news_count,predicted_direction,actual_return_pct,actual_direction,correct,price,rsi
+2025-12-01,56.68,SLIGHTLY BULLISH,51.14,65.0,5,up,-1.8403,down,False,282.84,80.05
+2025-12-15,58.37,SLIGHTLY BULLISH,57.29,60.0,5,up,-1.1455,down,False,273.85,37.29
+2025-12-29,68.59,BUY,69.32,67.5,5,up,-4.1642,down,False,273.5,47.42
