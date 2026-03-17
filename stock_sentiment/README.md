@@ -2,144 +2,176 @@
 
 **ECE 482 Senior Design Project** — University of Miami
 
-This tool reads recent financial news about tech stocks and uses AI to tell you whether the news is positive (bullish), negative (bearish), or neutral. It gives each stock a score from 0 to 100 so you can quickly see market sentiment at a glance.
+This tool analyzes recent financial news about tech stocks using a dual-model LLM ensemble (Claude 3.7 + GPT-5), combines it with technical analysis (EMA + RSI), and uses a trained Logistic Regression model to produce a data-driven stock score from 0 to 100.
 
 ---
 
-## Quick Start (Get Running in 5 Minutes)
+## Quick Start
 
-### Step 1: Download the project
-
-Open a terminal (Command Prompt on Windows, Terminal on Mac) and run:
+### Step 1: Clone the project
 
 ```bash
 git clone https://github.com/cccccclu26/ECE-482.git
 cd ECE-482/stock_sentiment
 ```
 
-> **Don't have Git?** You can also click the green "Code" button on GitHub and select "Download ZIP", then unzip the folder.
-
-### Step 2: Install Python packages
+### Step 2: Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-> **"pip not found"?** Try `python -m pip install -r requirements.txt` or `py -m pip install -r requirements.txt` on Windows.
+### Step 3: Set up API keys
 
-### Step 3: Set up your API keys
-
-You need two free API keys. Here's how to get them:
-
-| Key | Where to get it | What it does |
-|-----|-----------------|--------------|
-| Polygon.io | [polygon.io](https://polygon.io/) - Sign up free | Fetches stock news |
-| WaveSpeed AI | [wavespeed.ai](https://wavespeed.ai/) | Runs the AI analysis |
-
-Once you have both keys, create a file called `.env` in the `stock_sentiment/` folder:
+Create a `.env` file in the `stock_sentiment/` folder (copy from `.env.example`):
 
 ```
-POLYGON_API_KEY=paste_your_polygon_key_here
-WAVESPEED_API_KEY=paste_your_wavespeed_key_here
+POLYGON_API_KEY=your_polygon_key_here
+WAVESPEED_API_KEY=your_wavespeed_key_here
 ```
 
-> **Tip:** There's already a file called `.env.example` in the folder. You can copy it, rename it to `.env`, and replace the placeholder text with your real keys.
+| Key | Where to get it | Purpose |
+|-----|-----------------|---------|
+| Polygon.io | [polygon.io](https://polygon.io/) — free tier | Fetch stock news & price data |
+| WaveSpeed AI | [wavespeed.ai](https://wavespeed.ai/) | Run Claude 3.7 + GPT-5 inference |
 
-### Step 4: Run it!
+### Step 4: Run it
 
 ```bash
+# Standard rule-based mode
 python main.py -t AAPL
-```
 
-That's it! You should see sentiment analysis results for Apple (AAPL) in your terminal.
+# ML mode (uses trained Logistic Regression model)
+python main.py -t AAPL --ml
+```
 
 ---
 
 ## Usage Examples
 
 ```bash
-# Analyze Apple stock
+# Analyze one stock
 python main.py -t AAPL
 
-# Analyze NVIDIA with 10 news articles
-python main.py -t NVDA -n 10
+# Analyze with ML scoring
+python main.py -t NVDA --ml
 
-# Analyze all 10 pre-configured tech stocks at once
+# Analyze all 10 tech stocks
 python main.py -a
 
-# Quick demo (analyzes AAPL, NVDA, MSFT)
-python main.py
+# Run backtesting on AAPL (last 6 months)
+python backtest.py -t AAPL
+
+# Train the ML model (with sentiment features)
+python ml_scorer.py --train --tickers AAPL NVDA MSFT --start 2023-01-01 --end 2025-12-01 --sentiment --eval
+
+# Show trained model info & learned weights
+python ml_scorer.py --info
 ```
 
-### Options
+### Command Options
 
-| Command | What it does |
-|---------|--------------|
-| `python main.py -t AAPL` | Analyze one stock (replace AAPL with any ticker) |
+| Command | Description |
+|---------|-------------|
+| `python main.py -t AAPL` | Analyze one stock |
+| `python main.py -t AAPL --ml` | Analyze with ML-based scoring |
 | `python main.py -a` | Analyze all 10 tech stocks |
-| `python main.py -t AAPL -n 10` | Analyze with a specific number of articles |
-| `python main.py` | Run a quick demo |
+| `python main.py -t AAPL -n 10` | Use 10 news articles |
+| `python backtest.py -t AAPL` | Run historical backtesting |
+| `python ml_scorer.py --train --sentiment` | Train ML model with sentiment |
+| `python ml_scorer.py --info` | Show model coefficients |
 
-### Supported Stocks (default)
+---
 
-AAPL, MSFT, GOOGL, AMZN, NVDA, META, TSLA, AMD, INTC, CRM
+## How It Works
 
-You can add or remove stocks by editing the `TECH_STOCKS` list in `config.py`.
+```
+Pick a stock (e.g., AAPL)
+        |
+        ├─── [1] Sentiment Analysis (LLM)
+        │         Fetch 20 recent news articles (Polygon.io)
+        │         Analyze each with Claude 3.7 + GPT-5 ensemble
+        │         Output: sentiment score 0-100 per article
+        │
+        ├─── [2] Technical Analysis
+        │         Fetch 6+ months of price data (yfinance)
+        │         Calculate EMA25 / EMA50 / EMA100 trend signals
+        │         Calculate RSI momentum signal
+        │         Output: technical score 0-100
+        │
+        └─── [3] Scoring
+                  Standard mode: 60% sentiment + 40% technical (rule-based)
+                  ML mode: Logistic Regression trained on historical data
+                  Output: final score 0-100 + grade
+```
+
+### Scoring Modes
+
+**Standard mode** (`python main.py -t AAPL`):
+- Sentiment score × 60% + Technical score × 40%
+- Weights are manually defined
+
+**ML mode** (`python main.py -t AAPL --ml`):
+- Logistic Regression trained on 3 years of historical data
+- 12 features: 9 technical (EMA trends, RSI, price ratios, volume) + 3 sentiment (score, confidence, article count)
+- Output is probability of price going up over the next 5 trading days
+- Replaces hardcoded weights with data-driven learned coefficients
 
 ---
 
 ## Understanding the Output
 
-When you run an analysis, you'll see something like this:
-
 ```
 ============================================================
-Result: AAPL
+  AAPL  |  FINAL SCORE: 20.01 / 100  |  SELL
 ============================================================
-Final Score:    51.6 / 100
-Sentiment:      NEUTRAL
-Articles:       20
-Lookback:       7 days
-Avg Confidence: 68.2%
-Bullish/Neutral/Bearish: 5/11/4
+
+  Scoring Method: ML Logistic Regression
+  Sentiment Input:  57.3
+  Technical Input:  47.5
+  P(Up): 20.01%  P(Down): 79.99%
+
+  --- Sentiment (20 articles) ---
+  Bullish: 5  Neutral: 14  Bearish: 1
+  Avg Confidence: 80.4%
+
+  --- Technical (EMA + RSI) ---
+  EMA Score: 75.0  (raw: 2/4)
+  EMA100 Uptrend: True
+  EMA50 > EMA100: True
+  EMA25 > EMA100: False
+  RSI: 37.74  (bearish_momentum)
+
+  --- Price ---
+  Current: $254.28  EMA25: $260.99  EMA50: $262.92  EMA100: $262.16
 ```
 
-### What do the numbers mean?
+### Grade Scale
 
-| Score Range | Sentiment | Meaning |
-|-------------|-----------|---------|
-| 70 - 100 | BULLISH | News is mostly positive, stock may go up |
-| 60 - 69 | Slightly Bullish | Leaning positive |
-| 41 - 59 | NEUTRAL | Mixed or no strong signal |
-| 31 - 40 | Slightly Bearish | Leaning negative |
-| 0 - 30 | BEARISH | News is mostly negative, stock may go down |
-
-### Where are results saved?
-
-Every analysis is automatically saved to the `results/` folder:
-
-- `results/AAPL_20260206_160659.json` — detailed results for a single stock
-- `results/analysis_20260206_160659.json` — detailed results for batch analysis
-- `results/summary_20260206_160659.csv` — summary table (open with Excel)
+| Score | Grade | Meaning |
+|-------|-------|---------|
+| 80–100 | STRONG BUY | Strong bullish signal |
+| 65–79 | BUY | Bullish |
+| 55–64 | SLIGHTLY BULLISH | Mild positive |
+| 45–54 | NEUTRAL | No clear signal |
+| 35–44 | SLIGHTLY BEARISH | Mild negative |
+| 20–34 | SELL | Bearish |
+| 0–19 | STRONG SELL | Strong bearish signal |
 
 ---
 
-## How It Works (Simple Version)
+## ML Model Details
 
-```
-You pick a stock (e.g., AAPL)
-        |
-        v
-Fetch 20 recent news articles (last 7 days)
-        |
-        v
-AI reads each article and scores it 0-100
-        |
-        v
-Combine all scores into one final score
-        |
-        v
-Show results + save to file
+The Logistic Regression model (`ml_scorer.py`) is trained on historical price and news data:
+
+- **Training data**: 3 years of daily OHLCV data + Polygon.io news for each ticker
+- **Label**: Did the stock go up 5 trading days later? (binary classification)
+- **Sentiment features**: Generated using VADER on historical Polygon.io news headlines (fast, free, reproducible for training — LLM scores used at prediction time)
+- **Test accuracy**: ~60% on held-out data (AAPL 2023–2025)
+
+To retrain the model:
+```bash
+python ml_scorer.py --train --tickers AAPL MSFT NVDA GOOGL --start 2023-01-01 --end 2025-12-01 --sentiment --eval
 ```
 
 ---
@@ -148,25 +180,21 @@ Show results + save to file
 
 ```
 stock_sentiment/
-├── main.py                # Run this file to start
-├── config.py              # Settings (change stock list, article count, etc.)
-├── news_fetcher.py        # Gets news from Polygon.io
-├── sentiment_analyzer.py  # AI sentiment analysis engine
-├── requirements.txt       # Python packages needed
-├── .env                   # Your API keys (keep this private!)
+├── main.py                # Entry point — run analysis
+├── ml_scorer.py           # ML model: train, evaluate, predict (Logistic Regression)
+├── combined_scorer.py     # Rule-based scorer (60/40 weights)
+├── backtest.py            # Historical backtesting module
+├── sentiment_analyzer.py  # Dual-model LLM sentiment engine
+├── technical_analysis.py  # EMA + RSI technical indicators
+├── news_fetcher.py        # Polygon.io news fetching
+├── config.py              # API keys, stock list, settings
+├── requirements.txt       # Python dependencies
+├── .env                   # Your API keys (never commit this!)
 ├── .env.example           # Template for .env
-└── results/               # Analysis results saved here
+├── models/
+│   └── lr_meta.json       # Trained model metadata & coefficients
+└── results/               # Analysis output (JSON + CSV)
 ```
-
-## Settings You Can Change
-
-Edit `config.py` to customize:
-
-| Setting | Default | What it does |
-|---------|---------|--------------|
-| `DEFAULT_NEWS_LIMIT` | 20 | How many articles to analyze per stock |
-| `NEWS_LOOKBACK_DAYS` | 7 | How far back to look for news (in days) |
-| `MAX_CONCURRENT_LLM_CALLS` | 5 | How many articles to analyze at the same time (higher = faster but uses more API quota) |
 
 ---
 
@@ -174,25 +202,24 @@ Edit `config.py` to customize:
 
 | Problem | Solution |
 |---------|----------|
-| `pip not found` | Use `python -m pip install -r requirements.txt` |
-| `ModuleNotFoundError` | Make sure you ran `pip install -r requirements.txt` |
-| `POLYGON_API_KEY is required` | Create the `.env` file with your API keys (see Step 3) |
-| `WAVESPEED_API_KEY is required` | Same as above — make sure both keys are in `.env` |
-| `No news found for XXXX` | The ticker might not have recent news, or check your Polygon API key |
-| Garbled text on Windows | This is a known encoding issue — the analysis still works correctly |
+| `ModuleNotFoundError` | Run `pip install -r requirements.txt` |
+| `POLYGON_API_KEY is required` | Create `.env` file with your keys |
+| `No trained model found` | Run `python ml_scorer.py --train` first |
+| `429 Too Many Requests` | WaveSpeed API rate limit — reduce `-n` or wait a moment |
+| Garbled text on Windows | Run with `python -X utf8 main.py ...` |
 
 ---
 
-## Important
+## Important Notes
 
-- **Do NOT share your `.env` file** — it contains your private API keys
-- API calls may cost money — check your usage on Polygon.io and WaveSpeed AI
-- This is an **educational project**, not financial advice. Do not make investment decisions based solely on this tool.
+- **Do NOT share your `.env` file** — it contains private API keys
+- This is an **educational project**, not financial advice
+- API calls may incur costs — monitor usage on Polygon.io and WaveSpeed AI
 
 ## Team
 
-- Zonglu Chen — LLM Pipeline & Evaluation
-- Jorge Garzon — Backend & Data Infrastructure
+- Zonglu Chen — LLM Pipeline, ML Scoring & Backtesting
+- Jorge Garzon — Technical Analysis & Backend
 - Alexander Pena — Web Interface & User Experience
 - Advisor: Dr. Mingzhe Chen
 
