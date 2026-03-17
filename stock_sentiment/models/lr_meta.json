@@ -1,5 +1,5 @@
 {
-  "trained_at": "2026-03-17T13:52:29.855768",
+  "trained_at": "2026-03-17T17:01:39.168410",
   "feature_columns": [
     "ema100_uptrend",
     "ema50_above_ema100",
@@ -14,25 +14,25 @@
     "sentiment_confidence",
     "news_count"
   ],
-  "n_samples": 9180,
-  "n_up": 6030,
-  "n_down": 3150,
+  "n_samples": 295,
+  "n_up": 200,
+  "n_down": 95,
   "coefficients": {
-    "ema100_uptrend": -0.9417,
-    "ema50_above_ema100": -0.2806,
-    "ema25_above_ema100": -0.407,
-    "ema_raw_points": 1.5889,
-    "rsi_value": 0.2509,
-    "price_vs_ema100": 0.3284,
-    "price_vs_ema50": -0.3438,
-    "price_vs_ema25": -0.1835,
-    "volume_ratio": 0.0695,
-    "sentiment_score": -0.0299,
-    "sentiment_confidence": 0.0572,
-    "news_count": 0.0257
+    "ema100_uptrend": 0.1516,
+    "ema50_above_ema100": -0.407,
+    "ema25_above_ema100": 0.2697,
+    "ema_raw_points": 0.1143,
+    "rsi_value": -0.1168,
+    "price_vs_ema100": -0.5015,
+    "price_vs_ema50": -0.0936,
+    "price_vs_ema25": 0.409,
+    "volume_ratio": 0.203,
+    "sentiment_score": 0.1256,
+    "sentiment_confidence": -0.1306,
+    "news_count": -0.4095
   },
-  "intercept": 0.0094,
+  "intercept": 0.0592,
   "include_sentiment": true,
-  "test_accuracy": 55.99,
-  "test_samples": 1836
+  "test_accuracy": 42.37,
+  "test_samples": 59
 }

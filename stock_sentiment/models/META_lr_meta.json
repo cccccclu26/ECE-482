@@ -1,0 +1,38 @@
+{
+  "trained_at": "2026-03-17T17:21:11.498257",
+  "feature_columns": [
+    "ema100_uptrend",
+    "ema50_above_ema100",
+    "ema25_above_ema100",
+    "ema_raw_points",
+    "rsi_value",
+    "price_vs_ema100",
+    "price_vs_ema50",
+    "price_vs_ema25",
+    "volume_ratio",
+    "sentiment_score",
+    "sentiment_confidence",
+    "news_count"
+  ],
+  "n_samples": 59,
+  "n_up": 43,
+  "n_down": 16,
+  "coefficients": {
+    "ema100_uptrend": 0.0,
+    "ema50_above_ema100": 0.0,
+    "ema25_above_ema100": 0.0,
+    "ema_raw_points": 0.0,
+    "rsi_value": -0.1263,
+    "price_vs_ema100": -0.4596,
+    "price_vs_ema50": -0.2608,
+    "price_vs_ema25": 0.2231,
+    "volume_ratio": 0.3238,
+    "sentiment_score": 0.6669,
+    "sentiment_confidence": 0.835,
+    "news_count": -0.6381
+  },
+  "intercept": 0.65,
+  "include_sentiment": true,
+  "test_accuracy": 66.67,
+  "ticker": "META"
+}

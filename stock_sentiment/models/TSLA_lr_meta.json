@@ -1,0 +1,38 @@
+{
+  "trained_at": "2026-03-17T17:21:11.534749",
+  "feature_columns": [
+    "ema100_uptrend",
+    "ema50_above_ema100",
+    "ema25_above_ema100",
+    "ema_raw_points",
+    "rsi_value",
+    "price_vs_ema100",
+    "price_vs_ema50",
+    "price_vs_ema25",
+    "volume_ratio",
+    "sentiment_score",
+    "sentiment_confidence",
+    "news_count"
+  ],
+  "n_samples": 59,
+  "n_up": 35,
+  "n_down": 24,
+  "coefficients": {
+    "ema100_uptrend": 0.2961,
+    "ema50_above_ema100": -0.0482,
+    "ema25_above_ema100": 0.3804,
+    "ema_raw_points": 0.2959,
+    "rsi_value": 0.5772,
+    "price_vs_ema100": -1.8623,
+    "price_vs_ema50": -0.1076,
+    "price_vs_ema25": 0.4483,
+    "volume_ratio": 0.1786,
+    "sentiment_score": 0.1946,
+    "sentiment_confidence": -0.1291,
+    "news_count": 0.5935
+  },
+  "intercept": 0.054,
+  "include_sentiment": true,
+  "test_accuracy": 58.33,
+  "ticker": "TSLA"
+}

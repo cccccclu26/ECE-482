@@ -1,0 +1,38 @@
+{
+  "trained_at": "2026-03-17T17:21:11.479564",
+  "feature_columns": [
+    "ema100_uptrend",
+    "ema50_above_ema100",
+    "ema25_above_ema100",
+    "ema_raw_points",
+    "rsi_value",
+    "price_vs_ema100",
+    "price_vs_ema50",
+    "price_vs_ema25",
+    "volume_ratio",
+    "sentiment_score",
+    "sentiment_confidence",
+    "news_count"
+  ],
+  "n_samples": 59,
+  "n_up": 35,
+  "n_down": 24,
+  "coefficients": {
+    "ema100_uptrend": 0.0,
+    "ema50_above_ema100": 0.0,
+    "ema25_above_ema100": 0.102,
+    "ema_raw_points": 0.102,
+    "rsi_value": 0.4127,
+    "price_vs_ema100": 0.7323,
+    "price_vs_ema50": -0.2503,
+    "price_vs_ema25": -0.522,
+    "volume_ratio": 0.4873,
+    "sentiment_score": 0.0331,
+    "sentiment_confidence": -0.0429,
+    "news_count": -0.4074
+  },
+  "intercept": 0.0553,
+  "include_sentiment": true,
+  "test_accuracy": 58.33,
+  "ticker": "NVDA"
+}

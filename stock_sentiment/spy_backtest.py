@@ -24,8 +24,9 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 from ml_scorer import (
     generate_features_from_price_data,
-    fetch_sentiment_for_date,
+    fetch_llm_sentiment_for_date,
     load_model,
+    load_per_stock_model,
     FEATURE_COLS,
     SENTIMENT_FEATURE_COLS,
 )
@@ -51,7 +52,7 @@ def fetch_all_price_data(tickers, start_date, end_date):
 
 def get_ml_score(model, scaler, feature_cols, ticker, date, price_data):
     """
-    Score a stock at a given date using the ML model.
+    Score a stock at a given date using its model.
     Uses only data available up to that date (no look-ahead bias).
     Returns P(up) probability 0-1.
     """
@@ -66,9 +67,9 @@ def get_ml_score(model, scaler, feature_cols, ticker, date, price_data):
     latest = features_df.iloc[-1]
     feat = {col: latest.get(col, 0) for col in FEATURE_COLS}
 
-    # Add sentiment if model expects it
+    # Add LLM sentiment if model expects it (consistent with training)
     if any(col in feature_cols for col in SENTIMENT_FEATURE_COLS):
-        sent = fetch_sentiment_for_date(ticker, date)
+        sent = fetch_llm_sentiment_for_date(ticker, date, news_limit=5)
         feat["sentiment_score"] = sent["sentiment_score"]
         feat["sentiment_confidence"] = sent["sentiment_confidence"]
         feat["news_count"] = sent["news_count"]
@@ -76,29 +77,36 @@ def get_ml_score(model, scaler, feature_cols, ticker, date, price_data):
     X = np.array([[feat.get(col, 0) for col in feature_cols]])
     X_scaled = scaler.transform(X)
     prob_up = model.predict_proba(X_scaled)[0][1]
-    return float(prob_up)
+    # Clip to [0.40, 0.90] to prevent probability saturation
+    # (LR can output extreme 0/1 values that mask real score differences)
+    prob_up = float(np.clip(prob_up, 0.40, 0.90))
+    return prob_up
 
 
-def score_to_weight(scores: dict, threshold: float = 0.52) -> dict:
+# Cache per-stock models to avoid reloading each time
+_stock_model_cache = {}
+
+def get_stock_model(ticker):
+    """Load and cache per-stock model."""
+    if ticker not in _stock_model_cache:
+        _stock_model_cache[ticker] = load_per_stock_model(ticker)
+    return _stock_model_cache[ticker]
+
+
+def score_to_weight(scores: dict, threshold: float = 0.52, max_weight: float = 0.40) -> dict:
     """
     Convert ML P(up) scores to portfolio weights.
+    ALL stocks are always included (fully invested).
+    Weight is proportional to P(up) score directly.
 
-    Only include stocks above threshold.
-    Weight = (score - 0.5) i.e. excess confidence above neutral.
-    Normalized so all weights sum to 1.
+    e.g. TSLA=0.90, AAPL=0.60, NVDA=0.40
+    → total=1.90, TSLA=47%, AAPL=32%, NVDA=21%
     """
-    eligible = {t: s for t, s in scores.items() if s >= threshold}
-    if not eligible:
-        # Fallback: equal weight top 3
-        top3 = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:3]
-        eligible = dict(top3)
-
-    excess = {t: s - 0.5 for t, s in eligible.items()}
-    total = sum(excess.values())
+    total = sum(scores.values())
     if total <= 0:
-        n = len(eligible)
-        return {t: 1/n for t in eligible}
-    return {t: v / total for t, v in excess.items()}
+        n = len(scores)
+        return {t: 1/n for t in scores}
+    return {t: s / total for t, s in scores.items()}
 
 
 def run_spy_backtest(start_date, end_date, top_k=3, rebalance_days=21, threshold=0.52):
@@ -120,11 +128,17 @@ def run_spy_backtest(start_date, end_date, top_k=3, rebalance_days=21, threshold
     print(f"Strategy:   Score-weighted portfolio (threshold={threshold:.0%}), rebalance every {rebalance_days} days")
     print(f"Benchmark:  SPY buy-and-hold")
 
-    # Load model
-    model, scaler, metadata = load_model()
-    feature_cols = metadata["feature_columns"]
-    include_sentiment = metadata.get("include_sentiment", False)
-    print(f"Model:      {metadata['n_samples']} samples, {metadata.get('test_accuracy', 'N/A')}% test accuracy")
+    # Load per-stock models (preload cache)
+    print(f"Loading per-stock models...")
+    loaded = []
+    for t in TICKERS:
+        try:
+            m, s, meta = get_stock_model(t)
+            acc = meta.get("test_accuracy", "N/A")
+            loaded.append(f"{t}({acc}%)")
+        except Exception:
+            loaded.append(f"{t}(no model)")
+    print(f"  {', '.join(loaded)}")
     print(f"{'='*65}\n")
 
     # Fetch all price data
@@ -166,10 +180,12 @@ def run_spy_backtest(start_date, end_date, top_k=3, rebalance_days=21, threshold
 
         print(f"[{r_idx+1:02d}/{len(rebalance_dates)}] {rebal_date.strftime('%Y-%m-%d')} → {next_rebal.strftime('%Y-%m-%d')}")
 
-        # Score all tickers at rebalance date
+        # Score all tickers using their own per-stock model
         scores = {}
         for ticker in TICKERS:
-            p_up = get_ml_score(model, scaler, feature_cols, ticker, rebal_date, price_data[ticker])
+            t_model, t_scaler, t_meta = get_stock_model(ticker)
+            t_feature_cols = t_meta["feature_columns"]
+            p_up = get_ml_score(t_model, t_scaler, t_feature_cols, ticker, rebal_date, price_data[ticker])
             scores[ticker] = p_up
 
         # Convert scores to weights
@@ -263,7 +279,12 @@ def main():
     parser.add_argument("--top-k", type=int, default=3, help="(unused) kept for compatibility")
     parser.add_argument("--rebalance-days", type=int, default=21, help="Trading days between rebalances (default: 21 = monthly)")
     parser.add_argument("--threshold", type=float, default=0.52, help="Min P(up) to include stock (default: 0.52)")
+    parser.add_argument("--tickers", nargs="+", default=None, help="Tickers to use (default: all 10)")
     args = parser.parse_args()
+
+    if args.tickers:
+        global TICKERS
+        TICKERS = [t.upper() for t in args.tickers]
 
     run_spy_backtest(
         start_date=args.start,

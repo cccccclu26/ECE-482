@@ -47,12 +47,50 @@ except LookupError:
 
 import config
 from technical_analysis import TechnicalAnalyzer
+from news_fetcher import NewsFetcher
+from sentiment_analyzer import SentimentAnalyzer
 
 # Paths
 MODEL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models")
 MODEL_PATH = os.path.join(MODEL_DIR, "lr_scorer.pkl")
 SCALER_PATH = os.path.join(MODEL_DIR, "lr_scaler.pkl")
 META_PATH = os.path.join(MODEL_DIR, "lr_meta.json")
+
+
+def get_per_stock_paths(ticker: str):
+    """Get model paths for a per-stock model."""
+    return (
+        os.path.join(MODEL_DIR, f"{ticker}_lr.pkl"),
+        os.path.join(MODEL_DIR, f"{ticker}_lr_scaler.pkl"),
+        os.path.join(MODEL_DIR, f"{ticker}_lr_meta.json"),
+    )
+
+
+def save_per_stock_model(ticker: str, model, scaler, metadata: Dict):
+    """Save a per-stock model to disk."""
+    ensure_model_dir()
+    model_path, scaler_path, meta_path = get_per_stock_paths(ticker)
+    with open(model_path, "wb") as f:
+        pickle.dump(model, f)
+    with open(scaler_path, "wb") as f:
+        pickle.dump(scaler, f)
+    with open(meta_path, "w") as f:
+        json.dump(metadata, f, indent=2)
+
+
+def load_per_stock_model(ticker: str):
+    """Load a per-stock model. Falls back to global model if not found."""
+    model_path, scaler_path, meta_path = get_per_stock_paths(ticker)
+    if os.path.exists(model_path):
+        with open(model_path, "rb") as f:
+            model = pickle.load(f)
+        with open(scaler_path, "rb") as f:
+            scaler = pickle.load(f)
+        with open(meta_path, "r") as f:
+            metadata = json.load(f)
+        return model, scaler, metadata
+    # Fallback to global model
+    return load_model()
 
 
 def ensure_model_dir():
@@ -172,6 +210,7 @@ def generate_training_data(
     start_date: str,
     end_date: str,
     forward_days: int = 5,
+    sample_every: int = 1,
 ) -> pd.DataFrame:
     """
     Generate training data from multiple tickers.
@@ -206,6 +245,11 @@ def generate_training_data(
 
             # Filter to requested date range
             features = features[features["date"] >= pd.Timestamp(start_date)]
+
+            # Weekly/custom sampling to reduce data points (useful for LLM sentiment)
+            if sample_every > 1:
+                features = features.iloc[::sample_every].reset_index(drop=True)
+
             features["ticker"] = ticker
 
             print(f"    {len(features)} samples ({features['direction'].sum()} up, {len(features) - features['direction'].sum()} down)")
@@ -284,6 +328,33 @@ def fetch_sentiment_for_date(ticker: str, date: pd.Timestamp) -> Dict:
     }
 
 
+def fetch_llm_sentiment_for_date(ticker: str, date: pd.Timestamp, news_limit: int = 5) -> Dict:
+    """
+    Fetch news from Polygon.io and score with real LLM ensemble (Claude + GPT-5).
+    Same pipeline as main.py — used for high-quality training labels.
+
+    Returns dict with: sentiment_score, sentiment_confidence, news_count
+    """
+    fetcher = NewsFetcher()
+    analyzer = SentimentAnalyzer()
+
+    end_str = date.strftime("%Y-%m-%d")
+    start_str = (date - timedelta(days=7)).strftime("%Y-%m-%d")
+
+    news_list = fetcher.get_news_by_date(ticker, start_str, end_str, limit=news_limit)
+    if not news_list:
+        return {"sentiment_score": 50.0, "sentiment_confidence": 0.0, "news_count": 0}
+
+    results = analyzer.analyze_news_batch(news_list)
+    agg = analyzer.aggregate_sentiment(results)
+
+    return {
+        "sentiment_score": float(agg["final_score"]),
+        "sentiment_confidence": float(agg["avg_confidence"]),
+        "news_count": int(agg["news_count"]),
+    }
+
+
 def add_sentiment_to_training_data(df: pd.DataFrame, ticker_col: str = "ticker") -> pd.DataFrame:
     """
     Add VADER-based sentiment columns to an existing feature DataFrame.
@@ -308,6 +379,47 @@ def add_sentiment_to_training_data(df: pd.DataFrame, ticker_col: str = "ticker")
             time.sleep(0.05)  # Gentle rate limiting
 
     sent_df = pd.DataFrame(sentiment_scores).set_index("_idx")
+    result = df.copy()
+    result["sentiment_score"] = sent_df["sentiment_score"]
+    result["sentiment_confidence"] = sent_df["sentiment_confidence"]
+    result["news_count"] = sent_df["news_count"]
+    return result
+
+
+def add_llm_sentiment_to_training_data(df: pd.DataFrame, ticker_col: str = "ticker", news_limit: int = 5) -> pd.DataFrame:
+    """
+    Add real LLM sentiment (Claude + GPT-5) to training data.
+    Much slower than VADER but produces higher-quality sentiment features
+    that match what the model sees at prediction time.
+
+    Args:
+        df: DataFrame with 'date' and 'ticker' columns
+        ticker_col: Column name for ticker symbol
+        news_limit: Articles per date (keep low to control API calls)
+
+    Returns:
+        DataFrame with sentiment_score, sentiment_confidence, news_count columns
+    """
+    sentiment_rows = []
+    total = len(df)
+    done = 0
+
+    for ticker, group in df.groupby(ticker_col):
+        print(f"\n  [{ticker}] {len(group)} dates to analyze...")
+        for idx, row in group.iterrows():
+            done += 1
+            date_str = row["date"].strftime("%Y-%m-%d")
+            print(f"    [{done}/{total}] {ticker} {date_str}", end=" ", flush=True)
+            try:
+                sent = fetch_llm_sentiment_for_date(ticker, row["date"], news_limit=news_limit)
+                print(f"→ score={sent['sentiment_score']:.0f} conf={sent['sentiment_confidence']:.0f} n={sent['news_count']}")
+            except Exception as e:
+                print(f"→ failed ({e}), using default")
+                sent = {"sentiment_score": 50.0, "sentiment_confidence": 0.0, "news_count": 0}
+            sentiment_rows.append({"_idx": idx, **sent})
+            time.sleep(1.0)  # Respect API rate limits
+
+    sent_df = pd.DataFrame(sentiment_rows).set_index("_idx")
     result = df.copy()
     result["sentiment_score"] = sent_df["sentiment_score"]
     result["sentiment_confidence"] = sent_df["sentiment_confidence"]
@@ -599,6 +711,9 @@ def main():
     parser.add_argument("--forward-days", type=int, default=5, help="Forward return period in days")
     parser.add_argument("--eval", action="store_true", help="Evaluate with train/test split")
     parser.add_argument("--sentiment", action="store_true", help="Include VADER sentiment features from Polygon.io news")
+    parser.add_argument("--llm-sentiment", action="store_true", help="Include real LLM (Claude+GPT-5) sentiment features — slower but higher quality")
+    parser.add_argument("--sample-every", type=int, default=1, help="Sample every N rows (e.g. 5=weekly). Recommended with --llm-sentiment to reduce API calls")
+    parser.add_argument("--per-stock", action="store_true", help="Train and save a separate model for each ticker")
     parser.add_argument("--info", action="store_true", help="Show trained model info")
 
     args = parser.parse_args()
@@ -616,6 +731,13 @@ def main():
         print(f"Forward: {args.forward_days} days")
         print()
 
+        use_llm = args.llm_sentiment
+        sample_every = args.sample_every if use_llm and args.sample_every == 1 else args.sample_every
+        # Default weekly sampling when using LLM sentiment (to control API cost)
+        if use_llm and args.sample_every == 1:
+            sample_every = 5
+            print("  [Auto] --llm-sentiment detected: defaulting to --sample-every 5 (weekly) to reduce API calls")
+
         # Generate training data
         print("[1/3] Generating training data from historical prices...")
         data = generate_training_data(
@@ -623,13 +745,58 @@ def main():
             start_date=args.start,
             end_date=args.end,
             forward_days=args.forward_days,
+            sample_every=sample_every,
         )
 
-        if args.sentiment:
+        if use_llm:
+            print(f"\n[1b] Adding LLM sentiment (Claude+GPT-5) from Polygon.io news...")
+            print(f"  {len(data)} data points × ~5 articles × 2 models ≈ {len(data)*10} API calls")
+            data = add_llm_sentiment_to_training_data(data)
+            print(f"\n  LLM sentiment added. Avg score: {data['sentiment_score'].mean():.1f}, "
+                  f"Avg confidence: {data['sentiment_confidence'].mean():.1f}")
+        elif args.sentiment:
             print("\n[1b] Adding VADER sentiment features from Polygon.io news...")
             data = add_sentiment_to_training_data(data)
             print(f"  Sentiment added. Avg score: {data['sentiment_score'].mean():.1f}, "
                   f"Avg news/day: {data['news_count'].mean():.1f}")
+
+        if args.per_stock:
+            print(f"\n[Per-Stock Mode] Training individual model for each ticker...")
+            summary = []
+            for ticker in args.tickers:
+                print(f"\n{'─'*50}")
+                print(f"Training: {ticker}")
+                ticker_data = data[data["ticker"] == ticker].copy()
+                if len(ticker_data) < 20:
+                    print(f"  Skipped: insufficient data ({len(ticker_data)} samples)")
+                    continue
+                t_train, t_test = train_test_split(ticker_data, test_size=0.2, random_state=42, stratify=ticker_data["direction"])
+                t_model, t_scaler, t_meta = train_model(t_train, include_sentiment=args.sentiment or use_llm)
+                eval_r = evaluate_model(t_model, t_scaler, t_test, t_meta["feature_columns"])
+                t_meta["test_accuracy"] = eval_r["accuracy"]
+                t_meta["ticker"] = ticker
+                # Retrain on full ticker data
+                t_model, t_scaler, t_meta_full = train_model(ticker_data, include_sentiment=args.sentiment or use_llm)
+                t_meta_full["test_accuracy"] = eval_r["accuracy"]
+                t_meta_full["ticker"] = ticker
+                save_per_stock_model(ticker, t_model, t_scaler, t_meta_full)
+                sent_coef = t_meta_full["coefficients"].get("sentiment_score", 0)
+                print(f"  Accuracy: {eval_r['accuracy']:.1f}%  |  sentiment_score weight: {sent_coef:+.3f}")
+                summary.append({"ticker": ticker, "accuracy": eval_r["accuracy"], "sentiment_weight": sent_coef, "samples": len(ticker_data)})
+
+            print(f"\n{'='*55}")
+            print(f"PER-STOCK TRAINING SUMMARY")
+            print(f"{'='*55}")
+            print(f"  {'Ticker':<8} {'Samples':>8} {'Accuracy':>10} {'Sentiment Weight':>18}")
+            print(f"  {'─'*46}")
+            for s in summary:
+                print(f"  {s['ticker']:<8} {s['samples']:>8} {s['accuracy']:>9.1f}%  {s['sentiment_weight']:>+17.3f}")
+            avg_acc = sum(s['accuracy'] for s in summary) / len(summary)
+            avg_sent = sum(s['sentiment_weight'] for s in summary) / len(summary)
+            print(f"  {'─'*46}")
+            print(f"  {'Average':<8} {'':>8} {avg_acc:>9.1f}%  {avg_sent:>+17.3f}")
+            print(f"\nPer-stock models saved to: {MODEL_DIR}")
+            return
 
         if args.eval:
             # Split into train/test
@@ -637,7 +804,7 @@ def main():
             train_data, test_data = train_test_split(data, test_size=0.2, random_state=42, stratify=data["direction"])
             print(f"  Train: {len(train_data)} samples | Test: {len(test_data)} samples")
 
-            model, scaler, metadata = train_model(train_data, include_sentiment=args.sentiment)
+            model, scaler, metadata = train_model(train_data, include_sentiment=args.sentiment or use_llm)
 
             # Evaluate on test set
             print("\n[3/3] Evaluating on test set...")
@@ -655,7 +822,7 @@ def main():
 
             # Now retrain on ALL data for the final saved model
             print("\n  Retraining on full dataset for final model...")
-            model, scaler, metadata_full = train_model(data, include_sentiment=args.sentiment)
+            model, scaler, metadata_full = train_model(data, include_sentiment=args.sentiment or use_llm)
             metadata_full["test_accuracy"] = eval_result["accuracy"]
             metadata_full["test_samples"] = eval_result["n_test_samples"]
             save_model(model, scaler, metadata_full)
@@ -663,7 +830,7 @@ def main():
         else:
             # Train on all data
             print("\n[2/3] Training on full dataset...")
-            model, scaler, metadata = train_model(data, include_sentiment=args.sentiment)
+            model, scaler, metadata = train_model(data, include_sentiment=args.sentiment or use_llm)
 
             print("\n[3/3] Saving model...")
             save_model(model, scaler, metadata)
