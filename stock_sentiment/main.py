@@ -16,6 +16,13 @@ from technical_analysis import TechnicalAnalyzer
 from combined_scorer import combine_scores
 import config
 
+# ML scorer (optional - used with --ml flag)
+try:
+    from ml_scorer import MLScorer
+    ML_AVAILABLE = True
+except (ImportError, FileNotFoundError):
+    ML_AVAILABLE = False
+
 # Results directory
 RESULTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
 
@@ -28,10 +35,26 @@ def ensure_results_dir():
 class StockAnalysisSystem:
     """Stock Analysis System - Combines Sentiment + Technical Analysis"""
 
-    def __init__(self):
+    def __init__(self, use_ml: bool = False):
         self.news_fetcher = NewsFetcher()
         self.sentiment_analyzer = SentimentAnalyzer()
         self.technical_analyzer = TechnicalAnalyzer()
+        self.use_ml = use_ml
+        self.ml_scorer = None
+
+        if use_ml:
+            if not ML_AVAILABLE:
+                print("WARNING: ML scorer not available. Run 'python ml_scorer.py --train' first.")
+                print("Falling back to rule-based scoring.")
+                self.use_ml = False
+            else:
+                try:
+                    self.ml_scorer = MLScorer()
+                    print("[ML Mode] Using trained Logistic Regression model for scoring")
+                except FileNotFoundError:
+                    print("WARNING: No trained model found. Run 'python ml_scorer.py --train' first.")
+                    print("Falling back to rule-based scoring.")
+                    self.use_ml = False
 
     def analyze_stock(self, ticker: str, news_limit: int = 20) -> Dict:
         """
@@ -82,15 +105,36 @@ class StockAnalysisSystem:
 
         # ---- Combined Score ----
         print(f"\n[3/3] Calculating combined score...")
-        combined = combine_scores(sentiment_score, technical_score)
+
+        if self.use_ml and self.ml_scorer:
+            ml_result = self.ml_scorer.predict(
+                sentiment_score=sentiment_score,
+                sentiment_confidence=sentiment_agg.get("avg_confidence"),
+                news_count=sentiment_agg.get("news_count", 0),
+                technical_data=tech_result,
+            )
+            final_score = ml_result["ml_score"]
+            grade = ml_result["grade"]
+            breakdown = {
+                "sentiment_score": round(sentiment_score, 2),
+                "technical_score": round(technical_score, 2),
+                "scoring_method": "ml_logistic_regression",
+                "probability_up": ml_result["probability_up"],
+                "probability_down": ml_result["probability_down"],
+            }
+        else:
+            combined = combine_scores(sentiment_score, technical_score)
+            final_score = combined["final_score"]
+            grade = combined["grade"]
+            breakdown = combined["breakdown"]
 
         result = {
             "ticker": ticker,
             "analysis_time": datetime.now().isoformat(),
             "lookback_days": config.NEWS_LOOKBACK_DAYS,
-            "final_score": combined["final_score"],
-            "grade": combined["grade"],
-            "breakdown": combined["breakdown"],
+            "final_score": final_score,
+            "grade": grade,
+            "breakdown": breakdown,
             "sentiment": sentiment_agg,
             "technical": tech_result,
         }
@@ -173,8 +217,14 @@ class StockAnalysisSystem:
         print(f"  {result['ticker']}  |  FINAL SCORE: {result['final_score']} / 100  |  {result['grade']}")
         print(f"{'='*60}")
 
-        print(f"\n  Sentiment:  {bd['sentiment_score']:.1f} x {bd['sentiment_weight']:.0%} = {bd['sentiment_contribution']:.1f} pts")
-        print(f"  Technical:  {bd['technical_score']:.1f} x {bd['technical_weight']:.0%} = {bd['technical_contribution']:.1f} pts")
+        if bd.get("scoring_method") == "ml_logistic_regression":
+            print(f"\n  Scoring Method: ML Logistic Regression")
+            print(f"  Sentiment Input:  {bd['sentiment_score']:.1f}")
+            print(f"  Technical Input:  {bd['technical_score']:.1f}")
+            print(f"  P(Up): {bd['probability_up']:.2%}  P(Down): {bd['probability_down']:.2%}")
+        else:
+            print(f"\n  Sentiment:  {bd['sentiment_score']:.1f} x {bd['sentiment_weight']:.0%} = {bd['sentiment_contribution']:.1f} pts")
+            print(f"  Technical:  {bd['technical_score']:.1f} x {bd['technical_weight']:.0%} = {bd['technical_contribution']:.1f} pts")
 
         # Sentiment details
         print(f"\n  --- Sentiment ({sent.get('news_count', 0)} articles) ---")
@@ -238,9 +288,10 @@ def main():
     parser.add_argument("-t", "--ticker", type=str, help="Analyze a single stock (e.g., AAPL)")
     parser.add_argument("-a", "--all", action="store_true", help="Analyze all configured tech stocks")
     parser.add_argument("-n", "--news-limit", type=int, default=20, help="News articles per stock (default: 20)")
+    parser.add_argument("--ml", action="store_true", help="Use ML (Logistic Regression) scoring instead of rule-based")
 
     args = parser.parse_args()
-    system = StockAnalysisSystem()
+    system = StockAnalysisSystem(use_ml=args.ml)
 
     if args.ticker:
         result = system.analyze_stock(args.ticker.upper(), args.news_limit)

@@ -27,3 +27,6 @@ Thumbs.db
 
 # Data cache (but keep results/)
 !stock_sentiment/results/
+
+# Trained model binaries (regenerate with: python ml_scorer.py --train --sentiment)
+stock_sentiment/models/*.pkl

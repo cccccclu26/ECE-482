@@ -1,0 +1,376 @@
+{
+  "ticker": "AAPL",
+  "analysis_time": "2026-03-17T12:00:45.071930",
+  "lookback_days": 7,
+  "final_score": 20.01,
+  "grade": "SELL",
+  "breakdown": {
+    "sentiment_score": 57.26,
+    "technical_score": 47.5,
+    "scoring_method": "ml_logistic_regression",
+    "probability_up": 0.2001,
+    "probability_down": 0.7999
+  },
+  "sentiment": {
+    "final_score": 57.26,
+    "sentiment": "neutral",
+    "news_count": 20,
+    "avg_confidence": 80.4,
+    "bullish_count": 5,
+    "bearish_count": 1,
+    "neutral_count": 14,
+    "details": [
+      {
+        "sentiment": "neutral",
+        "score": 50,
+        "confidence": 78,
+        "reason": "[gpt-5-chat] News benefits Samsung and Nvidia in AI chips, with no direct impact on Apple’s operations or competitive advantage mentioned. | [claude-3.7-sonnet] This news focuses on Samsung and Nvidia partnership with no direct mention of Apple or impact on AAPL stock.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 50,
+          "claude-3.7-sonnet": 50
+        },
+        "title": "Samsung Stock Jumps As Nvidia CEO Jensen Huang Confirms New AI Chip Production Deal",
+        "source": "Benzinga",
+        "published_utc": "2026-03-17T10:02:20Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 50,
+        "confidence": 78,
+        "reason": "[gpt-5-chat] The ruling targets Polymarket, not Apple directly. Removal of one minor app has negligible financial impact on Apple's overall operations. | [claude-3.7-sonnet] News concerns regulatory action against Polymarket in Argentina but has minimal direct impact on Apple's core business or revenue.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 50,
+          "claude-3.7-sonnet": 50
+        },
+        "title": "Crypto Prediction Platform Polymarket Blocked In Argentina For Facilitating Unauthorized Betting: Report",
+        "source": "Benzinga",
+        "published_utc": "2026-03-17T09:03:33Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 50,
+        "confidence": 78,
+        "reason": "[gpt-5-chat] News concerns Alphabet's buybacks, not Apple; minimal direct impact on AAPL fundamentals or investor sentiment. | [claude-3.7-sonnet] News focuses on Google/Alphabet, not Apple. Without direct AAPL impact mentioned, no relevant sentiment can be derived for Apple stock.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 50,
+          "claude-3.7-sonnet": 50
+        },
+        "title": "Google Parent Alphabet's $346 Billion Investment Is Providing a Big Lift to Its Bottom Line -- but It Has Nothing to Do With Artificial Intelligence (AI)",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-17T08:06:00Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 55,
+        "confidence": 70,
+        "reason": "[claude-3.7-sonnet] The news focuses on an ETF sale that includes AAPL, but appears to be routine rebalancing rather than signaling negative sentiment about Apple specifically.",
+        "models_used": [
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "claude-3.7-sonnet": 55
+        },
+        "title": "What Investors Should Know About This $8 Million Tech ETF Sale Last Quarter",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-17T00:28:41Z"
+      },
+      {
+        "sentiment": "bearish",
+        "score": 35,
+        "confidence": 85,
+        "reason": "[gpt-5-chat] Article favors Amazon over Apple, citing lower valuation and stronger growth prospects, suggesting weaker near-term sentiment toward Apple.",
+        "models_used": [
+          "gpt-5-chat"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 35
+        },
+        "title": "Better Stock to Buy Right Now: Amazon vs. Apple",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-16T19:25:00Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 52,
+        "confidence": 72,
+        "reason": "[gpt-5-chat] News is about Qorvo, not Apple; indirect sector optimism but no direct impact on AAPL fundamentals. | [claude-3.7-sonnet] News is about Qorvo (QRVO), not Apple (AAPL). No relevant information about AAPL is provided to make any sentiment assessment.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 55,
+          "claude-3.7-sonnet": 50
+        },
+        "title": "Kintayl Capital Loads Up Qorvo Stock With 124,000 Shares Buy",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-16T17:24:41Z"
+      },
+      {
+        "sentiment": "bullish",
+        "score": 76,
+        "confidence": 85,
+        "reason": "[gpt-5-chat] Aggressive pricing and cost absorption strengthen market share and long-term growth, despite short-term margin pressure. | [claude-3.7-sonnet] Strategic pricing leverages Apple's financial strength to gain market share while competitors struggle, with premium lines offsetting margin pressure from budget offerings.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 75,
+          "claude-3.7-sonnet": 78
+        },
+        "title": "Apple Launches a Price War Its Rivals Can’t Afford to Fight",
+        "source": "Investing.com",
+        "published_utc": "2026-03-16T16:09:00Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 50,
+        "confidence": 85,
+        "reason": "[gpt-5-chat] The article highlights Microsoft and Amazon as AI leaders, offering no direct insights or drivers specific to Apple's performance or valuation.",
+        "models_used": [
+          "gpt-5-chat"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 50
+        },
+        "title": "The Most Overlooked Artificial Intelligence (AI) Stocks in the \"Magnificent Seven\" for 2026",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-15T22:25:00Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 52,
+        "confidence": 75,
+        "reason": "[gpt-5-chat] Article focuses on ETFs comparison, not AAPL directly; mild negative implication as investors advised to diversify away from tech exposure including Apple. | [claude-3.7-sonnet] News compares two dividend ETFs with no direct impact on AAPL stock; AAPL is not specifically mentioned in the analysis.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 55,
+          "claude-3.7-sonnet": 50
+        },
+        "title": "Fidelity (FDVV) vs. ProShares (NOBL): Which Dividend ETF Reigns Supreme?",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-15T21:18:03Z"
+      },
+      {
+        "sentiment": "bullish",
+        "score": 75,
+        "confidence": 82,
+        "reason": "[gpt-5-chat] Apple is listed among top AI buy recommendations, indicating optimism about its AI-driven growth potential amid market pullback. | [claude-3.7-sonnet] Apple is highlighted as a top AI stock to buy during market pullback, indicating positive growth prospects in AI despite current market volatility.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 75,
+          "claude-3.7-sonnet": 75
+        },
+        "title": "My Top 5 AI Stocks to Buy Amid the Market Pullback",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-15T18:10:00Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 50,
+        "confidence": 72,
+        "reason": "[gpt-5-chat] The article promotes an ETF, not AAPL specifically, and AAPL is not directly discussed or impacted by the news. | [claude-3.7-sonnet] Article focuses on a GARP ETF rather than Apple specifically. No direct information about AAPL stock performance or outlook is provided.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 50,
+          "claude-3.7-sonnet": 50
+        },
+        "title": "Is the iShares MSCI USA Quality GARP ETF the Smartest Investment You Can Make in March?",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-15T13:25:00Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 52,
+        "confidence": 75,
+        "reason": "[gpt-5-chat] No direct AAPL news; broader tech AI expansion is positive for the sector but lacks Apple-specific catalysts. | [claude-3.7-sonnet] News doesn't specifically mention AAPL. Broader tech environment shows mixed signals with AI investments but also challenges in the sector.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 55,
+          "claude-3.7-sonnet": 50
+        },
+        "title": "Consumer Tech News (Mar 9-13): Trump Administration Sues California Over Emissions Targets, Nvidia Announces $26B AI Investment & More",
+        "source": "Benzinga",
+        "published_utc": "2026-03-15T13:20:41Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 52,
+        "confidence": 78,
+        "reason": "[gpt-5-chat] Article focuses on ETF performance comparison, not AAPL directly; mentions tech sector strength indirectly positive but lacks AAPL-specific catalysts. | [claude-3.7-sonnet] Article compares two ETFs without specific AAPL implications; AAPL is likely included in ITOT but not central to the analysis.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 55,
+          "claude-3.7-sonnet": 50
+        },
+        "title": "ITOT vs. VTV: Is Broad Market Exposure or Value Stock Stability the Better Buy for Investors?",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-14T21:10:54Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 52,
+        "confidence": 78,
+        "reason": "[gpt-5-chat] Article focuses on TSM’s AI growth, mentioning Apple only as a customer with no specific impact on AAPL’s performance. | [claude-3.7-sonnet] The news primarily focuses on TSM as an AI investment, with only minor mention of Apple as a TSM customer, without direct impact on AAPL stock.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 50,
+          "claude-3.7-sonnet": 55
+        },
+        "title": "Satya Nadella Says \"All Software Is Being Rewritten.\" Here's 1 of the Best Artificial Intelligence (AI) Stocks to Own for 2026.",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-14T20:05:00Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 55,
+        "confidence": 85,
+        "reason": "[gpt-5-chat] Article focuses on VTI’s overall market exposure, not AAPL specifically, offering a positive long-term view of equities but no direct impact on Apple’s stock.",
+        "models_used": [
+          "gpt-5-chat"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 55
+        },
+        "title": "Could Buying the Vanguard Total Stock Market ETF in 2026 Make You a Millionaire?",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-14T15:30:00Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 50,
+        "confidence": 85,
+        "reason": "[gpt-5-chat] Article neutrally compares two tech ETFs, with no explicit bullish or bearish indication for Apple or the tech sector overall. | [claude-3.7-sonnet] The news compares two tech ETFs without expressing direct sentiment about AAPL, though AAPL is likely a major holding in both funds.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 50,
+          "claude-3.7-sonnet": 50
+        },
+        "title": "VGT vs. XLK: Which Broad Tech ETF Is the Better Buy Right Now?",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-13T19:37:49Z"
+      },
+      {
+        "sentiment": "neutral",
+        "score": 50,
+        "confidence": 90,
+        "reason": "[gpt-5-chat] News is about USA Rare Earth, not directly related to AAPL, implying negligible impact on Apple’s stock sentiment.",
+        "models_used": [
+          "gpt-5-chat"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 50
+        },
+        "title": "Is USA Rare Earth Stock a Millionaire Maker?",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-13T19:30:00Z"
+      },
+      {
+        "sentiment": "bullish",
+        "score": 72,
+        "confidence": 82,
+        "reason": "[gpt-5-chat] Positive narrative highlighting leadership vision, Apple's growth from struggle to $3T valuation reinforces confidence in company stability and long-term success. | [claude-3.7-sonnet] Positive historical perspective highlighting Cook's successful leadership journey and Apple's tremendous growth to $3T valuation, showing strong organizational foundation and leadership continuity.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 70,
+          "claude-3.7-sonnet": 75
+        },
+        "title": "Tim Cook Quit A Safe IBM Job For A Struggling Apple After Asking Himself One Question— 'I Was Warned...'",
+        "source": "Benzinga",
+        "published_utc": "2026-03-13T18:01:12Z"
+      },
+      {
+        "sentiment": "bullish",
+        "score": 85,
+        "confidence": 90,
+        "reason": "[gpt-5-chat] Strong revenue growth, AI demand, market dominance, and reasonable valuation suggest continued optimism for TSMC's long-term potential.",
+        "models_used": [
+          "gpt-5-chat"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 85
+        },
+        "title": "Up Over 100% in 1 Year, Should You Buy Taiwan Semiconductor Manufacturing Company Right Now?",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-13T13:15:00Z"
+      },
+      {
+        "sentiment": "bullish",
+        "score": 76,
+        "confidence": 85,
+        "reason": "[gpt-5-chat] Positive mention of Apple’s new budget laptop and strong high-margin Services growth indicate continued earnings strength and investor appeal. | [claude-3.7-sonnet] Positive recommendation for Apple as a top investment choice, highlighting new products and strong Services segment growth with high profit margins.",
+        "models_used": [
+          "gpt-5-chat",
+          "claude-3.7-sonnet"
+        ],
+        "model_scores": {
+          "gpt-5-chat": 78,
+          "claude-3.7-sonnet": 75
+        },
+        "title": "The Best Stocks to Invest $1,000 in Right Now",
+        "source": "The Motley Fool",
+        "published_utc": "2026-03-13T13:05:00Z"
+      }
+    ]
+  },
+  "technical": {
+    "ticker": "AAPL",
+    "technical_score": 47.5,
+    "signal": "neutral",
+    "ema": {
+      "score": 75.0,
+      "raw_points": 2,
+      "ema100_uptrend": true,
+      "ema50_above_ema100": true,
+      "ema25_above_ema100": false
+    },
+    "rsi": {
+      "score": 20,
+      "value": 37.74,
+      "signal": "bearish_momentum"
+    },
+    "price": {
+      "current": 254.28,
+      "ema25": 260.99,
+      "ema50": 262.92,
+      "ema100": 262.16
+    }
+  }
+}
