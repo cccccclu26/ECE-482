@@ -19,7 +19,7 @@ DEFAULT_NEWS_LIMIT = 20  # Default number of news articles per stock
 NEWS_LOOKBACK_DAYS = 7   # Fetch news from the past N days
 
 # Concurrency config
-MAX_CONCURRENT_LLM_CALLS = 5  # Max parallel LLM API calls
+MAX_CONCURRENT_LLM_CALLS = 1  # Sequential to avoid rate limits
 
 # WaveSpeed LLM API config
 WAVESPEED_API_URL = "https://api.wavespeed.ai/api/v3/wavespeed-ai/any-llm"

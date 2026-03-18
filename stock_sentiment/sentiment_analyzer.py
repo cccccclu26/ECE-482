@@ -4,6 +4,7 @@ Runs both Claude 3.7 Sonnet and GPT-5 on each article, averages their scores.
 Supports concurrent LLM calls for faster batch analysis.
 """
 import json
+import time
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import List, Dict
@@ -133,15 +134,12 @@ class SentimentAnalyzer:
             published_date=news.get("published_utc", "")
         )
 
-        # Call all models in parallel
+        # Call models sequentially to avoid rate limits
         model_results = []
-        with ThreadPoolExecutor(max_workers=len(self.models)) as executor:
-            futures = {
-                executor.submit(self._analyze_with_single_model, prompt, model): model
-                for model in self.models
-            }
-            for future in as_completed(futures):
-                model_results.append(future.result())
+        for model in self.models:
+            result = self._analyze_with_single_model(prompt, model)
+            model_results.append(result)
+            time.sleep(1.0)  # 1s between each model call
 
         # Average results
         averaged = self._average_model_results(model_results)
