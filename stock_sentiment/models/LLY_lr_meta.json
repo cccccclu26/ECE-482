@@ -1,0 +1,38 @@
+{
+  "trained_at": "2026-03-18T21:50:57.818621",
+  "feature_columns": [
+    "ema100_uptrend",
+    "ema50_above_ema100",
+    "ema25_above_ema100",
+    "ema_raw_points",
+    "rsi_value",
+    "price_vs_ema100",
+    "price_vs_ema50",
+    "price_vs_ema25",
+    "volume_ratio",
+    "sentiment_score",
+    "sentiment_confidence",
+    "news_count"
+  ],
+  "n_samples": 45,
+  "n_up": 34,
+  "n_down": 11,
+  "coefficients": {
+    "ema100_uptrend": -0.001,
+    "ema50_above_ema100": -0.474,
+    "ema25_above_ema100": -0.6855,
+    "ema_raw_points": -0.4274,
+    "rsi_value": 0.5024,
+    "price_vs_ema100": -0.4042,
+    "price_vs_ema50": -0.5966,
+    "price_vs_ema25": -0.5732,
+    "volume_ratio": -0.0157,
+    "sentiment_score": -0.4025,
+    "sentiment_confidence": 0.5164,
+    "news_count": -0.1522
+  },
+  "intercept": 0.6551,
+  "include_sentiment": true,
+  "test_accuracy": 66.67,
+  "ticker": "LLY"
+}

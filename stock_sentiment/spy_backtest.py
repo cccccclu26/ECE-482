@@ -14,6 +14,7 @@ Usage:
 """
 import argparse
 import ssl
+import time
 from datetime import datetime, timedelta
 
 import numpy as np
@@ -93,20 +94,33 @@ def get_stock_model(ticker):
     return _stock_model_cache[ticker]
 
 
-def score_to_weight(scores: dict, threshold: float = 0.52, max_weight: float = 0.40) -> dict:
+def score_to_weight(scores: dict, threshold: float = 0.52) -> dict:
     """
-    Convert ML P(up) scores to portfolio weights.
-    ALL stocks are always included (fully invested).
-    Weight is proportional to P(up) score directly.
+    Convert ML P(up) scores to portfolio weights with defensive cash mode.
 
-    e.g. TSLA=0.90, AAPL=0.60, NVDA=0.40
-    → total=1.90, TSLA=47%, AAPL=32%, NVDA=21%
+    Equity exposure = fraction of stocks with P(up) >= threshold.
+    Qualifying stocks are weighted proportional to their P(up) score.
+    The remaining allocation sits in CASH (0% return).
+
+    e.g. threshold=0.52, 6/10 stocks qualify → 60% equity, 40% cash
+    Qualifying: TSLA=0.90, AAPL=0.60, NVDA=0.55
+    → total_qual=2.05, TSLA=26%, AAPL=18%, NVDA=16%, CASH=40%
     """
-    total = sum(scores.values())
-    if total <= 0:
-        n = len(scores)
-        return {t: 1/n for t in scores}
-    return {t: s / total for t, s in scores.items()}
+    qualifying = {t: s for t, s in scores.items() if s >= threshold}
+    n_total = len(scores)
+    n_qualifying = len(qualifying)
+
+    if n_qualifying == 0:
+        return {"CASH": 1.0}
+
+    equity_pct = n_qualifying / n_total
+    total_score = sum(qualifying.values())
+    weights = {t: (s / total_score) * equity_pct for t, s in qualifying.items()}
+
+    cash_pct = 1.0 - equity_pct
+    if cash_pct > 0.001:
+        weights["CASH"] = cash_pct
+    return weights
 
 
 def run_spy_backtest(start_date, end_date, top_k=3, rebalance_days=21, threshold=0.52):
@@ -187,18 +201,25 @@ def run_spy_backtest(start_date, end_date, top_k=3, rebalance_days=21, threshold
             t_feature_cols = t_meta["feature_columns"]
             p_up = get_ml_score(t_model, t_scaler, t_feature_cols, ticker, rebal_date, price_data[ticker])
             scores[ticker] = p_up
+            time.sleep(1.5)  # 1.5s between tickers to avoid LLM rate limits
 
-        # Convert scores to weights
+        # Convert scores to weights (with defensive cash)
         weights = score_to_weight(scores, threshold=threshold)
-        selected = list(weights.keys())
+        equity_tickers = [t for t in weights if t != "CASH"]
+        cash_pct = weights.get("CASH", 0.0)
 
-        print(f"  Portfolio ({len(selected)} stocks):")
+        print(f"  Portfolio ({len(equity_tickers)} stocks, cash={cash_pct:.0%}):")
         for t in sorted(weights, key=weights.get, reverse=True):
-            print(f"    {t}: P(up)={scores[t]:.0%}  weight={weights[t]:.1%}")
+            if t == "CASH":
+                print(f"    CASH: {weights[t]:.1%}")
+            else:
+                print(f"    {t}: P(up)={scores[t]:.0%}  weight={weights[t]:.1%}")
 
         # Calculate weighted portfolio return over hold period
         period_return = 0.0
         for ticker, weight in weights.items():
+            if ticker == "CASH":
+                continue  # cash earns 0%
             ticker_data = price_data[ticker]
             future = ticker_data[ticker_data.index >= rebal_date]
             if len(future) < 2:
@@ -226,9 +247,10 @@ def run_spy_backtest(start_date, end_date, top_k=3, rebalance_days=21, threshold
 
         portfolio_history.append({
             "date": rebal_date.strftime("%Y-%m-%d"),
-            "selected": selected,
+            "selected": equity_tickers,
+            "cash_pct": round(cash_pct, 4),
             "weights": {t: round(w, 4) for t, w in weights.items()},
-            "scores": {t: round(scores[t], 4) for t in selected},
+            "scores": {t: round(scores[t], 4) for t in equity_tickers},
             "portfolio_return_pct": round(period_return * 100, 2),
             "spy_return_pct": round(spy_period_return * 100, 2),
             "portfolio_value": round(portfolio_value, 2),
@@ -262,7 +284,7 @@ def run_spy_backtest(start_date, end_date, top_k=3, rebalance_days=21, threshold
         print(f"\n✗ Portfolio UNDERPERFORMED SPY by {abs(alpha):.1f}%")
 
     # Most selected stocks
-    all_selected = [t for p in portfolio_history for t in p["selected"]]
+    all_selected = [t for p in portfolio_history for t in p["selected"] if t != "CASH"]
     from collections import Counter
     freq = Counter(all_selected)
     print(f"\nMost selected stocks:")

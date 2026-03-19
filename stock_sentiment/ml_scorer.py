@@ -328,13 +328,39 @@ def fetch_sentiment_for_date(ticker: str, date: pd.Timestamp) -> Dict:
     }
 
 
+_SENTIMENT_CACHE_PATH = os.path.join(os.path.dirname(__file__), "models", "sentiment_cache.json")
+_sentiment_cache: Optional[Dict] = None
+
+
+def _load_sentiment_cache() -> Dict:
+    global _sentiment_cache
+    if _sentiment_cache is None:
+        if os.path.exists(_SENTIMENT_CACHE_PATH):
+            with open(_SENTIMENT_CACHE_PATH, "r") as f:
+                _sentiment_cache = json.load(f)
+        else:
+            _sentiment_cache = {}
+    return _sentiment_cache
+
+
+def _save_sentiment_cache():
+    with open(_SENTIMENT_CACHE_PATH, "w") as f:
+        json.dump(_sentiment_cache, f)
+
+
 def fetch_llm_sentiment_for_date(ticker: str, date: pd.Timestamp, news_limit: int = 5) -> Dict:
     """
     Fetch news from Polygon.io and score with real LLM ensemble (Claude + GPT-5).
-    Same pipeline as main.py — used for high-quality training labels.
+    Results are cached to disk by (ticker, date) to avoid redundant API calls.
 
     Returns dict with: sentiment_score, sentiment_confidence, news_count
     """
+    cache = _load_sentiment_cache()
+    cache_key = f"{ticker}_{date.strftime('%Y-%m-%d')}"
+
+    if cache_key in cache:
+        return cache[cache_key]
+
     fetcher = NewsFetcher()
     analyzer = SentimentAnalyzer()
 
@@ -343,16 +369,24 @@ def fetch_llm_sentiment_for_date(ticker: str, date: pd.Timestamp, news_limit: in
 
     news_list = fetcher.get_news_by_date(ticker, start_str, end_str, limit=news_limit)
     if not news_list:
-        return {"sentiment_score": 50.0, "sentiment_confidence": 0.0, "news_count": 0}
+        result = {"sentiment_score": 50.0, "sentiment_confidence": 0.0, "news_count": 0}
+        cache[cache_key] = result
+        _save_sentiment_cache()
+        return result
+
+    time.sleep(1.5)  # Rate limit: 1.5s between LLM calls
 
     results = analyzer.analyze_news_batch(news_list)
     agg = analyzer.aggregate_sentiment(results)
 
-    return {
+    result = {
         "sentiment_score": float(agg["final_score"]),
         "sentiment_confidence": float(agg["avg_confidence"]),
         "news_count": int(agg["news_count"]),
     }
+    cache[cache_key] = result
+    _save_sentiment_cache()
+    return result
 
 
 def add_sentiment_to_training_data(df: pd.DataFrame, ticker_col: str = "ticker") -> pd.DataFrame:

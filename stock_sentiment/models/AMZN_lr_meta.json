@@ -1,0 +1,38 @@
+{
+  "trained_at": "2026-03-18T21:50:57.747270",
+  "feature_columns": [
+    "ema100_uptrend",
+    "ema50_above_ema100",
+    "ema25_above_ema100",
+    "ema_raw_points",
+    "rsi_value",
+    "price_vs_ema100",
+    "price_vs_ema50",
+    "price_vs_ema25",
+    "volume_ratio",
+    "sentiment_score",
+    "sentiment_confidence",
+    "news_count"
+  ],
+  "n_samples": 45,
+  "n_up": 26,
+  "n_down": 19,
+  "coefficients": {
+    "ema100_uptrend": -0.0117,
+    "ema50_above_ema100": -0.1304,
+    "ema25_above_ema100": 0.1436,
+    "ema_raw_points": 0.0165,
+    "rsi_value": -0.3163,
+    "price_vs_ema100": -0.0022,
+    "price_vs_ema50": 0.0084,
+    "price_vs_ema25": -0.1504,
+    "volume_ratio": 0.0004,
+    "sentiment_score": -0.2417,
+    "sentiment_confidence": -0.1176,
+    "news_count": 0.0345
+  },
+  "intercept": 0.0245,
+  "include_sentiment": true,
+  "test_accuracy": 33.33,
+  "ticker": "AMZN"
+}
