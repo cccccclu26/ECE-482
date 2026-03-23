@@ -34,5 +34,7 @@
   "intercept": 0.0245,
   "include_sentiment": true,
   "test_accuracy": 33.33,
-  "ticker": "AMZN"
+  "ticker": "AMZN",
+  "training_start": "2021-01-04",
+  "training_end": "2024-12-31"
 }

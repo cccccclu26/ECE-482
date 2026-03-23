@@ -1,0 +1,3429 @@
+[
+  {
+    "ticker": "AAPL",
+    "analysis_time": "2026-03-21T11:40:47.845372",
+    "lookback_days": 7,
+    "final_score": 90.0,
+    "grade": "STRONG BUY",
+    "breakdown": {
+      "sentiment_score": 54.39,
+      "technical_score": 35.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.9,
+      "probability_down": 0.0284
+    },
+    "sentiment": {
+      "final_score": 54.39,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 72.9,
+      "bullish_count": 5,
+      "bearish_count": 3,
+      "neutral_count": 12,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 72,
+          "reason": "[claude-3.7-sonnet] News is about USA Rare Earth and MP Materials, not AAPL. Contains no information relevant to Apple's business or stock prospects. | [gpt-5-chat] The article focuses on rare-earth mining stocks and doesn’t mention Apple; no direct impact on AAPL stock sentiment is implied.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 50
+          },
+          "title": "USA Rare Earth vs. MP Materials: Which Mining Stock Should You Buy in 2026?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T14:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 68,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Blockchain settlement improves market efficiency and potentially benefits AAPL as a major Russell 1000 component, though impact is indirect and implementation is distant. | [gpt-5-chat] Blockchain-based settlement could boost liquidity, reduce risk, and modernize trading for large-cap stocks like AAPL, supporting higher investor confidence long term.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65,
+            "gpt-5-chat": 70
+          },
+          "title": "SEC Greenlights Nasdaq's Tokenized Settlement Pilot: What It Means For Investors",
+          "source": "Benzinga",
+          "published_utc": "2026-03-20T21:29:01Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 45,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Article acknowledges Apple's business strengths but highlights valuation concerns and limited future growth potential due to massive scale.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 45
+          },
+          "title": "Is Apple Stock Your Ticket to Becoming a Millionaire?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T08:25:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] News focuses on Berkshire's holdings in other companies, not AAPL, implying minimal direct impact on Apple's stock outlook.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 55
+          },
+          "title": "Warren Buffett's Berkshire Hathaway Is Doubling Its Money in Coca-Cola, American Express, and Moody's Every 21 to 30 Months -- Here's How",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T08:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 52,
+          "confidence": 58,
+          "reason": "[claude-3.7-sonnet] This news is about VONG ETF, not AAPL. No direct information about Apple stock is provided to analyze. | [gpt-5-chat] While highlighting strong historical returns, the article also stresses recent losses and diversification, making the tone cautiously positive but not distinctly bullish.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 55
+          },
+          "title": "Could Investing $10,000 in VONG Make You a Millionaire?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T04:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 60,
+          "reason": "[claude-3.7-sonnet] News is about ZoomInfo, not Apple. No impact on AAPL stock can be determined from this information.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50
+          },
+          "title": "Calydon Capital Dumps $9 Million of ZoomInfo Amid Stock's 92% Decline Since 2021",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T19:13:15Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Great Magnificent 7 Breakup: Nvidia Stands Tall While Tesla, Microsoft Stumble And Fall",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:10:59Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 40,
+          "confidence": 75,
+          "reason": "[claude-3.7-sonnet] Druckenmiller exited positions in multiple Magnificent Seven stocks and views them as overvalued, suggesting potential downside for AAPL despite not being specifically mentioned.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 40
+          },
+          "title": "Billionaire Stanley Druckenmiller's Newest Buy Is a Must-See if You Own Shares in Wall Street's \"Magnificent Seven\"",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T08:06:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] TSMC maintains strong competitive advantages in chip manufacturing with key clients like Apple, positioning it for continued growth despite significant prior gains. | [gpt-5-chat] TSMC’s strong semiconductor position supports Apple’s supply chain and margin stability, indirectly benefiting AAPL despite the article focusing on TSMC’s growth.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 80,
+            "gpt-5-chat": 70
+          },
+          "title": "Think It's Too Late to Buy Taiwan Semiconductor Manufacturing Company Stock? Here's the 1 Reason Why There's Still Time.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T01:30:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 32,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] Major client losses, significant revenue risk, slowing growth, and sharp stock decline indicate severe business challenges ahead for The Trade Desk. | [gpt-5-chat] News concerns The Trade Desk, not Apple; minimal direct impact on AAPL fundamentals or earnings outlook.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 15,
+            "gpt-5-chat": 50
+          },
+          "title": "The Trade Desk Is Suddenly Bleeding Customers. Is It a Red Flag for the Adtech Stock?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T17:20:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 80,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Article positively associates Apple with elite $3T market cap group and suggests strong AI sector growth, indirectly benefiting Apple's ecosystem and position.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 80
+          },
+          "title": "2 Companies That Will Join Nvidia, Apple, and Alphabet in the $3 Trillion Club by 2028",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T11:25:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] News focuses on Samsung and Nvidia partnership with no direct mention of Apple or impact on AAPL stock.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50
+          },
+          "title": "Samsung Stock Jumps As Nvidia CEO Jensen Huang Confirms New AI Chip Production Deal",
+          "source": "Benzinga",
+          "published_utc": "2026-03-17T10:02:20Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] News primarily concerns Polymarket regulation in Argentina with minimal direct impact on Apple's core business or revenue streams.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50
+          },
+          "title": "Crypto Prediction Platform Polymarket Blocked In Argentina For Facilitating Unauthorized Betting: Report",
+          "source": "Benzinga",
+          "published_utc": "2026-03-17T09:03:33Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 52,
+          "confidence": 72,
+          "reason": "[claude-3.7-sonnet] News is about Google/Alphabet, not Apple. Contains no direct information affecting AAPL stock performance or sentiment. | [gpt-5-chat] News focuses on Alphabet’s financial strength and buybacks, with no direct impact or mention of Apple, implying minimal sentiment effect on AAPL.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 55
+          },
+          "title": "Google Parent Alphabet's $346 Billion Investment Is Providing a Big Lift to Its Bottom Line -- but It Has Nothing to Do With Artificial Intelligence (AI)",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T08:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] News doesn't directly impact AAPL, only mentions a tech ETF sale that appears routine. AAPL is likely in QTEC but the rebalancing isn't Apple-specific.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 55
+          },
+          "title": "What Investors Should Know About This $8 Million Tech ETF Sale Last Quarter",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T00:28:41Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 38,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] Article presents Apple as inferior investment compared to Amazon, citing higher P/E ratio and slower projected earnings growth. | [gpt-5-chat] The article favors Amazon over Apple due to better valuation and growth, implying relatively weaker prospects for AAPL in the short term.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 35,
+            "gpt-5-chat": 40
+          },
+          "title": "Better Stock to Buy Right Now: Amazon vs. Apple",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-16T19:25:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 65,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] Large institutional investment, attractive valuation metrics, and expanding revenue diversification suggest positive outlook for Qorvo despite previous decline. | [gpt-5-chat] The news concerns Qorvo, not Apple, implying no direct impact on AAPL sentiment or fundamentals.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 55
+          },
+          "title": "Kintayl Capital Loads Up Qorvo Stock With 124,000 Shares Buy",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-16T17:24:41Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Apple strategically launching affordable products to gain market share while leveraging financial strength competitors lack, with premium lines offsetting margin pressure.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75
+          },
+          "title": "Apple Launches a Price War Its Rivals Can’t Afford to Fight",
+          "source": "Investing.com",
+          "published_utc": "2026-03-16T16:09:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] The news focuses on Microsoft and Amazon as overlooked AI stocks, not providing specific information about Apple's AI position or performance. | [gpt-5-chat] The article focuses positively on Microsoft and Amazon AI prospects, not Apple, implying no direct impact or sentiment shift toward AAPL.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 50
+          },
+          "title": "The Most Overlooked Artificial Intelligence (AI) Stocks in the \"Magnificent Seven\" for 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-15T22:25:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 72,
+          "reason": "[claude-3.7-sonnet] News compares two dividend ETFs without direct AAPL analysis. FDVV has tech exposure which could include AAPL, but specific impact is not mentioned. | [gpt-5-chat] News compares ETFs, not AAPL specifically; tech exposure mention is indirect, offering no clear bullish or bearish signal for Apple.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 50
+          },
+          "title": "Fidelity (FDVV) vs. ProShares (NOBL): Which Dividend ETF Reigns Supreme?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-15T21:18:03Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "AAPL",
+      "technical_score": 35.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 70,
+        "value": 27.42,
+        "signal": "oversold_reversal"
+      },
+      "price": {
+        "current": 247.99,
+        "ema25": 258.41,
+        "ema50": 261.45,
+        "ema100": 262.78
+      },
+      "volume_ratio": 2.1213
+    }
+  },
+  {
+    "ticker": "NVDA",
+    "analysis_time": "2026-03-21T11:53:26.449272",
+    "lookback_days": 7,
+    "final_score": 40.0,
+    "grade": "SLIGHTLY BEARISH",
+    "breakdown": {
+      "sentiment_score": 57.7,
+      "technical_score": 35.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.4,
+      "probability_down": 1.0
+    },
+    "sentiment": {
+      "final_score": 57.7,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 72.25,
+      "bullish_count": 10,
+      "bearish_count": 3,
+      "neutral_count": 7,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 60,
+          "reason": "[claude-3.7-sonnet] Article discusses VTI ETF's potential returns with no mention of NVDA. Contains no information relevant to NVIDIA stock performance.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50
+          },
+          "title": "$1,000 in the VTI ETF Could Turn Into $1.39 Million. Here's the Math.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T12:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 68,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] News mentions Nvidia as a key partnership for Uber's autonomous vehicle strategy, suggesting positive implications for NVDA, though Uber is the primary focus. | [gpt-5-chat] Mentions Nvidia as a key partner in Uber’s autonomous strategy, suggesting strong demand for its AI and automotive chips, supporting positive investor sentiment.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65,
+            "gpt-5-chat": 70
+          },
+          "title": "1 Brilliant Driverless-Vehicle Stock to Buy Before It's Too Late",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T12:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] News discusses Buffett's general investment advice about index funds but contains no specific information about NVIDIA stock performance or outlook. | [gpt-5-chat] The news discusses broad index investing advice, not NVDA specifically, implying no direct positive or negative impact on NVDA stock sentiment.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 50
+          },
+          "title": "The 1 Asset Warren Buffett Says Every Investor Should Own",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T09:24:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 82,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] AWS revenue forecast doubled due to AI demand, indicating strong growth potential for NVDA as a key AI infrastructure supplier. | [gpt-5-chat] AWS growth driven by AI demand implies sustained infrastructure investment, benefiting NVDA through increased GPU and AI chip sales.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 78
+          },
+          "title": "Does Amazon's Andy Jassy Know Something Wall Street Doesn't? He Just Made a Game-Changing AI Prediction -- and It's Excellent News for Investors.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T08:10:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 70,
+          "confidence": 75,
+          "reason": "[claude-3.7-sonnet] Projection shows significant growth potential, but tempered by competitive threats and economic uncertainties acknowledged in the analysis. | [gpt-5-chat] Positive growth forecast and strong revenue projection outweigh competition and macroeconomic concerns.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65,
+            "gpt-5-chat": 75
+          },
+          "title": "Prediction: This Will Be Nvidia's Stock Price by the End of 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T07:02:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 60,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Article frames market correction as buying opportunity, recommending alternative AI stocks with growth potential despite acknowledging significant recent losses. | [gpt-5-chat] Focus is on other AI stocks after Nvidia’s sell-off; NVDA is mentioned indirectly, implying stable sentiment rather than strong optimism or pessimism.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65,
+            "gpt-5-chat": 55
+          },
+          "title": "Top 2 AI Growth Stocks to Buy After Nvidia's Latest Sell-Off",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T06:05:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 30,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Negative developments for Nvidia supplier Super Micro Computer regarding illegal exports to China could disrupt Nvidia's supply chain and impact future sales.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 30
+          },
+          "title": "The Latest Super Micro Computer Scandal Sinks the Stock. Is This a Buying Opportunity or Should Investors Stay Away?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T02:25:31Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 69,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] The news is about Nebius, not NVDA (Nvidia). Cannot determine NVDA sentiment from news about a different company. | [gpt-5-chat] Large multi-year contracts from Meta and Microsoft strengthen revenue visibility and growth prospects, supporting strong bullish sentiment on future valuation expansion.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 88
+          },
+          "title": "The Good News Just Keeps Flowing in for Nebius Investors. Here's Why This AI Stock Could Jump 4X After the Meta Platforms Contract.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T02:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "This Nvidia-Backed Stock Is Slated to Quadruple Its Revenue by 2027",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T01:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 62,
+          "confidence": 72,
+          "reason": "[claude-3.7-sonnet] NVDA only mentioned as Planet Labs partner, not focus of news. Broader market decline with tech-heavy Nasdaq down 1.98% suggests mixed environment for NVDA. | [gpt-5-chat] Planet Labs' strong results and AI partnerships with Nvidia indicate positive demand for NVDA's technology despite broader market weakness.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 55,
+            "gpt-5-chat": 70
+          },
+          "title": "Stock Market Today, March 20: Planet Labs Surges After Record Revenue and Upbeat Guidance",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T21:34:35Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] News is about Dell benefiting from Super Micro's issues, with no direct mention of NVDA. Potential indirect impact on GPU demand is unclear.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50
+          },
+          "title": "Why Dell Technologies Stock Just Jumped",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T21:28:22Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "3 Bargain Stocks the Market Is Mispricing After the Recent Sell-Off",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T21:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 85,
+          "confidence": 90,
+          "reason": "[claude-3.7-sonnet] NVDA benefits from CEO projecting $1T in AI demand through 2027, doubling previous forecasts, amid strong sector earnings and revenue growth. | [gpt-5-chat] Strong AI demand forecasts and robust semiconductor earnings suggest continued momentum for Nvidia despite minor sector concerns.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 85
+          },
+          "title": "AI Trade Deepens as Earnings and Demand Align",
+          "source": "Investing.com",
+          "published_utc": "2026-03-20T17:53:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 28,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Rising rate-hike fears, market-wide selloff, and concerns about stagflation create negative environment for growth stocks like NVDA despite no direct mention. | [gpt-5-chat] Rising energy prices and rate-hike fears hurt tech valuations like NVDA; market-wide risk-off sentiment pressures growth equities.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 30,
+            "gpt-5-chat": 25
+          },
+          "title": "Brent Hits $110, Rate-Hike Fears Hammer Stocks And Gold: What's Moving Markets Friday?",
+          "source": "Benzinga",
+          "published_utc": "2026-03-20T17:36:23Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Strong Nvidia earnings mentioned positively, suggesting continued growth despite unrelated ASML stock movement. Semiconductor sector appears fundamentally strong with increased capex spending.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75
+          },
+          "title": "Why Did ASML Stock Just Drop?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T16:31:39Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Nvidia retains AI market dominance despite sell-off, suggesting resilience and potential undervaluation relative to growth prospects.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 75
+          },
+          "title": "3 AI Stocks Trading at Bargain Prices After the Recent Sell-Off",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T14:30:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 20,
+          "confidence": 90,
+          "reason": "[gpt-5-chat] Article highlights overvaluation, cash burn, and share dilution, predicting sharp downside versus analyst targets.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 20
+          },
+          "title": "Wall Street Is Wrong About This Quantum Computing Stock",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T12:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] NVDA isn't directly discussed in the news, which focuses on three different AI companies (CoreWeave, TTM, Fastly) as alternative investment opportunities. | [gpt-5-chat] NVDA isn't mentioned; focus is on other AI stocks, implying no direct impact or sentiment shift for NVIDIA.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 50
+          },
+          "title": "The Artificial Intelligence (AI) Stocks I'm Watching Closest in March",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T11:31:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] News focuses on Tower Semiconductor's performance and partnerships, with no direct impact on NVIDIA mentioned despite AI infrastructure relevance.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50
+          },
+          "title": "Why Tower Semiconductor Rallied Over 30% This Week",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T10:37:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 72,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] Strong projected revenue growth, large addressable market, and AI sector momentum, though tempered by profitability concerns and competitive threats from larger companies. | [gpt-5-chat] Strong growth projections and large addressable market signal optimism, though profitability and competition risks temper enthusiasm.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 70
+          },
+          "title": "Nvidia Made Millionaires. This Artificial Intelligence (AI) Stock Could Be Next.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T10:10:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "NVDA",
+      "technical_score": 35.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 70,
+        "value": 29.0,
+        "signal": "oversold_reversal"
+      },
+      "price": {
+        "current": 172.7,
+        "ema25": 182.54,
+        "ema50": 183.8,
+        "ema100": 184.45
+      },
+      "volume_ratio": 1.0548
+    }
+  },
+  {
+    "ticker": "META",
+    "analysis_time": "2026-03-21T12:05:04.554495",
+    "lookback_days": 7,
+    "final_score": 40.0,
+    "grade": "SLIGHTLY BEARISH",
+    "breakdown": {
+      "sentiment_score": 54.53,
+      "technical_score": 35.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.4,
+      "probability_down": 1.0
+    },
+    "sentiment": {
+      "final_score": 54.53,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 74.1,
+      "bullish_count": 7,
+      "bearish_count": 5,
+      "neutral_count": 8,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] News compares META favorably with Alphabet but ultimately recommends Alphabet. META's AI investments and valuation are positive, but lacks the diversification advantage. | [gpt-5-chat] Meta is positively mentioned for AI growth and valuation, but recommendation favors Alphabet, tempering bullish sentiment.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 55,
+            "gpt-5-chat": 55
+          },
+          "title": "Better AI Stock: Alphabet vs. Meta Platforms",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T12:06:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 32,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] News suggests Meta will be overtaken by Oracle, implying Meta's relative underperformance despite current higher valuation. Presents competitive threats to Meta's market position. | [gpt-5-chat] Article predicts Oracle surpassing Meta, implying relative weakness or slower growth expectations for Meta compared to Oracle.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 35,
+            "gpt-5-chat": 30
+          },
+          "title": "Prediction: Oracle Will Be Worth More Than Meta by 2028. Here's Why.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T09:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Good News Just Keeps Flowing in for Nebius Investors. Here's Why This AI Stock Could Jump 4X After the Meta Platforms Contract.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T02:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 82,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] Meta is presented as undervalued at below 17.5x 2027 estimates with proven AI monetization capabilities for ad growth and multiple expansion opportunities. | [gpt-5-chat] Meta is highlighted as undervalued with strong AI-driven ad growth and multiple expansion potential, indicating positive investor sentiment after the sell-off.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 78
+          },
+          "title": "3 Bargain Stocks the Market Is Mispricing After the Recent Sell-Off",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T21:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 42,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] While TTD faces significant stock decline, its low valuation and potential to capture market share from Meta presents a contrarian opportunity despite ongoing challenges. | [gpt-5-chat] The Trade Desk's weakness and potential advertiser shift away from Meta suggest competitive pressure and negative implications for Meta's ad revenue outlook.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 55,
+            "gpt-5-chat": 30
+          },
+          "title": "The Trade Desk Just Fell to a Multi-Year Low. Contrarian Investors Are Paying Attention.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T18:01:20Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] This news is about Floor & Decor, not META stock, so it has no direct impact on META's valuation or price.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50
+          },
+          "title": "Home Improvement Stock Down 40% Gets $14 Million Trim as Growth Slowed Last Quarter",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T16:16:15Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 82,
+          "reason": "[claude-3.7-sonnet] Meta's AI-powered advertising tools are driving significant earnings growth, and it's considered a bargain stock following the tech sell-off. | [gpt-5-chat] Meta’s AI advertising tools are boosting earnings growth, implying strong fundamentals despite overall market weakness.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 75
+          },
+          "title": "3 AI Stocks Trading at Bargain Prices After the Recent Sell-Off",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T14:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 52,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] The news discusses AI infrastructure investment broadly but doesn't specifically mention META's involvement or impact on its business prospects. | [gpt-5-chat] META is part of big tech spending on AI, but the article highlights other companies (TSMC, Corning), offering limited direct impact on META's stock sentiment.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 55
+          },
+          "title": "What Are the Best AI Stocks to Buy While Big Tech Is Spending $690 Billion on Infrastructure?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T08:10:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] News focuses on ASML’s growth, not META. No direct impact or mention of META’s fundamentals or outlook.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 50
+          },
+          "title": "What if ASML Becomes the Next Trillion-Dollar Stock?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T06:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 65,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] Meta's major $27B investment in neocloud infrastructure indicates strategic AI positioning, though the news primarily highlights Nebius Group's growth potential rather than META directly.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65
+          },
+          "title": "Prediction: This Neocloud Stock Will Outperform the \"Magnificent Seven\" in 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T23:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Despite short-term AI momentum concerns, evidence indicates strong long-term AI growth potential with reasonable valuations and continued demand, favorable for META's AI investments. | [gpt-5-chat] Despite short-term concerns, strong demand, reasonable valuations, and positive analyst recommendations signal long-term growth potential for AI-related stocks like META.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 75
+          },
+          "title": "Should You Really Buy Artificial Intelligence Stocks Right Now? Evidence is Piling Up and Here's What it Says.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T22:15:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 30,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Market-wide selloff and stagflation fears signal negative macro sentiment likely pressuring META's valuation and growth expectations.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 30
+          },
+          "title": "S&P 500 Slides, Gold Crashes As $100 Oil Stokes Stagflation Fears: What's Moving Markets Thursday?",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T17:36:32Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 32,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Meta's lower P/E ratio compared to utilities suggests market concerns about tech valuations and AI investment costs, indicating potential downward pressure. | [gpt-5-chat] Meta faces valuation pressure as investor interest shifts to energy companies; market rotation suggests reduced confidence in traditional tech growth.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 30,
+            "gpt-5-chat": 35
+          },
+          "title": "Move Over Meta, Microsoft — Constellation, NextEra Hit Big Tech Valuations In 2026's Weirdest Trade",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:22:54Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 35,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Meta is mentioned as losing ground amid investor shift from the Magnificent Seven, indicating negative sentiment toward its stock performance.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 35
+          },
+          "title": "The Great Magnificent 7 Breakup: Nvidia Stands Tall While Tesla, Microsoft Stumble And Fall",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:10:59Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 82,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Positive long-term outlook driven by AI integration, user growth, and reinvestment into technology indicate strong future performance potential.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 82
+          },
+          "title": "1 Artificial Intelligence (AI) Stock You Could Hold Forever",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T15:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "[claude-3.7-sonnet] The news is unrelated to META stock and discusses energy companies (Enterprise Products Partners and Enbridge) instead.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50
+          },
+          "title": "Want Decades of Passive Income? 2 Energy Stocks to Buy Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T12:34:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] META is not mentioned or implied; article focuses on other stocks, implying no direct sentiment impact on META.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 50
+          },
+          "title": "3 No-Brainer Stocks to Buy With $300 Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T09:06:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 30,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Druckenmiller completely exited META position, indicating lack of confidence in the stock compared to broader market opportunities. | [gpt-5-chat] Druckenmiller’s exit from Meta indicates reduced confidence and signals potential overvaluation concerns among major investors.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 30,
+            "gpt-5-chat": 30
+          },
+          "title": "Billionaire Stanley Druckenmiller's Newest Buy Is a Must-See if You Own Shares in Wall Street's \"Magnificent Seven\"",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T08:06:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 82,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] Meta identified as long-term AI investment with strong growth prospects, young leadership, and effective AI integration across advertising and social media platforms. | [gpt-5-chat] Positive long-term outlook citing Meta's strong AI integration and leadership strength within a favorable AI-focused investment narrative.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 78
+          },
+          "title": "3 Artificial Intelligence (AI) Stocks You Could Hold Forever",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T07:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 65,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Competitive struggles at TTD likely benefit Meta as advertisers may shift budgets to established walled gardens with better transparency and performance tracking. | [gpt-5-chat] The Trade Desk’s weakness could shift advertising budgets toward Meta’s strong ad platforms, improving its competitive position and potential revenue growth.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65,
+            "gpt-5-chat": 65
+          },
+          "title": "The Trade Desk Is Suddenly Bleeding Customers. Is It a Red Flag for the Adtech Stock?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T17:20:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "META",
+      "technical_score": 35.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 70,
+        "value": 23.84,
+        "signal": "oversold_reversal"
+      },
+      "price": {
+        "current": 593.66,
+        "ema25": 637.38,
+        "ema50": 646.42,
+        "ema100": 661.12
+      },
+      "volume_ratio": 1.5921
+    }
+  },
+  {
+    "ticker": "JPM",
+    "analysis_time": "2026-03-21T12:09:54.306936",
+    "lookback_days": 7,
+    "final_score": 90.0,
+    "grade": "STRONG BUY",
+    "breakdown": {
+      "sentiment_score": 54.1,
+      "technical_score": 10.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.9,
+      "probability_down": 0.0
+    },
+    "sentiment": {
+      "final_score": 54.1,
+      "sentiment": "neutral",
+      "news_count": 10,
+      "avg_confidence": 83.5,
+      "bullish_count": 3,
+      "bearish_count": 2,
+      "neutral_count": 5,
+      "details": [
+        {
+          "sentiment": "bearish",
+          "score": 30,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] JPMorgan cut S&P 500 target amid oil price spike, suggesting negative outlook on market conditions that could affect financial sector performance. | [gpt-5-chat] JPMorgan lowered its S&P 500 target due to high oil prices and growth concerns, indicating negative market and earnings outlook.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 30,
+            "gpt-5-chat": 30
+          },
+          "title": "Stock Market Today, March 19: Brent Crude's $119 Spike Rattles Markets",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T21:19:22Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 52,
+          "confidence": 90,
+          "reason": "[claude-3.7-sonnet] The news doesn't mention JPM/JP Morgan or impact the company's financial performance. It's about UNCF fundraising for HBCUs. | [gpt-5-chat] The news focuses on charitable fundraising and community impact, not directly related to JPMorgan's financial performance or stock movement.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 55
+          },
+          "title": "UNCF NEW ENGLAND Raises Record-Breaking $800,000 for HBCUs and Student Success",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-19T11:00:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 25,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Recession warning, high oil prices, and overvalued markets suggest potential downside risk for financial stocks like JPM.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 25
+          },
+          "title": "The Stock Market Sounds an Alarm as an Economist Issues a Recession Warning. History Says This Could Happen Next.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T08:12:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 72,
+          "reason": "[claude-3.7-sonnet] The dividend announcement from US Financial 15 Split Corp. is routine news that doesn't directly impact JPM stock performance, though it suggests stable financial sector outlook. | [gpt-5-chat] Dividend declaration from a fund indicates stable income but not directly impacting JPM stock performance.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 55,
+            "gpt-5-chat": 55
+          },
+          "title": "US FINANCIAL 15 SPLIT CORP. Preferred Dividend Declared",
+          "source": "Benzinga",
+          "published_utc": "2026-03-18T13:00:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] News relates to another fund’s dividend declaration, not directly impacting JPMorgan’s fundamentals or valuation.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 50
+          },
+          "title": "North American Financial 15 Split Corp. Monthly Dividend Declaration for Class A & Preferred Share",
+          "source": "Benzinga",
+          "published_utc": "2026-03-18T13:00:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] News relates to Financial 15 Split Corp.'s dividend announcement, not directly to JPM, implying no meaningful impact on JPM stock sentiment.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 50
+          },
+          "title": "FINANCIAL 15 SPLIT CORP. Monthly Dividend Declaration for Class A &  Preferred Share",
+          "source": "Benzinga",
+          "published_utc": "2026-03-18T13:00:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 78,
+          "confidence": 82,
+          "reason": "[claude-3.7-sonnet] JPMorgan analyst raised price target significantly ($11 increase) with overweight rating maintained, showing strong confidence in Edgewise's drug pipeline and clinical data. | [gpt-5-chat] JPMorgan's analyst raised the price target and maintained an overweight rating, signaling strong confidence in Edgewise Therapeutics' drug pipeline performance.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 80
+          },
+          "title": "Why Edgewise Therapeutics Stock Topped the Market on Tuesday",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:31:35Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 82,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] JPMorgan's upgrade to Overweight with a $210 price target reflects strong confidence in Oracle despite the sell-off, supported by record earnings and substantial RPO growth. | [gpt-5-chat] JPMorgan upgrade, strong earnings growth, improved risk-reward, and large RPO suggest optimism despite recent stock decline.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 78
+          },
+          "title": "Oracle Has Fallen 18% in 2026. Wall Street's Top Pick Just Set a $210 Price Target.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-15T17:19:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] The article neutrally compares ETFs ITOT and VTV; no direct mention or implication affecting JPMorgan stock sentiment.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 55
+          },
+          "title": "ITOT vs. VTV: Is Broad Market Exposure or Value Stock Stability the Better Buy for Investors?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-14T21:10:54Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 65,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] JPM provided expert analysis on geopolitical impacts. Rising energy stocks benefit investment banking and trading revenues, though broader market uncertainty poses some risk. | [gpt-5-chat] Geopolitical tension boosts oil and defense sectors; JPM may benefit from higher trading and investment activity despite broader market risks.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65,
+            "gpt-5-chat": 65
+          },
+          "title": "Trump Says US 'Obliterated' Military Targets On Iran's Kharg Island, Threatens Tougher Action If Hormuz Shipping Is Disrupted",
+          "source": "Benzinga",
+          "published_utc": "2026-03-14T02:16:24Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "JPM",
+      "technical_score": 10.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 20,
+        "value": 36.38,
+        "signal": "bearish_momentum"
+      },
+      "price": {
+        "current": 286.56,
+        "ema25": 294.31,
+        "ema50": 300.34,
+        "ema100": 304.67
+      },
+      "volume_ratio": 1.9716
+    }
+  },
+  {
+    "ticker": "TSLA",
+    "analysis_time": "2026-03-21T12:18:38.611518",
+    "lookback_days": 7,
+    "final_score": 90.0,
+    "grade": "STRONG BUY",
+    "breakdown": {
+      "sentiment_score": 54.38,
+      "technical_score": 35.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.9,
+      "probability_down": 0.0
+    },
+    "sentiment": {
+      "final_score": 54.38,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 78.05,
+      "bullish_count": 9,
+      "bearish_count": 6,
+      "neutral_count": 5,
+      "details": [
+        {
+          "sentiment": "bearish",
+          "score": 25,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Escalated NHTSA investigation and potential costly outcomes pose regulatory and reputational risks to Tesla's autonomous driving business.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 25
+          },
+          "title": "Should Tesla Be Worried About the National Highway Traffic Safety Administration? (Yes.)",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T13:33:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] News highlights Uber's strategic position in driverless technology through partnerships, but doesn't directly mention TSLA which faces increasing competition in autonomous driving. | [gpt-5-chat] Positive focus on Uber’s driverless strategy highlights growing competition, potentially pressuring Tesla’s autonomous vehicle market share and investor sentiment.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 35
+          },
+          "title": "1 Brilliant Driverless-Vehicle Stock to Buy Before It's Too Late",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T12:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] The news doesn't mention Tesla directly. It focuses on SoundHound AI and Rivian as recommended AI stocks after Nvidia's sell-off. | [gpt-5-chat] TSLA is not mentioned in the article; its sentiment impact is neutral despite broader AI market context.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 50
+          },
+          "title": "Top 2 AI Growth Stocks to Buy After Nvidia's Latest Sell-Off",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T06:05:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 65,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Investment could enhance Tesla’s AI and autonomy edge, though governance risks and unproven xAI model temper enthusiasm.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 65
+          },
+          "title": "Tesla Is Investing in xAI. Is That Good News for Investors?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T02:37:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 28,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Legal liability of $2.5B damages against Musk creates significant financial risk for Tesla, as his focus and resources may be diverted from Tesla operations. | [gpt-5-chat] Legal liability against Elon Musk may hurt investor confidence and distract management, negatively impacting Tesla’s stock sentiment short term.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 25,
+            "gpt-5-chat": 30
+          },
+          "title": "Elon Musk Found Liable By Jury For Misleading Twitter Investors In $44 Billion Deal, Faces Potential $2.5 Billion Damages",
+          "source": "Benzinga",
+          "published_utc": "2026-03-21T02:00:05Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 72,
+          "confidence": 82,
+          "reason": "[claude-3.7-sonnet] News positively impacts Tesla through its autonomous vehicle development, suggesting AVs will expand rather than disrupt markets, potentially benefiting Tesla's self-driving technology investments. | [gpt-5-chat] Positive implications for autonomous vehicle adoption indirectly benefit Tesla’s AV ambitions and EV demand, indicating favorable industry sentiment.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 70
+          },
+          "title": "Skeptics Fear Autonomous Vehicles Will Destroy Uber. Here's Why They May Be Wrong.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T13:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 72,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Tesla's valuation is supported by diverse business ambitions beyond EVs, mitigating competitive threats from GM's EV market share gains. | [gpt-5-chat] Article emphasizes Tesla’s diversified growth beyond EVs, suggesting resilience and investor confidence despite rising competition from GM.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 70,
+            "gpt-5-chat": 75
+          },
+          "title": "Should Tesla be Worried About General Motors?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T11:11:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 74,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Tesla's $2.9B solar equipment investment advances its 100GW solar manufacturing goal, expanding beyond EVs into renewable energy infrastructure with significant growth potential. | [gpt-5-chat] Large-scale solar investment signals long-term growth ambitions, diversification in energy, and potential U.S. manufacturing expansion, boosting investor sentiment toward Tesla’s future prospects.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 70,
+            "gpt-5-chat": 78
+          },
+          "title": "Tesla In Talks To Purchase $2.9 Billion Worth Of Solar Equipment From Chinese Suppliers: Report",
+          "source": "Benzinga",
+          "published_utc": "2026-03-20T10:42:13Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] While Tesla faces increased competition in robotics, the market is nascent with huge growth potential. Tesla maintains first-mover advantage with earlier expected production dates. | [gpt-5-chat] Competition increases risk but validates market potential; Tesla remains an early mover with near-term lead despite new long-term challenges.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 55,
+            "gpt-5-chat": 55
+          },
+          "title": "Tesla's New Robotic Rival Has a Strangely Familiar Face",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T07:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "This Transportation Stock May Outperform the S&P 500 in 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T01:05:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 35,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Delivery declines and share drop indicate investor concerns despite new product efforts and partnerships.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 35
+          },
+          "title": "XPeng Q4 Preview: Chinse EV Maker Struggling With Deliveries In 2026, Will Company Silence Critics?",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T18:30:39Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 30,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Market-wide selloff amid stagflation fears likely affects TSLA negatively. Higher oil prices increase EV production costs, while hawkish Fed policy threatens consumer purchasing power. | [gpt-5-chat] Macroeconomic fears, rising yields, and market selloff signal risk-off sentiment that typically pressures growth and tech stocks like Tesla.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 30,
+            "gpt-5-chat": 30
+          },
+          "title": "S&P 500 Slides, Gold Crashes As $100 Oil Stokes Stagflation Fears: What's Moving Markets Thursday?",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T17:36:32Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 28,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Tesla is explicitly mentioned as 'struggling with weak EV demand' while the Magnificent 7 group breaks up, signaling significant challenges ahead. | [gpt-5-chat] News highlights weak EV demand and Tesla's underperformance relative to peers, indicating negative investor sentiment toward the stock.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 30,
+            "gpt-5-chat": 25
+          },
+          "title": "The Great Magnificent 7 Breakup: Nvidia Stands Tall While Tesla, Microsoft Stumble And Fall",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:10:59Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 68,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Tesla's Terafab chip production initiative signals strategic vertical integration for self-driving and robotics, potentially reducing dependency on external suppliers while maintaining Nvidia partnership. | [gpt-5-chat] Tesla's upcoming Terafab chip project signals innovation and vertical integration, supporting long-term growth despite AI race concerns.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65,
+            "gpt-5-chat": 70
+          },
+          "title": "Elon Musk Says China Will Win The AI Race, But Here's Where SpaceX Will Win",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T10:05:16Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 35,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Respected billionaire investor Druckenmiller completely exited Tesla position, suggesting overvaluation concerns about 'Magnificent Seven' stocks including TSLA.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 35
+          },
+          "title": "Billionaire Stanley Druckenmiller's Newest Buy Is a Must-See if You Own Shares in Wall Street's \"Magnificent Seven\"",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T08:06:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 82,
+          "reason": "[claude-3.7-sonnet] Tesla identified as one of five companies positioned to dominate next market cycle through electrification and autonomous driving leadership, indicating strong long-term growth prospects. | [gpt-5-chat] Tesla is highlighted as a leader in electrification and autonomous driving, indicating strong growth potential within long-term structural market trends.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 75
+          },
+          "title": "5 Stocks That Could Dominate the Next Market Cycle",
+          "source": "Investing.com",
+          "published_utc": "2026-03-19T06:51:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 82,
+          "reason": "[claude-3.7-sonnet] Vertical integration reduces supply chain risks and enhances Tesla's AI capabilities, positioning it for greater technological independence and potential competitive advantages. | [gpt-5-chat] Vertical integration and supply chain control reduce risk and strengthen Tesla’s AI and robotics roadmap, indicating long-term strategic strength.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 75
+          },
+          "title": "Tesla Just Snubbed TSMC — Musk Is Quietly Building A Sovereign Chip Chain",
+          "source": "Benzinga",
+          "published_utc": "2026-03-18T22:17:50Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 68,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] SpaceX's potential fast-track into S&P 500 could positively impact Tesla through Elon Musk association and investment relationships, despite not mentioning Tesla directly. | [gpt-5-chat] SpaceX IPO could boost Tesla investor sentiment due to shared Elon Musk association and increased visibility of his companies.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65,
+            "gpt-5-chat": 70
+          },
+          "title": "Why Your S&P 500 ETF Could Rapidly Include SpaceX",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T14:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 75,
+          "reason": "[claude-3.7-sonnet] Production deal confirms long-term AI commitment but significant delays until 2027 and production pace concerns offset positive investment signals.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 55
+          },
+          "title": "Samsung Electronics To Kickstart Tesla Chips Production In Late 2027",
+          "source": "Benzinga",
+          "published_utc": "2026-03-18T08:18:51Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 82,
+          "reason": "[claude-3.7-sonnet] Strong projected growth in solar and battery storage benefits Tesla's energy division, with federal incentives and growing demand supporting long-term expansion potential. | [gpt-5-chat] Strong industry growth supports Tesla’s solar and battery businesses, aided by incentives and demand for clean energy.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 75
+          },
+          "title": "Solar Energy and Battery Storage Market Size to Grow USD 11.64 Billion by 2035 | SNS Insider",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-18T06:30:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "TSLA",
+      "technical_score": 35.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 70,
+        "value": 24.08,
+        "signal": "oversold_reversal"
+      },
+      "price": {
+        "current": 367.96,
+        "ema25": 400.43,
+        "ema50": 411.86,
+        "ema100": 422.5
+      },
+      "volume_ratio": 1.2432
+    }
+  },
+  {
+    "ticker": "MSFT",
+    "analysis_time": "2026-03-21T12:29:27.990647",
+    "lookback_days": 7,
+    "final_score": 40.0,
+    "grade": "SLIGHTLY BEARISH",
+    "breakdown": {
+      "sentiment_score": 53.84,
+      "technical_score": 35.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.4,
+      "probability_down": 0.9995
+    },
+    "sentiment": {
+      "final_score": 53.84,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 76.85,
+      "bullish_count": 7,
+      "bearish_count": 4,
+      "neutral_count": 9,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 52,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] News focuses on Nvidia, not Microsoft. Cannot provide sentiment analysis for MSFT based on information about a different company. | [gpt-5-chat] News focuses on Nvidia growth prospects, not MSFT; neutral indirect impact with no material MSFT information or sentiment drivers.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 55
+          },
+          "title": "Could Nvidia Stock Turn $10,000 Into $1 Million This Decade?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T15:02:03Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 52,
+          "confidence": 75,
+          "reason": "[claude-3.7-sonnet] News focuses on Oracle vs Meta with no direct Microsoft implications, though cloud/AI competition could indirectly impact MSFT's market position. | [gpt-5-chat] News focuses on Oracle’s growth potential and does not directly impact Microsoft; indirect AI cloud demand slightly positive for MSFT sentiment.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 55
+          },
+          "title": "Prediction: Oracle Will Be Worth More Than Meta by 2028. Here's Why.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T09:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 60,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] News is about Nebius, not Microsoft. No direct impact on MSFT mentioned despite Microsoft being a Nebius customer. | [gpt-5-chat] Large contracts with Meta and Microsoft signal strong AI demand, indirectly positive for MSFT's ecosystem and AI partnerships.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 70
+          },
+          "title": "The Good News Just Keeps Flowing in for Nebius Investors. Here's Why This AI Stock Could Jump 4X After the Meta Platforms Contract.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T02:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 60,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] Article presents tech sell-off as buying opportunity, particularly for AI stocks, though MSFT isn't specifically mentioned among the three highlighted companies. | [gpt-5-chat] Microsoft is not directly mentioned; general AI market optimism offsets sector-wide bearish pressure from the recent sell-off.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65,
+            "gpt-5-chat": 55
+          },
+          "title": "3 AI Stocks Trading at Bargain Prices After the Recent Sell-Off",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T14:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 82,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] Motley Fool recommends MSFT as 20-year hold, highlighting dominant position in software and Azure's growth outpacing competitors, suggesting strong long-term prospects. | [gpt-5-chat] Positive long-term outlook for Microsoft’s growth in cloud computing and software leadership supports strong investor confidence.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 80
+          },
+          "title": "3 Monster Stocks to Hold for the Next 20 Years Starting Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T12:30:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 20,
+          "confidence": 90,
+          "reason": "[gpt-5-chat] Highlights overvaluation, major cash burn, and share dilution, predicting a sharp price decline and comparing the stock to speculative bubbles.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 20
+          },
+          "title": "Wall Street Is Wrong About This Quantum Computing Stock",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T12:05:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 65,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] Strategic partnership highlights Microsoft's expanding role in AI-powered retail solutions, though impact on MSFT financials appears moderate given Rezolve's size.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65
+          },
+          "title": "Rezolve Ai and Microsoft to Spotlight the Rise of Agentic Commerce at the 38th Annual Roth Conference",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-20T12:00:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Article explicitly names MSFT as superior investment choice due to stable business model and attractive valuation compared to competitor.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75
+          },
+          "title": "Better Buy Now: Alphabet vs. Microsoft",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T10:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 75,
+          "reason": "[claude-3.7-sonnet] News focuses on ASML, not MSFT. Implies continued AI spending that could benefit MSFT, but lacks direct MSFT impact assessment. | [gpt-5-chat] ASML growth could strengthen AI chip supply, indirectly supporting MSFT’s cloud and AI businesses, but valuation and AI spending risks temper direct bullish impact on MSFT.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 55,
+            "gpt-5-chat": 55
+          },
+          "title": "What if ASML Becomes the Next Trillion-Dollar Stock?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T06:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 52,
+          "confidence": 58,
+          "reason": "[claude-3.7-sonnet] The news is about VONG ETF, not MSFT specifically. MSFT is not mentioned in the content, making it irrelevant for MSFT stock analysis. | [gpt-5-chat] Article focuses on VONG’s historical performance and diversification advice; minimal direct impact or sentiment signal for MSFT stock.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 55
+          },
+          "title": "Could Investing $10,000 in VONG Make You a Millionaire?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T04:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 48,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Microsoft mentioned as competitor to Palantir, which faces extreme valuation concerns and historical precedent suggesting significant underperformance of similarly valued companies. | [gpt-5-chat] Microsoft is cited as a major competitive threat to Palantir, implying strong market position and growth prospects for MSFT relative to an overvalued peer.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 25,
+            "gpt-5-chat": 70
+          },
+          "title": "Palantir Stock Is 2,500% More Expensive Than the S&P 500 Average. History Is Clear About What Happens Next.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T02:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] News focuses on Anthropic and an ETF investment opportunity rather than direct MSFT impact, though Microsoft may benefit indirectly from AI sector growth.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 55
+          },
+          "title": "Anthropic Is Worth $380 Billion: This Little-Known ETF Could Let You Own a Piece Before It IPOs",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T23:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 65,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] Microsoft's $19.4B deal with Nebius Group shows strategic investment in neocloud AI infrastructure, positioning MSFT well in the growing AI ecosystem.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65
+          },
+          "title": "Prediction: This Neocloud Stock Will Outperform the \"Magnificent Seven\" in 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T23:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 42,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Despite solid revenue and AI adoption, significant stock decline, high capex pressuring margins, and valuation concerns without sufficient margin of safety warrant caution. | [gpt-5-chat] Strong financials and AI growth offset by stock underperformance, high valuation, and margin pressure from heavy AI infrastructure spending.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 35,
+            "gpt-5-chat": 48
+          },
+          "title": "Microsoft Stock Has Been Absolutely Slammed This Year. Is It Finally Time to Buy?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T20:03:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 35,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] The news is about PureCycle Technologies, not Microsoft (MSFT). No information about MSFT is provided to analyze. | [gpt-5-chat] Share sale, mounting losses, minimal revenue, and high valuation indicate weak fundamentals and negative investor sentiment.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 20
+          },
+          "title": "Is PureCycle Technologies Stock a Buy or Sell After Shay Capital Dumped Shares Worth $3.2 Million?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T18:27:46Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] News centers on Alibaba’s AI growth, not directly on Microsoft; minimal near-term impact expected on MSFT despite broader AI sector implications.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 55
+          },
+          "title": "Something Big Is Brewing at Alibaba -- and Investors Should Pay Attention",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T16:28:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 35,
+          "confidence": 75,
+          "reason": "[claude-3.7-sonnet] Microsoft faces valuation pressure from AI capex concerns while utilities gain favor as growth stocks, suggesting potential market rotation away from traditional tech.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 35
+          },
+          "title": "Move Over Meta, Microsoft — Constellation, NextEra Hit Big Tech Valuations In 2026's Weirdest Trade",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:22:54Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 35,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Article highlights investor concerns over Microsoft's AI spending efficiency and notes its stock is stumbling compared to Nvidia's strength.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 35
+          },
+          "title": "The Great Magnificent 7 Breakup: Nvidia Stands Tall While Tesla, Microsoft Stumble And Fall",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:10:59Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] News primarily concerns Nebius, not Microsoft. Microsoft partnership mentioned but minimal direct MSFT impact. Broader market weakness in growth stocks suggests cautious environment. | [gpt-5-chat] Despite Nebius’ short-term dip, its strong multiyear partnership with Microsoft and AI expansion efforts support a positive long-term outlook for MSFT.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 45,
+            "gpt-5-chat": 65
+          },
+          "title": "What's Going On With Nebius Shares On Thursday?",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T14:50:31Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 80,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Positive outlook on Microsoft's AI and cloud expansion supports long-term growth potential, indicating strong investor sentiment.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 80
+          },
+          "title": "3 Stocks to Buy Now and Hold Forever",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T11:32:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "MSFT",
+      "technical_score": 35.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 70,
+        "value": 23.47,
+        "signal": "oversold_reversal"
+      },
+      "price": {
+        "current": 381.87,
+        "ema25": 402.84,
+        "ema50": 419.1,
+        "ema100": 444.36
+      },
+      "volume_ratio": 1.3812
+    }
+  },
+  {
+    "ticker": "AMZN",
+    "analysis_time": "2026-03-21T12:42:06.146272",
+    "lookback_days": 7,
+    "final_score": 71.16,
+    "grade": "BUY",
+    "breakdown": {
+      "sentiment_score": 57.38,
+      "technical_score": 10.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.7116,
+      "probability_down": 0.2884
+    },
+    "sentiment": {
+      "final_score": 57.38,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 69.45,
+      "bullish_count": 7,
+      "bearish_count": 3,
+      "neutral_count": 10,
+      "details": [
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Despite stock decline, strong financials, CEO insider buy, and AI partnership potential indicate long-term strength and market overreaction correction opportunity.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 75
+          },
+          "title": "The Trade Desk Is Being Valued Like a Dying Business, but Its Financials Say Otherwise",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T12:31:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] News focuses positively on Uber’s driverless strategy, but AMZN’s Zoox only mentioned as a partner, implying limited direct impact on Amazon’s valuation.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 55
+          },
+          "title": "1 Brilliant Driverless-Vehicle Stock to Buy Before It's Too Late",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T12:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Prediction: Oracle Will Be Worth More Than Meta by 2028. Here's Why.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T09:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 85,
+          "confidence": 90,
+          "reason": "[claude-3.7-sonnet] CEO's dramatic upward revision of AWS revenue forecast signals exceptional AI-driven growth potential, addressing investor concerns about AI investment returns. | [gpt-5-chat] Upgraded AWS growth forecast and positive AI outlook suggest strong long-term profitability and investor confidence in Amazon’s future performance.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 85
+          },
+          "title": "Does Amazon's Andy Jassy Know Something Wall Street Doesn't? He Just Made a Game-Changing AI Prediction -- and It's Excellent News for Investors.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T08:10:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 35,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Amazon losing USPS contract creates logistics challenges, likely increasing shipping costs while major carriers UPS and FedEx remain reluctant to fill the gap. | [gpt-5-chat] Loss of USPS partnership may increase Amazon's logistics costs and operational complexity, pressuring margins despite potential network expansion opportunities.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 35,
+            "gpt-5-chat": 35
+          },
+          "title": "Could Amazon and USPS' Failing Contract Negotiations Help UPS and FedEx?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T01:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 82,
+          "reason": "[claude-3.7-sonnet] News is about ANDE stock, not AMZN. Contains no information to assess Amazon's performance or outlook. | [gpt-5-chat] News pertains to The Andersons (ANDE), not Amazon (AMZN), so it has no direct impact on AMZN’s fundamentals or valuation.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 50
+          },
+          "title": "Agriculture Stock Up 53% Draws $12 Million Bet. Here's What Long-Term Investors Should Know",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T16:28:07Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] News is about Floor & Decor, not Amazon. Contains no information relevant to AMZN stock performance or outlook. | [gpt-5-chat] News concerns Floor & Decor, not Amazon; no direct impact on AMZN fundamentals or sector outlook indicated.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 50
+          },
+          "title": "Home Improvement Stock Down 40% Gets $14 Million Trim as Growth Slowed Last Quarter",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T16:16:15Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 72,
+          "confidence": 82,
+          "reason": "[claude-3.7-sonnet] Amazon's heavy AI investment and strong AWS growth present buying opportunity after tech sell-off, positioning it well for future AI-driven revenue growth. | [gpt-5-chat] Amazon's strong AWS-driven AI investments and attractive valuation after the sell-off suggest positive long-term growth potential.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 70
+          },
+          "title": "3 AI Stocks Trading at Bargain Prices After the Recent Sell-Off",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T14:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 82,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] Reputable investment source recommends Amazon as a 20-year hold, highlighting its leadership in multiple high-growth sectors with strong competitive advantages. | [gpt-5-chat] Positive long-term endorsement highlighting Amazon's leadership in e-commerce and cloud computing indicates strong growth outlook.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 80
+          },
+          "title": "3 Monster Stocks to Hold for the Next 20 Years Starting Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T12:30:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 20,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Article criticizes IonQ's valuation, highlighting unsustainable cash burn, dilution, and comparing to dot-com bubble companies, predicting significant price drop despite growth.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 20
+          },
+          "title": "Wall Street Is Wrong About This Quantum Computing Stock",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T12:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 60,
+          "reason": "[claude-3.7-sonnet] News focuses on SoundHound AI, not AMZN. Minimal direct relevance to Amazon despite potential AI industry implications.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 55
+          },
+          "title": "Nvidia Made Millionaires. This Artificial Intelligence (AI) Stock Could Be Next.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T10:10:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "What Are the Best AI Stocks to Buy While Big Tech Is Spending $690 Billion on Infrastructure?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T08:10:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] News focuses on ASML’s growth prospects rather than Amazon, implying indirect but limited impact on AMZN sentiment.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 50
+          },
+          "title": "What if ASML Becomes the Next Trillion-Dollar Stock?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T06:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 30,
+          "reason": "[claude-3.7-sonnet] The news is about VONG ETF, not AMZN specifically, providing no direct information to analyze Amazon stock sentiment.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50
+          },
+          "title": "Could Investing $10,000 in VONG Make You a Millionaire?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T04:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 60,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] Article focuses on Anthropic and AGIX ETF without direct AMZN impact. Amazon is likely an Anthropic investor, but no specific AMZN stock implications mentioned. | [gpt-5-chat] Anthropic’s high valuation and strong AI growth positively reflect on Amazon, a key investor and AI player, signaling continued optimism in AMZN’s AI-driven prospects.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 70
+          },
+          "title": "Anthropic Is Worth $380 Billion: This Little-Known ETF Could Let You Own a Piece Before It IPOs",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T23:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 72,
+          "reason": "[claude-3.7-sonnet] News is about Uber and Rivian partnership with no direct impact on Amazon, making it irrelevant for AMZN stock sentiment analysis. | [gpt-5-chat] News centers on Uber and Rivian, with no direct impact on Amazon’s fundamentals or competitive position mentioned.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 50
+          },
+          "title": "Uber Is Cozying Up With Rivian. Does This Make Either Stock a Buy?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T23:11:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 70,
+          "confidence": 75,
+          "reason": "[claude-3.7-sonnet] Despite short-term momentum loss, the article indicates strong long-term AI prospects with reasonable valuations, making quality AI stocks like AMZN attractive at current levels.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 70
+          },
+          "title": "Should You Really Buy Artificial Intelligence Stocks Right Now? Evidence is Piling Up and Here's What it Says.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T22:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 85,
+          "confidence": 82,
+          "reason": "[claude-3.7-sonnet] CEO's optimistic projection for AWS revenue growth is significant as cloud computing is Amazon's highest-margin business, directly impacting overall profitability. | [gpt-5-chat] Positive guidance on AWS growth implies strong future profitability and reinforces investor confidence in Amazon's core high-margin segment.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 85
+          },
+          "title": "CEO Andy Jassy Delivers Fantastic News for Amazon Stock Investors!",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T17:21:41Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 52,
+          "confidence": 72,
+          "reason": "[claude-3.7-sonnet] News is about Alibaba, not Amazon, so direct impact on AMZN is minimal. No relevant information to evaluate AMZN stock. | [gpt-5-chat] News focuses on Alibaba’s AI growth, not Amazon; minimal direct impact on AMZN sentiment, though competitive implications may warrant attention.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 55
+          },
+          "title": "Something Big Is Brewing at Alibaba -- and Investors Should Pay Attention",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T16:28:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 35,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] Amazon is explicitly mentioned as 'losing ground' alongside Apple and Meta, suggesting underperformance in the tech sector amid investor shift to company-specific fundamentals. | [gpt-5-chat] Amazon is mentioned as losing ground among major tech stocks, suggesting negative investor sentiment and weaker relative performance.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 35,
+            "gpt-5-chat": 35
+          },
+          "title": "The Great Magnificent 7 Breakup: Nvidia Stands Tall While Tesla, Microsoft Stumble And Fall",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:10:59Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "AMZN",
+      "technical_score": 10.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 20,
+        "value": 36.54,
+        "signal": "bearish_momentum"
+      },
+      "price": {
+        "current": 205.37,
+        "ema25": 212.44,
+        "ema50": 217.16,
+        "ema100": 221.91
+      },
+      "volume_ratio": 1.2057
+    }
+  },
+  {
+    "ticker": "GOOGL",
+    "analysis_time": "2026-03-21T12:52:48.375829",
+    "lookback_days": 7,
+    "final_score": 40.0,
+    "grade": "SLIGHTLY BEARISH",
+    "breakdown": {
+      "sentiment_score": 58.32,
+      "technical_score": 60.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.4,
+      "probability_down": 0.9974
+    },
+    "sentiment": {
+      "final_score": 58.32,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 78.05,
+      "bullish_count": 9,
+      "bearish_count": 3,
+      "neutral_count": 8,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 52,
+          "confidence": 62,
+          "reason": "[claude-3.7-sonnet] News focuses on NVIDIA, not GOOGL. Cannot provide accurate GOOGL sentiment analysis from unrelated content about NVIDIA's growth prospects. | [gpt-5-chat] Article notes strong growth and leadership but highlights valuation limits, implying moderate upside rather than exceptional future returns.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 55
+          },
+          "title": "Could Nvidia Stock Turn $10,000 Into $1 Million This Decade?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T15:02:03Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 80,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Despite stock plummet, Trade Desk shows strong fundamentals, impressive margins, solid growth, CEO confidence via large personal investment, and AI partnership potential. | [gpt-5-chat] Despite stock decline, strong fundamentals, CEO share purchase, and AI growth prospects indicate market overreaction and positive long-term outlook.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 75
+          },
+          "title": "The Trade Desk Is Being Valued Like a Dying Business, but Its Financials Say Otherwise",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T12:31:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Alphabet receives explicit recommendation for long-term investors, has diversified operations, dominant infrastructure, and popular Gemini AI with attractive valuation. | [gpt-5-chat] Positive tone favoring Alphabet's diversified model, AI leadership, and attractive valuation suggests long-term growth potential.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 75
+          },
+          "title": "Better AI Stock: Alphabet vs. Meta Platforms",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T12:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 60,
+          "reason": "[claude-3.7-sonnet] News focuses on Uber's driverless strategy, not Google/Alphabet. While Waymo (Google's subsidiary) is mentioned as a partner, impact on GOOGL is indirect.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50
+          },
+          "title": "1 Brilliant Driverless-Vehicle Stock to Buy Before It's Too Late",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T12:05:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 82,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] Article positively compares GOOGL to cryptocurrencies, highlighting Gemini AI growth, Apple partnership, quantum computing progress, and attractive valuation relative to tech sector. | [gpt-5-chat] Positive focus on Alphabet’s AI growth, Apple collaboration, and undervaluation suggests strong long-term potential compared to broader tech and crypto markets.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 78
+          },
+          "title": "2 Tech Stocks With More Long-Term Potential Than Any Cryptocurrency I've Seen",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T11:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 52,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] News focuses on Oracle potentially surpassing Meta, with no direct impact on Google mentioned. Irrelevant to GOOGL sentiment. | [gpt-5-chat] Article focuses positively on Oracle’s growth, not GOOGL, implying no direct impact or sentiment shift toward Google.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 55
+          },
+          "title": "Prediction: Oracle Will Be Worth More Than Meta by 2028. Here's Why.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T09:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 70,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Positive AI partnership mention with Google suggests potential growth opportunities despite overall market decline.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 70
+          },
+          "title": "Stock Market Today, March 20: Planet Labs Surges After Record Revenue and Upbeat Guidance",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T21:34:35Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 60,
+          "reason": "[claude-3.7-sonnet] Article identifies AI stocks as undervalued after sell-off, but GOOGL isn't specifically mentioned despite being a major AI player.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75
+          },
+          "title": "3 Bargain Stocks the Market Is Mispricing After the Recent Sell-Off",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T21:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 70,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] GOOGL benefits indirectly as an early SpaceX investor; SpaceX’s high valuation and IPO buzz could boost sentiment toward Alphabet’s portfolio value.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 70
+          },
+          "title": "Want to Invest in SpaceX Before Its IPO? Here's How.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T20:05:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 38,
+          "confidence": 75,
+          "reason": "[claude-3.7-sonnet] News suggests TTD could pull advertisers from Google, potentially threatening GOOGL's ad revenue dominance, though the contrarian investment case adds uncertainty. | [gpt-5-chat] Ad market weakness and The Trade Desk’s competitive push suggest challenges for Google’s ad revenue growth.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 40,
+            "gpt-5-chat": 35
+          },
+          "title": "The Trade Desk Just Fell to a Multi-Year Low. Contrarian Investors Are Paying Attention.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T18:01:20Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 90,
+          "reason": "[claude-3.7-sonnet] News focuses on ANDE stock, not GOOGL. No relevant information for Google sentiment analysis. | [gpt-5-chat] News concerns The Andersons (ANDE), not GOOGL, so it has negligible direct impact on Google’s stock outlook.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 50
+          },
+          "title": "Agriculture Stock Up 53% Draws $12 Million Bet. Here's What Long-Term Investors Should Know",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T16:28:07Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 75,
+          "reason": "[gpt-5-chat] GOOGL not mentioned; positive AI sector tone may indirectly benefit it, but limited direct relevance tempers sentiment.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 55
+          },
+          "title": "3 AI Stocks Trading at Bargain Prices After the Recent Sell-Off",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T14:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Significant position (44%) by respected value investor, strong performance (+86%), favorable DOJ ruling, and competitive AI capabilities indicate positive outlook for GOOGL.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75
+          },
+          "title": "Li Lu, the \"Chinese Warren Buffett,\" Has 75% of Himalaya Capital's Portfolio Invested in Just 3 Stocks",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T12:15:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 20,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Analyst highlights unsustainable cash burn, negative cash flow, excessive dilution, and unrealistic valuations, comparing IonQ to dot-com bubble companies. | [gpt-5-chat] Article criticizes overvaluation, heavy losses, dilution, and predicts price drop, signaling negative sentiment toward the stock.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 20,
+            "gpt-5-chat": 20
+          },
+          "title": "Wall Street Is Wrong About This Quantum Computing Stock",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T12:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] Article doesn't mention GOOGL specifically and focuses on three other AI companies, providing no direct impact on Google stock.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50
+          },
+          "title": "The Artificial Intelligence (AI) Stocks I'm Watching Closest in March",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T11:31:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] News focuses on SoundHound AI's growth potential, not Google; indirect AI optimism offers minimal effect on GOOGL sentiment.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 55
+          },
+          "title": "Nvidia Made Millionaires. This Artificial Intelligence (AI) Stock Could Be Next.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T10:10:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 35,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] The article favors Microsoft as the better buy, citing Alphabet’s premium valuation and dependence on advertising as weaknesses.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 35
+          },
+          "title": "Better Buy Now: Alphabet vs. Microsoft",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T10:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] News focuses on ASML, not GOOGL. Mentions tech capex but provides no specific information about Google's performance or prospects. | [gpt-5-chat] News focuses on ASML’s growth potential, not GOOGL. Minimal direct impact on Google’s fundamentals or sentiment.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 50
+          },
+          "title": "What if ASML Becomes the Next Trillion-Dollar Stock?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T06:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 68,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] Alphabet's partnership with NextEra for nuclear energy is positive, but this news primarily focuses on NextEra rather than GOOGL's core business. | [gpt-5-chat] Positive for Alphabet due to partnership with NextEra in nuclear energy, signaling diversification into sustainable power and long-term strategic growth.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 65,
+            "gpt-5-chat": 70
+          },
+          "title": "This Nuclear Dividend Stock Could Turn $1,000 Into a Lifetime Income Stream",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T03:05:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 62,
+          "confidence": 72,
+          "reason": "[claude-3.7-sonnet] Google is mentioned only as a partner for AST SpaceMobile, without specific impact on GOOGL stock performance. Minimal GOOGL-specific information provided. | [gpt-5-chat] Google’s partnership with AST SpaceMobile highlights engagement in satellite and AI-driven connectivity growth, supporting positive market perception despite execution risks.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 55,
+            "gpt-5-chat": 70
+          },
+          "title": "This Space Stock Is Up 238% in the Past Year. Here's How it Stacks Up to the Competition.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T02:05:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "GOOGL",
+      "technical_score": 60.0,
+      "signal": "bullish",
+      "ema": {
+        "score": 100.0,
+        "raw_points": 4,
+        "ema100_uptrend": true,
+        "ema50_above_ema100": true,
+        "ema25_above_ema100": true
+      },
+      "rsi": {
+        "score": 20,
+        "value": 38.62,
+        "signal": "bearish_momentum"
+      },
+      "price": {
+        "current": 301.0,
+        "ema25": 308.35,
+        "ema50": 310.36,
+        "ema100": 303.75
+      },
+      "volume_ratio": 1.5012
+    }
+  },
+  {
+    "ticker": "AVGO",
+    "analysis_time": "2026-03-21T13:04:32.081520",
+    "lookback_days": 7,
+    "final_score": 90.0,
+    "grade": "STRONG BUY",
+    "breakdown": {
+      "sentiment_score": 69.88,
+      "technical_score": 10.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.9,
+      "probability_down": 0.0031
+    },
+    "sentiment": {
+      "final_score": 69.88,
+      "sentiment": "bullish",
+      "news_count": 20,
+      "avg_confidence": 75.0,
+      "bullish_count": 13,
+      "bearish_count": 0,
+      "neutral_count": 7,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] Article focuses on Nvidia, not AVGO. For Nvidia, suggests strong future growth but limited upside potential due to already massive valuation. | [gpt-5-chat] Highlights strong growth prospects but emphasizes valuation limits and reduced future upside, indicating moderate optimism rather than full bullishness.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 55,
+            "gpt-5-chat": 55
+          },
+          "title": "Could Nvidia Stock Turn $10,000 Into $1 Million This Decade?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T15:02:03Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The 1 Asset Warren Buffett Says Every Investor Should Own",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-21T09:24:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 70,
+          "reason": "[gpt-5-chat] AVGO is not mentioned; sentiment on AI peers is positive but indirect, implying limited immediate impact on AVGO valuation.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 55
+          },
+          "title": "3 AI Stocks Trading at Bargain Prices After the Recent Sell-Off",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T14:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 55,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] The article focuses on ASML’s growth, not Broadcom. Indirectly positive for AVGO through AI demand but no direct impact mentioned.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 55
+          },
+          "title": "What if ASML Becomes the Next Trillion-Dollar Stock?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T06:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 62,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] The news is about Nvidia (not AVGO), showing strong AI growth prospects with reasonable valuation metrics and significant market expansion potential. | [gpt-5-chat] The news focuses on Nvidia, not AVGO, with no direct mention of Broadcom’s performance or outlook, implying neutral relevance for AVGO.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 50
+          },
+          "title": "1 Artificial Intelligence (AI) Stock With Generational Wealth Potential",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T02:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 75,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Despite short-term momentum loss, long-term AI growth remains strong with reasonable valuations and continued demand, making quality AI stocks attractive at current prices. | [gpt-5-chat] Despite short-term concerns, strong AI demand, improving valuations, and analyst recommendations indicate positive long-term outlook for AI-related stocks like AVGO.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 75
+          },
+          "title": "Should You Really Buy Artificial Intelligence Stocks Right Now? Evidence is Piling Up and Here's What it Says.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T22:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 82,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] Strong AI positioning with projected $100B+ AI ASIC revenue by 2027, strategic advantages in custom AI chips and data center networking. | [gpt-5-chat] Positive outlook on Broadcom’s AI revenue growth and market positioning in custom AI chips and data center networking.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 78
+          },
+          "title": "Should You Forget Nvidia and Buy These 2 Artificial Intelligence (AI) Stocks Instead?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T21:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 72,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Strong revenue growth, raised guidance, and significant AI/defense market penetration, though limited upside potential due to elevated valuation.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 72
+          },
+          "title": "Keysight: The Quiet Winner in the AI and Defense Spending Boom",
+          "source": "Investing.com",
+          "published_utc": "2026-03-19T16:08:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 85,
+          "confidence": 90,
+          "reason": "[claude-3.7-sonnet] Strong AI growth prospects with 140% YoY growth, projected $100B revenue by 2027, and favorable comparison to Nvidia despite premium valuation.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85
+          },
+          "title": "The Smartest Growth Stock to Buy With $500 Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T15:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 82,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] Broadcom is identified as one of five dominant stocks for the next market cycle, positioned to capitalize on semiconductor and infrastructure software growth trends. | [gpt-5-chat] Broadcom is highlighted among top stocks expected to lead the next market cycle, indicating strong growth prospects tied to semiconductor and infrastructure software trends.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 78
+          },
+          "title": "5 Stocks That Could Dominate the Next Market Cycle",
+          "source": "Investing.com",
+          "published_utc": "2026-03-19T06:51:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 80,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] Broadcom's dominant 60% ASIC market share and 106% AI revenue growth position it strongly in high-demand custom AI chip market. | [gpt-5-chat] Broadcom’s dominant 60% market share and 106% AI revenue growth highlight strong leadership and premium positioning in the rapidly expanding custom AI chip market.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 75
+          },
+          "title": "Marvell Technology vs. Broadcom: Which Custom AI Chip Stock Has More Upside?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T18:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 48,
+          "confidence": 72,
+          "reason": "[claude-3.7-sonnet] News is about Hut 8, not AVGO. Article shows institutional profit-taking despite growth, suggesting caution about valuation and ongoing losses. | [gpt-5-chat] News concerns Hut 8, not AVGO; no direct impact or mention of AVGO, thus sentiment for AVGO remains neutral.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 45,
+            "gpt-5-chat": 50
+          },
+          "title": "Ardsley Dumps 440,000 Hut 8 Shares Worth $19.4 Million",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T16:21:34Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 82,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] Strong AI growth trajectory positions Broadcom to nearly double market cap by 2028, with clear catalyst from data center and AI chip design leadership. | [gpt-5-chat] Positive growth outlook from AI infrastructure demand and market cap milestone expectations signal strong investor optimism for Broadcom.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 78
+          },
+          "title": "2 Companies That Will Join Nvidia, Apple, and Alphabet in the $3 Trillion Club by 2028",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T11:25:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 60,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] News is about Oracle, not AVGO (Broadcom). Cannot determine AVGO sentiment from this Oracle-specific information. | [gpt-5-chat] Oracle’s sustained AI investment and strong backlog signal expanding infrastructure demand, positively impacting AVGO’s chip and networking sales supporting AI data centers.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 70
+          },
+          "title": "Oracle Isn't Done Spending Big on AI. Here's Why It Said Investors Shouldn't Worry.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T10:08:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 68,
+          "confidence": 90,
+          "reason": "[claude-3.7-sonnet] TSMC positioned to profit from massive $720B AI infrastructure spending, with attractive P/E ratio below historical peak, suggesting strong growth potential. | [gpt-5-chat] News focuses on TSMC benefiting from AI spend, with no direct mention or implication for AVGO performance or catalysts.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 50
+          },
+          "title": "Big Tech Is Spending $720 Billion on AI in 2026, and This One Stock Gets Paid on Every Dollar",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:19:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 89,
+          "confidence": 90,
+          "reason": "[claude-3.7-sonnet] Strong earnings, 106% AI revenue growth, $100B+ future revenue visibility, significant undervaluation against analyst targets, high margins, and substantial shareholder returns. | [gpt-5-chat] Strong revenue growth, surging AI demand, high margins, and undervaluation versus analyst targets indicate strong bullish momentum.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 90,
+            "gpt-5-chat": 88
+          },
+          "title": "Broadcom Earnings and Cash Flow Suggest Valuation Gap at $324",
+          "source": "Investing.com",
+          "published_utc": "2026-03-17T20:34:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 85,
+          "confidence": 90,
+          "reason": "[claude-3.7-sonnet] Strong AI market position, impressive revenue growth, high analyst price targets, and significant AI infrastructure spending from tech companies all indicate strong upside potential.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85
+          },
+          "title": "Is Broadcom Stock Going to $460?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T14:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 84,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] Strong semiconductor sector outlook with Broadcom specifically mentioned as key VGT holding benefiting from trillions in AI infrastructure spending. | [gpt-5-chat] Strong AI and semiconductor growth outlook favors Broadcom, a key VGT holding, suggesting continued outperformance and positive investor sentiment toward AVGO.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 82
+          },
+          "title": "Prediction: This Unstoppable Vanguard ETF Will Crush the S&P 500 Again in 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T08:26:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 45,
+          "confidence": 70,
+          "reason": "[claude-3.7-sonnet] While warning of high valuations approaching historical correction levels, the article suggests AI investments by tech companies like AVGO have stronger fundamentals than previous bubbles.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 45
+          },
+          "title": "The Stock Market Sounds an Alarm for the First Time in 25 Years. Here Is What History Says the S&P 500 Will Do in 2026.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-16T22:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "1 Clear AI Winner Investors Should Load Up On",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-16T20:30:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "AVGO",
+      "technical_score": 10.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 20,
+        "value": 32.45,
+        "signal": "bearish_momentum"
+      },
+      "price": {
+        "current": 310.51,
+        "ema25": 326.88,
+        "ema50": 331.82,
+        "ema100": 337.65
+      },
+      "volume_ratio": 1.2345
+    }
+  },
+  {
+    "ticker": "LLY",
+    "analysis_time": "2026-03-21T13:15:45.417799",
+    "lookback_days": 7,
+    "final_score": 85.69,
+    "grade": "STRONG BUY",
+    "breakdown": {
+      "sentiment_score": 56.18,
+      "technical_score": 85.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.8569,
+      "probability_down": 0.1431
+    },
+    "sentiment": {
+      "final_score": 56.18,
+      "sentiment": "neutral",
+      "news_count": 15,
+      "avg_confidence": 64.87,
+      "bullish_count": 5,
+      "bearish_count": 2,
+      "neutral_count": 8,
+      "details": [
+        {
+          "sentiment": "bullish",
+          "score": 78,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Eli Lilly is favorably highlighted for market dominance with its blockbuster drug, suggesting positive long-term growth and investor sentiment.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 78
+          },
+          "title": "My Top 3 Drug Stocks for March 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T10:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 78,
+          "reason": "[claude-3.7-sonnet] The news doesn't mention LLY/Eli Lilly directly, only discussing Abivax and Nektar as potential acquisition targets for unspecified pharmaceutical companies. | [gpt-5-chat] News discusses potential acquisitions of smaller biotech firms, not directly related to LLY, implying no significant immediate impact on its stock.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 50
+          },
+          "title": "2 Healthcare Stocks to Buy Before They Get Bought Out",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-20T09:34:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 82,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] LLY outperforms competitor with dominant weight-loss market position, strong pipeline, newer approvals, faster revenue growth, and higher income at similar valuation. | [gpt-5-chat] Article favors Eli Lilly's superior growth, leadership in weight-loss market, and strong pipeline, indicating strong investor optimism.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 85,
+            "gpt-5-chat": 80
+          },
+          "title": "Best Growth Stock to Buy Right Now: Eli Lilly vs. Vertex Pharmaceuticals",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T18:30:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 65,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Strong trial results for retatrutide offset by HSBC downgrade citing overvaluation. Mixed signals create balanced outlook despite positive clinical data. | [gpt-5-chat] Strong trial efficacy and metabolic results support growth, though downgraded rating tempers short-term enthusiasm due to high valuation concerns.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 60,
+            "gpt-5-chat": 70
+          },
+          "title": "Eli Lilly Says Experimental Diabetes Drug Shows Weight Loss Of 17%",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T15:37:41Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 80,
+          "reason": "[claude-3.7-sonnet] Strong GLP-1 revenue growth but lofty valuation, increasing competition, and future patent concerns create downside risks that offset current performance advantages. | [gpt-5-chat] Strong growth from GLP-1 drugs supports fundamentals, but high valuation and rising competition balance optimism, making the outlook cautiously neutral.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 45,
+            "gpt-5-chat": 55
+          },
+          "title": "Is It Too Late to Buy Eli Lilly?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T15:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 42,
+          "confidence": 62,
+          "reason": "[claude-3.7-sonnet] News is about Hut 8, not LLY stock. Cannot determine sentiment for Eli Lilly from this unrelated information. | [gpt-5-chat] Large shareholder exit amid valuation concerns and ongoing losses suggests reduced investor confidence despite prior stock surge and revenue growth.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50,
+            "gpt-5-chat": 35
+          },
+          "title": "Ardsley Dumps 440,000 Hut 8 Shares Worth $19.4 Million",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T16:21:34Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Amphista Therapeutics appoints Louise Modis Ph.D. as CEO and Patrick Kelly M.D. as CMO  and provides a business update as the Company prepares to file IND application for AMX-883",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-18T12:00:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 78,
+          "confidence": 85,
+          "reason": "[claude-3.7-sonnet] LLY dominates weight loss drug market (60% share), shows triple-digit revenue growth, and potential buying opportunity with recent price drop and upcoming regulatory catalysts. | [gpt-5-chat] Strong market leadership, high growth, and potential buying opportunity despite short-term stock drop",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 80,
+            "gpt-5-chat": 75
+          },
+          "title": "Better Weight Loss Drug Stock Buy: Eli Lilly vs Viking Therapeutics",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T00:30:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 25,
+          "confidence": 88,
+          "reason": "[claude-3.7-sonnet] Major analyst downgrade with significant price target reduction, citing overvalued obesity drug market expectations and increasing competition from Novo Nordisk. | [gpt-5-chat] Downgrade and price target cut signal negative sentiment driven by concerns over overvaluation, competition, and pipeline execution risks.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 25,
+            "gpt-5-chat": 25
+          },
+          "title": "Eli Lilly Analyst Flags Overhyped Obesity Drug Expectations",
+          "source": "Benzinga",
+          "published_utc": "2026-03-17T16:57:34Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Novo Nordisk A/S Investigated by the Portnoy Law Firm",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-17T13:00:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Defensive Sectors: Are Utilities, Staples, and Health Care Signaling Trouble?",
+          "source": "Investing.com",
+          "published_utc": "2026-03-17T06:44:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 75,
+          "reason": "[claude-3.7-sonnet] News primarily discusses Pfizer, not LLY. Cannot provide sentiment on LLY stock based on this information.",
+          "models_used": [
+            "claude-3.7-sonnet"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 50
+          },
+          "title": "Should You Avoid Pfizer? Here's the Key Risk to Watch",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T05:15:00Z"
+        },
+        {
+          "sentiment": "bullish",
+          "score": 76,
+          "confidence": 82,
+          "reason": "[claude-3.7-sonnet] Successful Phase 3 trial with strong efficacy metrics could expand Ebglyss market to pediatric patients, potentially increasing revenue with consistent safety profile. | [gpt-5-chat] Positive Phase 3 pediatric results strengthen Ebglyss prospects, supporting potential revenue growth and label expansion with consistent safety profile.",
+          "models_used": [
+            "claude-3.7-sonnet",
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "claude-3.7-sonnet": 75,
+            "gpt-5-chat": 78
+          },
+          "title": "Eli Lilly's Eczema Drug Shows Strong Skin Clearance In Phase 3 Pediatric Trial",
+          "source": "Benzinga",
+          "published_utc": "2026-03-16T12:43:00Z"
+        },
+        {
+          "sentiment": "bearish",
+          "score": 35,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] Competitors offering deep discounts may pressure pricing for Eli Lilly drugs, signaling potential margin compression across the pharmaceutical industry.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 35
+          },
+          "title": "Amgen, GSK Set To Join TrumpRx Offering Deep Prescription Drug Discounts: Report",
+          "source": "Benzinga",
+          "published_utc": "2026-03-16T11:19:54Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 85,
+          "reason": "[gpt-5-chat] News highlights a major industry event without specific reference to Lilly or its performance impact.",
+          "models_used": [
+            "gpt-5-chat"
+          ],
+          "model_scores": {
+            "gpt-5-chat": 50
+          },
+          "title": "BIO-Europe Spring® 2026: Partnering Momentum Builds as Global Biopharma Leaders Set Course for Lisbon",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-16T10:00:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "LLY",
+      "technical_score": 85.0,
+      "signal": "bullish",
+      "ema": {
+        "score": 100.0,
+        "raw_points": 4,
+        "ema100_uptrend": true,
+        "ema50_above_ema100": true,
+        "ema25_above_ema100": true
+      },
+      "rsi": {
+        "score": 70,
+        "value": 20.1,
+        "signal": "oversold_reversal"
+      },
+      "price": {
+        "current": 906.7,
+        "ema25": 986.68,
+        "ema50": 1003.86,
+        "ema100": 984.08
+      },
+      "volume_ratio": 0.9446
+    }
+  }
+]

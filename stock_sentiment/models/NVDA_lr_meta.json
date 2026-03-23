@@ -34,5 +34,7 @@
   "intercept": 0.0553,
   "include_sentiment": true,
   "test_accuracy": 58.33,
-  "ticker": "NVDA"
+  "ticker": "NVDA",
+  "training_start": "2021-01-04",
+  "training_end": "2024-12-31"
 }

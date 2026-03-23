@@ -348,18 +348,29 @@ def _save_sentiment_cache():
         json.dump(_sentiment_cache, f)
 
 
-def fetch_llm_sentiment_for_date(ticker: str, date: pd.Timestamp, news_limit: int = 5) -> Dict:
+def fetch_llm_sentiment_for_date(ticker: str, date: pd.Timestamp, news_limit: int = 5, fuzzy_days: int = 3) -> Dict:
     """
     Fetch news from Polygon.io and score with real LLM ensemble (Claude + GPT-5).
     Results are cached to disk by (ticker, date) to avoid redundant API calls.
+    Fuzzy matching: if no exact date hit, reuse a cached entry within ±fuzzy_days.
 
     Returns dict with: sentiment_score, sentiment_confidence, news_count
     """
     cache = _load_sentiment_cache()
     cache_key = f"{ticker}_{date.strftime('%Y-%m-%d')}"
 
+    # Exact match
     if cache_key in cache:
         return cache[cache_key]
+
+    # Fuzzy match: check ±fuzzy_days for a nearby cached entry
+    for offset in range(1, fuzzy_days + 1):
+        for delta in [timedelta(days=offset), timedelta(days=-offset)]:
+            nearby_key = f"{ticker}_{(date + delta).strftime('%Y-%m-%d')}"
+            if nearby_key in cache:
+                cache[cache_key] = cache[nearby_key]  # also store under exact key
+                _save_sentiment_cache()
+                return cache[nearby_key]
 
     fetcher = NewsFetcher()
     analyzer = SentimentAnalyzer()
@@ -524,8 +535,17 @@ def train_model(
     # Feature importance (coefficients)
     coef_dict = {col: round(float(c), 4) for col, c in zip(feature_cols, model.coef_[0])}
 
+    # Record training date range if available
+    training_start = None
+    training_end = None
+    if "date" in train_data.columns:
+        training_start = str(train_data["date"].min().date())
+        training_end = str(train_data["date"].max().date())
+
     metadata = {
         "trained_at": datetime.now().isoformat(),
+        "training_start": training_start,
+        "training_end": training_end,
         "feature_columns": feature_cols,
         "n_samples": len(y),
         "n_up": int(y.sum()),
@@ -614,6 +634,7 @@ class MLScorer:
         news_count: int = None,
         technical_data: Dict = None,
         price_data: pd.DataFrame = None,
+        ticker: str = None,
     ) -> Dict:
         """
         Predict stock direction and score.
@@ -628,10 +649,21 @@ class MLScorer:
             news_count: Number of news articles analyzed (optional)
             technical_data: Dict from TechnicalAnalyzer.analyze() (optional)
             price_data: Raw price DataFrame - will extract features (optional)
+            ticker: Stock ticker to load per-stock model (optional, falls back to global)
 
         Returns:
             Dict with ml_score (0-100), predicted_direction, probability, grade
         """
+        # Load per-stock model if ticker provided, else use global model
+        if ticker:
+            model, scaler, metadata = load_per_stock_model(ticker)
+            feature_cols = metadata["feature_columns"]
+            model_used = f"{ticker}_lr (per-stock)"
+        else:
+            model, scaler, metadata = self.model, self.scaler, self.metadata
+            feature_cols = self.feature_cols
+            model_used = "global"
+
         features = {}
 
         # Extract technical features from technical_data dict
@@ -654,23 +686,26 @@ class MLScorer:
             features["price_vs_ema100"] = (current_price - ema100) / ema100 * 100 if ema100 else 0
             features["price_vs_ema50"] = (current_price - ema50) / ema50 * 100 if ema50 else 0
             features["price_vs_ema25"] = (current_price - ema25) / ema25 * 100 if ema25 else 0
-            features["volume_ratio"] = 1.0  # Not available from analyze() output
+            features["volume_ratio"] = technical_data.get("volume_ratio", 1.0)
 
         # Add sentiment features if model expects them
-        if "sentiment_score" in self.feature_cols and sentiment_score is not None:
+        if "sentiment_score" in feature_cols and sentiment_score is not None:
             features["sentiment_score"] = sentiment_score
-        if "sentiment_confidence" in self.feature_cols and sentiment_confidence is not None:
+        if "sentiment_confidence" in feature_cols and sentiment_confidence is not None:
             features["sentiment_confidence"] = sentiment_confidence
-        if "news_count" in self.feature_cols and news_count is not None:
+        if "news_count" in feature_cols and news_count is not None:
             features["news_count"] = news_count
 
         # Build feature vector in correct order
-        X = np.array([[features.get(col, 0) for col in self.feature_cols]])
-        X_scaled = self.scaler.transform(X)
+        X = np.array([[features.get(col, 0) for col in feature_cols]])
+        X_scaled = scaler.transform(X)
 
         # Predict
-        prob = self.model.predict_proba(X_scaled)[0]  # [P(down), P(up)]
+        prob = model.predict_proba(X_scaled)[0]  # [P(down), P(up)]
         prob_up = prob[1]
+        # Clip to [0.40, 0.90] — consistent with spy_backtest.py
+        # Prevents LR probability saturation (extreme 0/1 outputs)
+        prob_up = float(np.clip(prob_up, 0.40, 0.90))
         ml_score = round(prob_up * 100, 2)
 
         predicted_direction = "up" if prob_up >= 0.5 else "down"

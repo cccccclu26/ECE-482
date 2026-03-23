@@ -52,7 +52,7 @@ class SentimentAnalyzer:
             self.api_url,
             headers=headers,
             json=payload,
-            timeout=60
+            timeout=15
         )
         response.raise_for_status()
 

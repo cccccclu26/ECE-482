@@ -34,5 +34,7 @@
   "intercept": 0.054,
   "include_sentiment": true,
   "test_accuracy": 58.33,
-  "ticker": "TSLA"
+  "ticker": "TSLA",
+  "training_start": "2021-01-04",
+  "training_end": "2024-12-31"
 }

@@ -220,6 +220,13 @@ class TechnicalAnalyzer:
         # Current price info
         latest = data.iloc[-1]
 
+        # Volume ratio: today's volume / 20-day average
+        vol_ratio = 1.0
+        if "Volume" in data.columns and len(data) >= 20:
+            avg_vol = data["Volume"].iloc[-20:].mean()
+            if avg_vol > 0:
+                vol_ratio = round(float(latest["Volume"] / avg_vol), 4)
+
         return {
             "ticker": ticker,
             "technical_score": technical_score,
@@ -241,7 +248,8 @@ class TechnicalAnalyzer:
                 "ema25": round(float(latest["EMA25"]), 2),
                 "ema50": round(float(latest["EMA50"]), 2),
                 "ema100": round(float(latest["EMA100"]), 2),
-            }
+            },
+            "volume_ratio": vol_ratio,
         }
 
 

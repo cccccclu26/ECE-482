@@ -34,5 +34,7 @@
   "intercept": 0.8476,
   "include_sentiment": true,
   "test_accuracy": 75.0,
-  "ticker": "JPM"
+  "ticker": "JPM",
+  "training_start": "2021-01-04",
+  "training_end": "2024-12-31"
 }

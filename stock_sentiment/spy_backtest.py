@@ -35,18 +35,60 @@ from ml_scorer import (
 TICKERS = ["AAPL", "NVDA", "MSFT", "AMZN", "GOOGL", "META", "TSLA", "AVGO", "JPM", "LLY"]
 
 
+def _fetch_polygon_ohlcv(ticker, start_str, end_str):
+    """Fetch daily OHLCV from Polygon.io. Returns DataFrame matching yfinance format."""
+    import requests
+    from config import POLYGON_API_KEY
+
+    url = (
+        f"https://api.polygon.io/v2/aggs/ticker/{ticker}/range/1/day"
+        f"/{start_str}/{end_str}?adjusted=true&sort=asc&limit=50000"
+        f"&apiKey={POLYGON_API_KEY}"
+    )
+    r = requests.get(url, timeout=30)
+    r.raise_for_status()
+    results = r.json().get("results", [])
+    if not results:
+        raise ValueError(f"No Polygon data for {ticker}")
+
+    df = pd.DataFrame(results)
+    df["Date"] = pd.to_datetime(df["t"], unit="ms")
+    df = df.set_index("Date")
+    df = df.rename(columns={"o": "Open", "h": "High", "l": "Low", "c": "Close", "v": "Volume"})
+    df = df[["Open", "High", "Low", "Close", "Volume"]]
+    df.index = df.index.tz_localize(None)
+    return df
+
+
 def fetch_all_price_data(tickers, start_date, end_date):
-    """Fetch price data for all tickers with enough history for EMA warmup."""
-    start_dt = datetime.strptime(start_date, "%Y-%m-%d") - timedelta(days=250)
+    """Fetch price data for all tickers with enough history for EMA warmup.
+    Uses Polygon.io first (fast), falls back to yfinance for older data."""
+    start_dt = datetime.strptime(start_date, "%Y-%m-%d") - timedelta(days=400)
     end_dt = datetime.strptime(end_date, "%Y-%m-%d") + timedelta(days=10)
+    start_str = start_dt.strftime("%Y-%m-%d")
+    end_str = end_dt.strftime("%Y-%m-%d")
 
     data = {}
     for ticker in tickers:
-        df = yf.Ticker(ticker).history(
-            start=start_dt.strftime("%Y-%m-%d"),
-            end=end_dt.strftime("%Y-%m-%d"),
-        )
-        df.index = df.index.tz_localize(None)
+        try:
+            df = _fetch_polygon_ohlcv(ticker, start_str, end_str)
+            # If Polygon data starts too late, prepend yfinance data
+            if len(df) > 0 and df.index[0] > pd.Timestamp(start_str) + timedelta(days=30):
+                yf_end = df.index[0].strftime("%Y-%m-%d")
+                yf_df = yf.Ticker(ticker).history(start=start_str, end=yf_end)
+                yf_df.index = yf_df.index.tz_localize(None)
+                yf_df = yf_df[["Open", "High", "Low", "Close", "Volume"]]
+                df = pd.concat([yf_df, df])
+                df = df[~df.index.duplicated(keep="last")]
+                df = df.sort_index()
+                print(f"  {ticker}: {len(df)} days (Polygon + yfinance)", flush=True)
+            else:
+                print(f"  {ticker}: {len(df)} days (Polygon.io)", flush=True)
+        except Exception as e:
+            print(f"  {ticker}: Polygon failed ({e}), using yfinance", flush=True)
+            df = yf.Ticker(ticker).history(start=start_str, end=end_str)
+            df.index = df.index.tz_localize(None)
+            df = df[["Open", "High", "Low", "Close", "Volume"]]
         data[ticker] = df
     return data
 
@@ -279,9 +321,9 @@ def run_spy_backtest(start_date, end_date, top_k=3, rebalance_days=21, threshold
     print(f"{'='*65}")
 
     if alpha > 0:
-        print(f"\n✓ Portfolio BEAT SPY by {alpha:.1f}%")
+        print(f"\n[WIN] Portfolio BEAT SPY by {alpha:.1f}%")
     else:
-        print(f"\n✗ Portfolio UNDERPERFORMED SPY by {abs(alpha):.1f}%")
+        print(f"\n[LOSS] Portfolio UNDERPERFORMED SPY by {abs(alpha):.1f}%")
 
     # Most selected stocks
     all_selected = [t for p in portfolio_history for t in p["selected"] if t != "CASH"]

@@ -112,6 +112,7 @@ class StockAnalysisSystem:
                 sentiment_confidence=sentiment_agg.get("avg_confidence"),
                 news_count=sentiment_agg.get("news_count", 0),
                 technical_data=tech_result,
+                ticker=ticker,
             )
             final_score = ml_result["ml_score"]
             grade = ml_result["grade"]

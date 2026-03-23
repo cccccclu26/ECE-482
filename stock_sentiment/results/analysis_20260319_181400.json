@@ -1,0 +1,2407 @@
+[
+  {
+    "ticker": "AAPL",
+    "analysis_time": "2026-03-19T18:07:11.615164",
+    "lookback_days": 7,
+    "final_score": 0.0,
+    "grade": "STRONG SELL",
+    "breakdown": {
+      "sentiment_score": 50.0,
+      "technical_score": 35.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.0,
+      "probability_down": 1.0
+    },
+    "sentiment": {
+      "final_score": 50.0,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 0.0,
+      "bullish_count": 0,
+      "bearish_count": 0,
+      "neutral_count": 20,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Calydon Capital Dumps $9 Million of ZoomInfo Amid Stock's 92% Decline Since 2021",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T19:13:15Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Great Magnificent 7 Breakup: Nvidia Stands Tall While Tesla, Microsoft Stumble And Fall",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:10:59Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Billionaire Stanley Druckenmiller's Newest Buy Is a Must-See if You Own Shares in Wall Street's \"Magnificent Seven\"",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T08:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Think It's Too Late to Buy Taiwan Semiconductor Manufacturing Company Stock? Here's the 1 Reason Why There's Still Time.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T01:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Trade Desk Is Suddenly Bleeding Customers. Is It a Red Flag for the Adtech Stock?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T17:20:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "2 Companies That Will Join Nvidia, Apple, and Alphabet in the $3 Trillion Club by 2028",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T11:25:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Samsung Stock Jumps As Nvidia CEO Jensen Huang Confirms New AI Chip Production Deal",
+          "source": "Benzinga",
+          "published_utc": "2026-03-17T10:02:20Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Crypto Prediction Platform Polymarket Blocked In Argentina For Facilitating Unauthorized Betting: Report",
+          "source": "Benzinga",
+          "published_utc": "2026-03-17T09:03:33Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Google Parent Alphabet's $346 Billion Investment Is Providing a Big Lift to Its Bottom Line -- but It Has Nothing to Do With Artificial Intelligence (AI)",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T08:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "What Investors Should Know About This $8 Million Tech ETF Sale Last Quarter",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T00:28:41Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Better Stock to Buy Right Now: Amazon vs. Apple",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-16T19:25:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Kintayl Capital Loads Up Qorvo Stock With 124,000 Shares Buy",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-16T17:24:41Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Apple Launches a Price War Its Rivals Can’t Afford to Fight",
+          "source": "Investing.com",
+          "published_utc": "2026-03-16T16:09:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Most Overlooked Artificial Intelligence (AI) Stocks in the \"Magnificent Seven\" for 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-15T22:25:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Fidelity (FDVV) vs. ProShares (NOBL): Which Dividend ETF Reigns Supreme?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-15T21:18:03Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "My Top 5 AI Stocks to Buy Amid the Market Pullback",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-15T18:10:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Is the iShares MSCI USA Quality GARP ETF the Smartest Investment You Can Make in March?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-15T13:25:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Consumer Tech News (Mar 9-13): Trump Administration Sues California Over Emissions Targets, Nvidia Announces $26B AI Investment & More",
+          "source": "Benzinga",
+          "published_utc": "2026-03-15T13:20:41Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "ITOT vs. VTV: Is Broad Market Exposure or Value Stock Stability the Better Buy for Investors?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-14T21:10:54Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Satya Nadella Says \"All Software Is Being Rewritten.\" Here's 1 of the Best Artificial Intelligence (AI) Stocks to Own for 2026.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-14T20:05:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "AAPL",
+      "technical_score": 35.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 70,
+        "value": 28.93,
+        "signal": "oversold_reversal"
+      },
+      "price": {
+        "current": 248.96,
+        "ema25": 259.28,
+        "ema50": 262.0,
+        "ema100": 263.08
+      }
+    }
+  },
+  {
+    "ticker": "MSFT",
+    "analysis_time": "2026-03-19T18:08:04.379666",
+    "lookback_days": 7,
+    "final_score": 0.0,
+    "grade": "STRONG SELL",
+    "breakdown": {
+      "sentiment_score": 50.0,
+      "technical_score": 35.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.0,
+      "probability_down": 1.0
+    },
+    "sentiment": {
+      "final_score": 50.0,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 0.0,
+      "bullish_count": 0,
+      "bearish_count": 0,
+      "neutral_count": 20,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Microsoft Stock Has Been Absolutely Slammed This Year. Is It Finally Time to Buy?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T20:03:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Is PureCycle Technologies Stock a Buy or Sell After Shay Capital Dumped Shares Worth $3.2 Million?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T18:27:46Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Something Big Is Brewing at Alibaba -- and Investors Should Pay Attention",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T16:28:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Move Over Meta, Microsoft — Constellation, NextEra Hit Big Tech Valuations In 2026's Weirdest Trade",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:22:54Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Great Magnificent 7 Breakup: Nvidia Stands Tall While Tesla, Microsoft Stumble And Fall",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:10:59Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "What's Going On With Nebius Shares On Thursday?",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T14:50:31Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "3 Stocks to Buy Now and Hold Forever",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T11:32:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Forget $5 Trillion, Dan Ives Thinks Nvidia Is $6 Trillion Company In Making",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T11:05:07Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Best Stocks to Buy With $1,000 Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T08:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "5 Stocks That Could Dominate the Next Market Cycle",
+          "source": "Investing.com",
+          "published_utc": "2026-03-19T06:51:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Palantir Has an $11.2 Billion Revenue Backlog, a $10 Billion Army Deal, and a 61% Growth Forecast. Is It a Buy for 2026?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T19:36:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Nebius To Raise $4 Billion Via Convertible Senior Debt",
+          "source": "Benzinga",
+          "published_utc": "2026-03-18T14:48:21Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Urban Grid and Sustain Our Future Foundation Collaborate with Microsoft to Deliver Energy Solutions and Drive Community Impact",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-18T14:00:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Bill Gates Has Nearly 30% of His $35 Billion Portfolio in 1 Stock and It's Not Microsoft",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T12:18:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "2 Companies That Will Join Nvidia, Apple, and Alphabet in the $3 Trillion Club by 2028",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T11:25:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Oracle Isn't Done Spending Big on AI. Here's Why It Said Investors Shouldn't Worry.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T10:08:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Is Nebius Stock a Buy Now?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T06:10:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Why Nebius Stock Fell Today",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T00:10:18Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "MediaTek Develops Active Optical Cable Technology with Microsoft Research to Deliver Significant Improvements in Data Center Efficiency",
+          "source": "Benzinga",
+          "published_utc": "2026-03-17T23:09:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Economy Just Shed 92,000 Jobs as Oil Prices Surge and Inflation Creeps Up. History Says the Stock Market Will Do This Next.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:24:10Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "MSFT",
+      "technical_score": 35.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 70,
+        "value": 29.96,
+        "signal": "oversold_reversal"
+      },
+      "price": {
+        "current": 389.02,
+        "ema25": 404.59,
+        "ema50": 420.62,
+        "ema100": 445.62
+      }
+    }
+  },
+  {
+    "ticker": "GOOGL",
+    "analysis_time": "2026-03-19T18:08:57.086925",
+    "lookback_days": 7,
+    "final_score": 0.0,
+    "grade": "STRONG SELL",
+    "breakdown": {
+      "sentiment_score": 50.0,
+      "technical_score": 82.5,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.0,
+      "probability_down": 1.0
+    },
+    "sentiment": {
+      "final_score": 50.0,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 0.0,
+      "bullish_count": 0,
+      "bearish_count": 0,
+      "neutral_count": 20,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Something Big Is Brewing at Alibaba -- and Investors Should Pay Attention",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T16:28:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Great Magnificent 7 Breakup: Nvidia Stands Tall While Tesla, Microsoft Stumble And Fall",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:10:59Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "3 Stocks to Buy Now and Hold Forever",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T11:32:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Forget $5 Trillion, Dan Ives Thinks Nvidia Is $6 Trillion Company In Making",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T11:05:07Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Elon Musk Says China Will Win The AI Race, But Here's Where SpaceX Will Win",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T10:05:16Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Billionaire Stanley Druckenmiller's Newest Buy Is a Must-See if You Own Shares in Wall Street's \"Magnificent Seven\"",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T08:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "3 Artificial Intelligence (AI) Stocks You Could Hold Forever",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T07:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Trade Desk Is Suddenly Bleeding Customers. Is It a Red Flag for the Adtech Stock?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T17:20:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Best Stocks to Invest $10,000 in Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T15:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Nvidia's Jensen Huang Wants To 'Die On The Job' Building A $20 Trillion Giant: 'That's My Dream Come True'",
+          "source": "Benzinga",
+          "published_utc": "2026-03-18T14:55:29Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "2 Companies That Will Join Nvidia, Apple, and Alphabet in the $3 Trillion Club by 2028",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T11:25:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Oracle Isn't Done Spending Big on AI. Here's Why It Said Investors Shouldn't Worry.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T10:08:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Fort Baker Dumps 1.68 Million TEGNA Shares Worth $34.3 Million",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T00:06:50Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Economy Just Shed 92,000 Jobs as Oil Prices Surge and Inflation Creeps Up. History Says the Stock Market Will Do This Next.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:24:10Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Big Tech Is Spending $720 Billion on AI in 2026, and This One Stock Gets Paid on Every Dollar",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:19:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "This $50 Billion AI Bet Is Either Oracle's Masterstroke or Its Biggest Mistake",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:10:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Broadcom Earnings and Cash Flow Suggest Valuation Gap at $324",
+          "source": "Investing.com",
+          "published_utc": "2026-03-17T20:34:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Single Best Way to Invest $500 in Artificial Intelligence (AI) Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T15:14:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "3 Artificial Intelligence (AI) Stocks Set to Dominate the Next Decade",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T15:14:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Is Broadcom Stock Going to $460?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T14:15:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "GOOGL",
+      "technical_score": 82.5,
+      "signal": "bullish",
+      "ema": {
+        "score": 100.0,
+        "raw_points": 4,
+        "ema100_uptrend": true,
+        "ema50_above_ema100": true,
+        "ema25_above_ema100": true
+      },
+      "rsi": {
+        "score": 65,
+        "value": 50.59,
+        "signal": "mildly_bullish"
+      },
+      "price": {
+        "current": 307.13,
+        "ema25": 308.96,
+        "ema50": 310.75,
+        "ema100": 303.81
+      }
+    }
+  },
+  {
+    "ticker": "AMZN",
+    "analysis_time": "2026-03-19T18:09:49.709263",
+    "lookback_days": 7,
+    "final_score": 0.0,
+    "grade": "STRONG SELL",
+    "breakdown": {
+      "sentiment_score": 50.0,
+      "technical_score": 17.5,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.0,
+      "probability_down": 1.0
+    },
+    "sentiment": {
+      "final_score": 50.0,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 0.0,
+      "bullish_count": 0,
+      "bearish_count": 0,
+      "neutral_count": 20,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "CEO Andy Jassy Delivers Fantastic News for Amazon Stock Investors!",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T17:21:41Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Something Big Is Brewing at Alibaba -- and Investors Should Pay Attention",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T16:28:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Great Magnificent 7 Breakup: Nvidia Stands Tall While Tesla, Microsoft Stumble And Fall",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:10:59Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "2 Beaten-Down Tech Stocks Coiled for a Massive Rebound",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T14:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "3 Stocks to Buy Now and Hold Forever",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T11:32:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The 1 Artificial Intelligence Stock I'd Buy With My Last $500",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T08:10:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Billionaire Stanley Druckenmiller's Newest Buy Is a Must-See if You Own Shares in Wall Street's \"Magnificent Seven\"",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T08:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Think It's Too Late to Buy Taiwan Semiconductor Manufacturing Company Stock? Here's the 1 Reason Why There's Still Time.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T01:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Amazon Stock: Buy, Sell, or Hold?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T01:03:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Trade Desk Is Suddenly Bleeding Customers. Is It a Red Flag for the Adtech Stock?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T17:20:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Nvidia's Jensen Huang Wants To 'Die On The Job' Building A $20 Trillion Giant: 'That's My Dream Come True'",
+          "source": "Benzinga",
+          "published_utc": "2026-03-18T14:55:29Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Oracle Isn't Done Spending Big on AI. Here's Why It Said Investors Shouldn't Worry.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T10:08:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Is Nebius Stock a Buy Now?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T06:10:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "1 Stock I Plan to Load Up On in 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T05:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Economy Just Shed 92,000 Jobs as Oil Prices Surge and Inflation Creeps Up. History Says the Stock Market Will Do This Next.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:24:10Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Big Tech Is Spending $720 Billion on AI in 2026, and This One Stock Gets Paid on Every Dollar",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:19:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "This $50 Billion AI Bet Is Either Oracle's Masterstroke or Its Biggest Mistake",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:10:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Is Broadcom Stock Going to $460?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T14:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "3 Growth Stocks to Buy and Hold Forever",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T11:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "My Top 3 Dividend Kings to Buy for March 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T10:32:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "AMZN",
+      "technical_score": 17.5,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 35,
+        "value": 43.07,
+        "signal": "mildly_bearish"
+      },
+      "price": {
+        "current": 208.76,
+        "ema25": 213.03,
+        "ema50": 217.64,
+        "ema100": 222.25
+      }
+    }
+  },
+  {
+    "ticker": "NVDA",
+    "analysis_time": "2026-03-19T18:10:42.564649",
+    "lookback_days": 7,
+    "final_score": 0.0,
+    "grade": "STRONG SELL",
+    "breakdown": {
+      "sentiment_score": 50.0,
+      "technical_score": 10.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.0,
+      "probability_down": 1.0
+    },
+    "sentiment": {
+      "final_score": 50.0,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 0.0,
+      "bullish_count": 0,
+      "bearish_count": 0,
+      "neutral_count": 20,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Should You Forget Nvidia and Buy These 2 Artificial Intelligence (AI) Stocks Instead?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T21:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Prediction: The Agentic AI Market Could Grow 10X by 2030. This Stock Is Leading the Charge.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T19:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Oil Spike Sends Indexes Lower, but the Selloff Stays Shallow",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T18:26:23Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "S&P 500 Slides, Gold Crashes As $100 Oil Stokes Stagflation Fears: What's Moving Markets Thursday?",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T17:36:32Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Nvidia Stock Is Even More Undervalued Than I Previously Thought",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T17:19:31Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Great Magnificent 7 Breakup: Nvidia Stands Tall While Tesla, Microsoft Stumble And Fall",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:10:59Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Will Invesco S&P 500 Equal Weight ETF Finally Reward Patient Investors?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T16:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Smartest Growth Stock to Buy With $500 Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T15:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "What's Going On With Nebius Shares On Thursday?",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T14:50:31Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Forget $5 Trillion, Dan Ives Thinks Nvidia Is $6 Trillion Company In Making",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T11:05:07Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Qnity Taps NVIDIA To Optimize Semiconductor Performance",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T10:56:41Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Elon Musk Says China Will Win The AI Race, But Here's Where SpaceX Will Win",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T10:05:16Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Auddia Announces LT350 Initiative to Power the Autonomous Vehicle Revolution with Distributed AI Datacenters",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-19T10:00:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "3 No-Brainer Stocks to Buy With $300 Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T09:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Billionaire Stanley Druckenmiller's Newest Buy Is a Must-See if You Own Shares in Wall Street's \"Magnificent Seven\"",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T08:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "3 Artificial Intelligence (AI) Stocks You Could Hold Forever",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T07:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "5 Stocks That Could Dominate the Next Market Cycle",
+          "source": "Investing.com",
+          "published_utc": "2026-03-19T06:51:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Think It's Too Late to Buy Taiwan Semiconductor Manufacturing Company Stock? Here's the 1 Reason Why There's Still Time.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T01:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Nvidia's Jensen Huang Just Made a Startling Prediction. Here's What it Means for Nvidia's Stock Price.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T22:10:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "More Than Just Brains: The AI Revolution’s Nervous System",
+          "source": "Investing.com",
+          "published_utc": "2026-03-18T20:43:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "NVDA",
+      "technical_score": 10.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 20,
+        "value": 38.96,
+        "signal": "bearish_momentum"
+      },
+      "price": {
+        "current": 178.56,
+        "ema25": 183.36,
+        "ema50": 184.25,
+        "ema100": 184.69
+      }
+    }
+  },
+  {
+    "ticker": "META",
+    "analysis_time": "2026-03-19T18:11:35.384861",
+    "lookback_days": 7,
+    "final_score": 0.0,
+    "grade": "STRONG SELL",
+    "breakdown": {
+      "sentiment_score": 50.0,
+      "technical_score": 35.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.0,
+      "probability_down": 1.0
+    },
+    "sentiment": {
+      "final_score": 50.0,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 0.0,
+      "bullish_count": 0,
+      "bearish_count": 0,
+      "neutral_count": 20,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "S&P 500 Slides, Gold Crashes As $100 Oil Stokes Stagflation Fears: What's Moving Markets Thursday?",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T17:36:32Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Move Over Meta, Microsoft — Constellation, NextEra Hit Big Tech Valuations In 2026's Weirdest Trade",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:22:54Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Great Magnificent 7 Breakup: Nvidia Stands Tall While Tesla, Microsoft Stumble And Fall",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:10:59Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "1 Artificial Intelligence (AI) Stock You Could Hold Forever",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T15:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Want Decades of Passive Income? 2 Energy Stocks to Buy Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T12:34:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "3 No-Brainer Stocks to Buy With $300 Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T09:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Billionaire Stanley Druckenmiller's Newest Buy Is a Must-See if You Own Shares in Wall Street's \"Magnificent Seven\"",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T08:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "3 Artificial Intelligence (AI) Stocks You Could Hold Forever",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T07:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Trade Desk Is Suddenly Bleeding Customers. Is It a Red Flag for the Adtech Stock?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T17:20:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Buy These 3 Semiconductor Stocks Now and Thank Yourself in a Decade",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T17:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Best Stocks to Invest $10,000 in Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T15:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "4 Dividend Energy Stocks to Buy in March",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T14:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Is Nebius Stock a Buy Now?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T06:10:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Why Nebius Stock Fell Today",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T00:10:18Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Economy Just Shed 92,000 Jobs as Oil Prices Surge and Inflation Creeps Up. History Says the Stock Market Will Do This Next.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:24:10Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Big Tech Is Spending $720 Billion on AI in 2026, and This One Stock Gets Paid on Every Dollar",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:19:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "This $50 Billion AI Bet Is Either Oracle's Masterstroke or Its Biggest Mistake",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:10:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Broadcom Earnings and Cash Flow Suggest Valuation Gap at $324",
+          "source": "Investing.com",
+          "published_utc": "2026-03-17T20:34:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Is Meta Platforms Stock Going to $700 by Year-End? The Math Says It's Possible.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T20:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Is Broadcom Stock Going to $460?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T14:15:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "META",
+      "technical_score": 35.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 70,
+        "value": 28.79,
+        "signal": "oversold_reversal"
+      },
+      "price": {
+        "current": 606.7,
+        "ema25": 641.02,
+        "ema50": 648.58,
+        "ema100": 662.48
+      }
+    }
+  },
+  {
+    "ticker": "TSLA",
+    "analysis_time": "2026-03-19T18:12:28.054859",
+    "lookback_days": 7,
+    "final_score": 0.0,
+    "grade": "STRONG SELL",
+    "breakdown": {
+      "sentiment_score": 50.0,
+      "technical_score": 10.0,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.0,
+      "probability_down": 1.0
+    },
+    "sentiment": {
+      "final_score": 50.0,
+      "sentiment": "neutral",
+      "news_count": 20,
+      "avg_confidence": 0.0,
+      "bullish_count": 0,
+      "bearish_count": 0,
+      "neutral_count": 20,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "XPeng Q4 Preview: Chinse EV Maker Struggling With Deliveries In 2026, Will Company Silence Critics?",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T18:30:39Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "S&P 500 Slides, Gold Crashes As $100 Oil Stokes Stagflation Fears: What's Moving Markets Thursday?",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T17:36:32Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Great Magnificent 7 Breakup: Nvidia Stands Tall While Tesla, Microsoft Stumble And Fall",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:10:59Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Elon Musk Says China Will Win The AI Race, But Here's Where SpaceX Will Win",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T10:05:16Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Billionaire Stanley Druckenmiller's Newest Buy Is a Must-See if You Own Shares in Wall Street's \"Magnificent Seven\"",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T08:06:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "5 Stocks That Could Dominate the Next Market Cycle",
+          "source": "Investing.com",
+          "published_utc": "2026-03-19T06:51:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Tesla Just Snubbed TSMC — Musk Is Quietly Building A Sovereign Chip Chain",
+          "source": "Benzinga",
+          "published_utc": "2026-03-18T22:17:50Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Why Your S&P 500 ETF Could Rapidly Include SpaceX",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T14:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Samsung Electronics To Kickstart Tesla Chips Production In Late 2027",
+          "source": "Benzinga",
+          "published_utc": "2026-03-18T08:18:51Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Solar Energy and Battery Storage Market Size to Grow USD 11.64 Billion by 2035 | SNS Insider",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-18T06:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Here's Why BYD Stock Is a Buy Before Earnings",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T00:21:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Economy Just Shed 92,000 Jobs as Oil Prices Surge and Inflation Creeps Up. History Says the Stock Market Will Do This Next.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:24:10Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Should You Sell Tesla Before June 30? Hint: Don't Dare",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Is Rivian the Smartest Investment You Can Make Today?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T19:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Why Lemonade Stock Is Up More Than 15% on Tuesday",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T16:16:22Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Tesla Stock's Bear Market Just Got A Dangerous New Twist: Q1 Deliveries Could Deepen The Damage",
+          "source": "Benzinga",
+          "published_utc": "2026-03-17T16:14:57Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "PsiBot's $280M Fundraising Signals China's Bet On Embodied AI",
+          "source": "Benzinga",
+          "published_utc": "2026-03-17T12:00:41Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Elon Musk Says Potential Proceeds Of OpenAI Lawsuit Will Go To Charity— 'I Will In No Way Enrich Myself'",
+          "source": "Benzinga",
+          "published_utc": "2026-03-17T09:13:32Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Lucid Stock Is Cheap, but Does That Make It a Buy Now?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T03:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Is Tesla a Recession-Proof Stock?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T02:05:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "TSLA",
+      "technical_score": 10.0,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 20,
+        "value": 30.82,
+        "signal": "bearish_momentum"
+      },
+      "price": {
+        "current": 380.3,
+        "ema25": 403.13,
+        "ema50": 413.65,
+        "ema100": 423.61
+      }
+    }
+  },
+  {
+    "ticker": "AMD",
+    "analysis_time": "2026-03-19T18:13:18.261908",
+    "lookback_days": 7,
+    "final_score": 0.0,
+    "grade": "STRONG SELL",
+    "breakdown": {
+      "sentiment_score": 50.0,
+      "technical_score": 32.5,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.0,
+      "probability_down": 1.0
+    },
+    "sentiment": {
+      "final_score": 50.0,
+      "sentiment": "neutral",
+      "news_count": 19,
+      "avg_confidence": 0.0,
+      "bullish_count": 0,
+      "bearish_count": 0,
+      "neutral_count": 19,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Should You Forget Nvidia and Buy These 2 Artificial Intelligence (AI) Stocks Instead?",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T21:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Think It's Too Late to Buy Taiwan Semiconductor Manufacturing Company Stock? Here's the 1 Reason Why There's Still Time.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T01:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Stock Market Today, March 18: Fed Leaves Rates Unchanged, and Markets Fall on Inflation Fears",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T21:20:20Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Big Tech Is Spending $720 Billion on AI in 2026, and This One Stock Gets Paid on Every Dollar",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T22:19:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Nvidia Stock Investors Just Got Fantastic From the Trump Administration",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T15:21:40Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Nvidia: Can AI Inference Really Drive a $1T Revenue Opportunity?",
+          "source": "Investing.com",
+          "published_utc": "2026-03-17T10:32:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Prediction: This Unstoppable Vanguard ETF Will Crush the S&P 500 Again in 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-17T08:26:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Stock Market Sounds an Alarm for the First Time in 25 Years. Here Is What History Says the S&P 500 Will Do in 2026.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-16T22:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "1 Clear AI Winner Investors Should Load Up On",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-16T20:30:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Celestica-AMD Partner For AI Rack-Scale Platform Deal",
+          "source": "Benzinga",
+          "published_utc": "2026-03-16T15:16:12Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "1 Artificial Intelligence (AI) Stock I'd Never Sell",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-15T16:02:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Consumer Tech News (Mar 9-13): Trump Administration Sues California Over Emissions Targets, Nvidia Announces $26B AI Investment & More",
+          "source": "Benzinga",
+          "published_utc": "2026-03-15T13:20:41Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "IT Spending Will Exceed $6 Trillion for the First Time in 2026 Thanks to Artificial Intelligence (AI). Here's How to Invest.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-15T01:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Satya Nadella Says \"All Software Is Being Rewritten.\" Here's 1 of the Best Artificial Intelligence (AI) Stocks to Own for 2026.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-14T20:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Stock Market Today, March 13: Nvidia Slips as GTC 2026 Conference Looms",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-13T21:09:42Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Prediction: This Under-the-Radar Artificial Intelligence (AI) Stock Could Be a Multibagger by the End of 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-13T12:20:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "High-End Semiconductor Packaging Market Size to Hit USD 134.90 Billion by 2035 | SNS Insider",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-13T08:28:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Prediction: This Artificial Intelligence (AI) Stock Will Be the Biggest Winner of the $660+ Billion Capex Boom",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-13T06:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "The Best Stocks to Invest $1,000 in Right Now",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-12T22:30:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "AMD",
+      "technical_score": 32.5,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 65,
+        "value": 58.27,
+        "signal": "mildly_bullish"
+      },
+      "price": {
+        "current": 205.27,
+        "ema25": 203.52,
+        "ema50": 208.97,
+        "ema100": 209.27
+      }
+    }
+  },
+  {
+    "ticker": "INTC",
+    "analysis_time": "2026-03-19T18:13:44.827332",
+    "lookback_days": 7,
+    "final_score": 0.93,
+    "grade": "STRONG SELL",
+    "breakdown": {
+      "sentiment_score": 50.0,
+      "technical_score": 82.5,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.0093,
+      "probability_down": 0.9907
+    },
+    "sentiment": {
+      "final_score": 50.0,
+      "sentiment": "neutral",
+      "news_count": 10,
+      "avg_confidence": 0.0,
+      "bullish_count": 0,
+      "bearish_count": 0,
+      "neutral_count": 10,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Nvidia: Can AI Inference Really Drive a $1T Revenue Opportunity?",
+          "source": "Investing.com",
+          "published_utc": "2026-03-17T10:32:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Why Intel Stock Spiked 7.4% on Monday Then Slumped",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-16T23:13:15Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Applied Materials Dividend Growth Adds New Dimension to AI Trade",
+          "source": "Investing.com",
+          "published_utc": "2026-03-16T19:11:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "A Once-in-a-Decade Investment Opportunity: The Best Artificial Intelligence (AI) Stock to Buy in March",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-16T08:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "$100 Invested in This Semiconductor Stock Today Could Be Worth $200 by 2030",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-15T19:33:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "1 Artificial Intelligence (AI) Stock I'd Never Sell",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-15T16:02:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Stock Market Today, March 13: Nvidia Slips as GTC 2026 Conference Looms",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-13T21:09:42Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "High-End Semiconductor Packaging Market Size to Hit USD 134.90 Billion by 2035 | SNS Insider",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-13T08:28:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "NEW TOUGHBOOK 56 REIMAGINES RUGGED MOBILITY & USABILITY FOR FIELD WORKERS",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-12T15:00:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "AI in Electronics and Sensors Market Size to Hit USD 113.23 Billion by 2035 | SNS Insider",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-12T09:00:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "INTC",
+      "technical_score": 82.5,
+      "signal": "bullish",
+      "ema": {
+        "score": 100.0,
+        "raw_points": 4,
+        "ema100_uptrend": true,
+        "ema50_above_ema100": true,
+        "ema25_above_ema100": true
+      },
+      "rsi": {
+        "score": 65,
+        "value": 53.67,
+        "signal": "mildly_bullish"
+      },
+      "price": {
+        "current": 46.18,
+        "ema25": 45.66,
+        "ema50": 44.94,
+        "ema100": 42.4
+      }
+    }
+  },
+  {
+    "ticker": "CRM",
+    "analysis_time": "2026-03-19T18:14:00.777050",
+    "lookback_days": 7,
+    "final_score": 33.91,
+    "grade": "SELL",
+    "breakdown": {
+      "sentiment_score": 50.0,
+      "technical_score": 17.5,
+      "scoring_method": "ml_logistic_regression",
+      "probability_up": 0.3391,
+      "probability_down": 0.6609
+    },
+    "sentiment": {
+      "final_score": 50.0,
+      "sentiment": "neutral",
+      "news_count": 6,
+      "avg_confidence": 0.0,
+      "bullish_count": 0,
+      "bearish_count": 0,
+      "neutral_count": 6,
+      "details": [
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Prediction: The Agentic AI Market Could Grow 10X by 2030. This Stock Is Leading the Charge.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T19:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "What's Going On With Salesforce Stock On Thursday?",
+          "source": "Benzinga",
+          "published_utc": "2026-03-19T16:26:08Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Prediction: This Artificial Intelligence (AI) Stock Will Be the Surprise Winner of the Software Sell-Off in 2026",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-19T13:15:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Oracle Agrees That AI Is Challenging the SaaS Model. Here's Why Oracle Thinks It's the Disruptor, Not the Disrupted.",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-18T21:05:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "This Longtime SaaS Bear Now Sees Value in the Beaten-Down Software Sector -- Here's What They Say Investors Are Getting Wrong",
+          "source": "The Motley Fool",
+          "published_utc": "2026-03-12T21:01:00Z"
+        },
+        {
+          "sentiment": "neutral",
+          "score": 50,
+          "confidence": 0,
+          "reason": "Analysis failed, using default",
+          "models_used": [],
+          "model_scores": {},
+          "title": "Intezer Processes 25 Million Security Alerts as Enterprises Shift to AI SOC Operations",
+          "source": "GlobeNewswire Inc.",
+          "published_utc": "2026-03-12T13:00:00Z"
+        }
+      ]
+    },
+    "technical": {
+      "ticker": "CRM",
+      "technical_score": 17.5,
+      "signal": "bearish",
+      "ema": {
+        "score": 0.0,
+        "raw_points": -4,
+        "ema100_uptrend": false,
+        "ema50_above_ema100": false,
+        "ema25_above_ema100": false
+      },
+      "rsi": {
+        "score": 35,
+        "value": 48.73,
+        "signal": "mildly_bearish"
+      },
+      "price": {
+        "current": 194.99,
+        "ema25": 197.51,
+        "ema50": 206.87,
+        "ema100": 220.33
+      }
+    }
+  }
+]

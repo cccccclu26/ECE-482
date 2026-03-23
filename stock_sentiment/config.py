@@ -30,18 +30,18 @@ LLM_MODELS = [
     "openai/gpt-5-chat",
 ]
 
-# Target stock list (tech sector)
+# Target stock list — must match trained per-stock models
 TECH_STOCKS = [
     "AAPL",   # Apple
-    "MSFT",   # Microsoft
-    "GOOGL",  # Alphabet
-    "AMZN",   # Amazon
     "NVDA",   # NVIDIA
     "META",   # Meta
+    "JPM",    # JPMorgan Chase
     "TSLA",   # Tesla
-    "AMD",    # AMD
-    "INTC",   # Intel
-    "CRM",    # Salesforce
+    "MSFT",   # Microsoft
+    "AMZN",   # Amazon
+    "GOOGL",  # Alphabet
+    "AVGO",   # Broadcom
+    "LLY",    # Eli Lilly
 ]
 
 # Sentiment analysis prompt template
